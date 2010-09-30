@@ -1,12 +1,59 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,10pt]{report}
 
-\usepackage{eventB}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontenc}
+\usepackage{graphicx}
 
-\title{Requirements Document\\ProvenLift}
-\author{Adrian Friedli and Alexander Bernauer}
+\usepackage[dvips]{hyperref}
+
+\input{eventB.sty}
+
+\date{30/09/10}
 
 \begin{document}
-\maketitle
+
+%% elevator
+\env{There is an elevator with a door and a main engine.}
+
+\env{The elevator is connected to the main engine through a cable.}
+\env{The main engine is either stopped, winding or unwinding.}
+If the main engine is winding resp. unwinding, the elevator is moving up resp. down.
+If it is stopped the elevator doesn't move.
+%%\env{The main engine has a sensor indicating the position of the elevator.}
+
+
+\env{The door of the elevator has an engine to open and close the door.}
+\env{The door engine is either opening, closing or stopped.}
+\env{The door can be fully open, half open or closed.}
+\env{The door has a sensor to detect the state of the door.}
+
+
+%% floors
+\env{There are N+1 floors, named floor0, ..., floorN.}
+\env{Every floor has a sensor to detect if the elevator has reached that floor.}
+\env{Every floor sensor is either on or off. The sensor is on if and only if the elevator is on that floor.}
+If a floor sensor is on, then the elevator is on that floor. Otherwise the elevator is not on that floor.
+
+%% buttons
+\env{In the elevator are N+1 buttons numbered from 0 to N.}
+If a button is pressed the elevator eventually goes to the corresponding floor.
+
+\env{On every floor except floorN, there is a up-button. On every floor except floor0, there is a down-button.}
+If a button on a floor is pressed, the elevator eventually comes to that floor.
+
+\env{Every button can be on or off and has a light indicating the state.}
+The light is switched on when the button is pressed and switched off if the request is served.
+
+
+%% controller
+\env{There is a controller}
+\env{The controller is connected to all buttons, sensors and engines in the system.}
+
+
+%% functional requirements
+\fun{When the main engine is winding or unwinding then the door engine is closing.}
 
 
 \end{document}
