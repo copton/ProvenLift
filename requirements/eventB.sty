@@ -1,0 +1,343 @@
+\NeedsTeXFormat{LaTeX2e}\relax
+\ProvidesPackage{eventB}[2008/09/05]
+
+% Sequent in a box.
+\newcommand{\Sequent}[2]{
+  \begin{array}{|l|}
+    \hline
+    #1\\
+    \vdash\\
+    #2\\
+    \hline
+  \end{array}
+}
+
+% Sequent in a single line.
+\newcommand{\sequent}[2]{
+  \begin{array}{l}
+    #1\
+    \mathrel{\vdash}\ 
+    #2
+  \end{array}
+}
+
+% Proofrule
+\newcommand{\proofrule}[3]{
+  \begin{array}{|l|}
+    \hline\\
+    \begin{array}{c}
+      #2\\[.5ex]
+      \hline\\[-1.5ex]
+      #3
+    \end{array}
+    \quad \textbf{#1}\\[1.5em]
+    \hline
+  \end{array}
+}
+
+% Proofrule with a double horizontal line, i.e.,
+% a proofrule that can be applied in both directions.
+\newcommand{\proofrulesym}[3]{
+\begin{array}{|l|}
+\hline\\
+\begin{array}{c}
+#2\\[.5ex]
+\hline \hline\\[-1.5ex]
+#3
+\end{array}
+\quad \textbf{#1}\\[1.5em]
+\hline
+\end{array}
+}
+
+%%%%% (START) Macros for requirement document %%%%%
+
+%%%%% Counter for requirements.
+\newcounter{reqc}
+
+%%%%% General requirement box: Provide a requirement box with label and
+%%%%%                          explanation text. The requirement counter is
+%%%%%                          used automatically.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Label text prefix (e.g. ENV, FUN, SAF, etc.)
+%%%%%   3. Explanation text.
+%%%%%
+%%%%% Usage: \req[0.8\textwidth]{FUN}{The 1st functional requirement is ...}
+%%%%%        \req{FUN}{The 1st functional requirement is ...}
+\newcommand{\req}[3][0.6\textwidth]{
+  \medskip\refstepcounter{reqc}
+  \begin{center}
+    \begin{tabular}{|@{\hspace{0.05\textwidth}}c@{\hspace{0.05\textwidth}}|@{\hspace{0.05\textwidth}}c@{\hspace{0.05\textwidth}}|}
+      \hline
+      & \\
+      \textsf{#2 \arabic{reqc}} &
+      \begin{minipage}[c]{#1}
+        #3
+      \end{minipage} \\
+      & \\
+      \hline
+    \end{tabular}
+  \end{center}
+}
+
+%%%%% Specific command for EQUIPMENT (EQP) requirements. This command used the %%%%% general macro \req for requirement.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Explanation text.
+%%%%% Usage: \eqp[0.8\textwidth]{An equipment requirement here is ...}
+%%%%%        \eqp{An equipment requirement here is ...}
+\newcommand{\eqp}[2][0.6\textwidth]{\req[#1]{EQP}{#2}}
+
+%%%%% Specific command for FUNCTIONAL (FUN) requirements. This command used
+%%%%% the general macro \req for requirement.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Explanation text.
+%%%%% Usage: \eqp[0.8\textwidth]{A functional requirement here is ...}
+%%%%%        \eqp{A functional requirement here is ...}
+\newcommand{\fun}[2][0.6\textwidth]{\req[#1]{FUN}{#2}}
+
+%%%%% Specific command for SAFETY (SAF) requirements. This command used
+%%%%% the general macro \req for requirement.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Explanation text.
+%%%%% Usage: \saf[0.8\textwidth]{A safety requirement here is ...}
+%%%%%        \saf{A safety requirement here is ...}
+\newcommand{\saf}[2][0.6\textwidth]{\req[#1]{SAF}{#2}}
+
+%%%%% Specific command for assumptions (ENV). This command used
+%%%%% the general macro \req for requirement.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Explanation text.
+\newcommand{\env}[2][0.6\textwidth]{\req[#1]{ENV}{#2}}
+
+%%%%% Specific command for generic requirements (REQ). This command used
+%%%%% the general macro \req for requirement.
+%%%%% Arguments:
+%%%%%   1. (Optional) Width of the explanation text. 
+%%%%%      (Default value: 0.6\textwidth)
+%%%%%   2. Explanation text.
+\newcommand{\genreq}[2][0.6\textwidth]{\req[#1]{REQ}{#2}}
+
+%%%%% (END) Macros for requirement document %%%%%
+
+
+
+%%%%% (BEGIN) Macros for Pretty-Print Event-B Components %%%
+
+
+%%%%% Event-B Keywords %%%%%
+\newcommand{\Brefines}{\textbf{refines}}
+\newcommand{\Bbegin}{\textbf{begin}}
+\newcommand{\Bany}{\textbf{any}}
+\newcommand{\Bwhere}{\textbf{where}}
+\newcommand{\Bwhen}{\textbf{when}}
+\newcommand{\Bthen}{\textbf{then}}
+\newcommand{\Bend}{\textbf{end}}
+\newcommand{\Bwhile}{\textbf{while}}
+
+%%%%% Event-B internal elements %%%%%
+\newcommand{\Bevent}[1]{\textsf{#1}}
+\newcommand{\Binv}[1]{\textbf{#1}}
+\newcommand{\Baxiom}[1]{\textbf{#1}}
+
+
+%%%%% Pretty print carrier sets
+%%%%% Arguments:
+%%%%% 1. (Comma-separated) list of carrier sets.
+%%%%%
+%%%%% Usage: \carriersets{S, T}
+\newcommand{\carriersets}[1]{
+  \begin{array}{|@{\quad}l@{\quad}l@{\quad}|}
+    \hline
+    & \\[-1ex]
+    \textbf{sets} &  #1 \\[1ex]
+    \hline
+  \end{array}
+}
+
+%%%%% Pretty print variables
+%%%%% Arguments:
+%%%%% 1. (Comma-separated) list of variables.
+%%%%%
+%%%%% Usage: \variables{x, y}
+\newcommand{\variables}[1]{
+  \begin{array}{|@{\quad}l@{\quad}l@{\quad}|}
+    \hline
+    & \\[-1ex]
+    \textbf{variables} &  #1 \\[1ex]
+    \hline
+  \end{array}
+}
+
+\newcommand{\constants}[1]{
+  \begin{array}{|@{\quad}l@{\quad}l@{\quad}|}
+    \hline
+    & \\[-1ex]
+    \textbf{constants} &  #1 \\[1ex]
+    \hline
+  \end{array}
+}
+
+%%%%% Pretty print axioms
+%%%%% Arguments:
+%%%%% 1. (Newline(\\)-separated) list of axioms.
+%%%%%
+%%%%% Usage: \axioms{\textbf{axm0\_1:} & x \in \nat \\
+%%%%%                \textbf{axm0\_2:} & y \in \nat \\[2ex]}
+\newcommand{\axioms}[1]{
+  \begin{array}[!htbp]{|@{\quad}l@{\quad}|}
+    \hline
+    \\[-1ex]
+    \textbf{axioms} \\
+    \begin{array}[!htbp]{@{\quad}l@{\ \ \ }l}
+      #1
+    \end{array}\\[2ex]
+    \hline
+  \end{array}
+}
+
+%%%%% Pretty print invariants
+%%%%% Arguments:
+%%%%% 1. (Newline(\\)-separated) list of invariants.
+%%%%%
+%%%%% Usage: \invariants{\textbf{inv0\_1:} & x \in \nat \\
+%%%%%                    \textbf{inv0\_2:} & y \in \nat \\[2ex]}
+\newcommand{\invariants}[1]{
+  \begin{array}[!htbp]{|@{\quad}l@{\quad}|}
+    \hline
+    \\[-1ex]
+    \textbf{invariants} \\
+    \begin{array}[!htbp]{@{\quad}l@{\ \ \ }l}
+      #1
+    \end{array}\\[2ex]
+    \hline
+  \end{array}
+}
+
+%%%%% Pretty print a refining event
+%%%%% Arguments:
+%%%%% 1. Name of the event.
+%%%%% 2. Name of the abstract event.
+%%%%% 3. (Comma-separated) list of parameters.
+%%%%% 4. (Newline(\\)-separated) list of guards.
+%%%%% 5. (Newline(\\)-separated) list of assignments.
+%%%%%
+%%%%% Usage: \revent{conc}{abs}{x,y}{G1(x,y)\\G2(x,y)}{S1(v,x,y)\\S2(w,x,y)}
+%%%%%       will produce the following
+%%%%%
+%%%%%       conc
+%%%%%       refines abs
+%%%%%       any x, y where
+%%%%%         G1(x, y)
+%%%%%         G2(x, y)
+%%%%%       then
+%%%%%         S1(v, x, y)
+%%%%%         S2(w, x, y)
+%%%%%       end
+%%%%%
+%%%%% Special case:
+%%%%% - Empty abstract event --> refines clause is omitted.
+%%%%% - Empty parameters, empty guards --> begin ... end
+%%%%% - Empty parameters --> when ... then ... end
+\newcommand{\revent}[5]{
+  \def\absevt{#2}
+  \def\params{#3}
+  \def\grds{#4}
+	\def\assgns{#5}
+  \begin{array}[!htbp]{|@{\quad}l@{\quad}|}
+    \hline
+    \\[-1ex]
+    \Bevent{#1} \\
+    \ifx\absevt\@empty
+    \else
+    \quad\Brefines \quad #2 \\
+    \fi
+
+    \ifx\params\@empty
+    \ifx\grds\@empty
+    \quad\Bbegin \\
+    \else
+    \quad\Bwhen \\
+    \begin{array}[!htbp]{@{\quad\quad}l}
+      #4
+    \end{array}\\
+    \quad\Bthen \\
+    \fi
+    \else
+    \quad\Bany \quad #3 \quad \Bwhere \\
+    \begin{array}[!htbp]{@{\quad\quad}l}
+      #4
+    \end{array}\\
+    \quad\Bthen \\
+    \fi
+    \begin{array}[!htbp]{@{\quad\quad}l}
+			\ifx\assgns\@empty
+			\mathrm{skip}
+			\else
+      #5
+			\fi
+    \end{array}\\
+    \quad\Bend\\[1ex]
+    \hline
+  \end{array}
+}
+
+
+%%%%% Pretty print an event without the ``refines'' clause
+%%%%% Arguments:
+%%%%% 1. Name of the event.
+%%%%% 2. (Comma-separated) list of parameters.
+%%%%% 3. (Newline(\\)-separated) list of guards.
+%%%%% 4. (Newline(\\)-separated) list of assignments.
+%%%%%
+%%%%% Usage: \event{evt}{x,y}{G1(x,y)\\G2(x,y)}{S1(v,x,y)\\S2(w,x,y)}
+%%%%%       will produce the following
+%%%%%
+%%%%%       evt
+%%%%%       any x, y where
+%%%%%         G1(x, y)
+%%%%%         G2(x, y)
+%%%%%       then
+%%%%%         S1(v, x, y)
+%%%%%         S2(w, x, y)
+%%%%%       end
+%%%%%
+%%%%% Special case:
+%%%%% - Empty parameters, empty guards --> begin ... end
+%%%%% - Empty parameters --> when ... then ... end
+\newcommand{\event}[4]{
+  \revent{#1}{}{#2}{#3}{#4}
+}
+
+%%%%% Pretty print the initialisation: no ``refines'' clause. no parameters, no
+%%%%% guards
+%%%%% Arguments:
+%%%%% 1. (Newline(\\)-separated) list of assignments.
+%%%%%
+%%%%% Usage: \init{S1(v,x,y)\\S2(w,x,y)}
+%%%%%       will produce the following
+%%%%%
+%%%%%       init
+%%%%%       begin
+%%%%%         S1(v, x, y)
+%%%%%         S2(w, x, y)
+%%%%%       end
+%%%%%
+%%%%% Special case:
+%%%%% - Empty parameters, empty guards --> begin ... end
+%%%%% - Empty parameters --> when ... then ... end
+\newcommand{\init}[1]{
+  \event{INITIALISATION}{}{}{#1}
+}
+
+%%%%% (END) Macros for Pretty-Print Event-B Components %%%
+
