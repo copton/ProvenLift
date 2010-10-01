@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
@@ -10,50 +10,67 @@
 
 \input{eventB.sty}
 
-\date{30/09/10}
+\title{Requirements Document\\ProvenLift}
+\author{Adrian Friedli\\Alexander Bernauer}
 
 \begin{document}
+\maketitle
+\newpage
 
-%% elevator
-\env{There is an elevator with a door and a main engine.}
+\section{Environmental Assumptions}
 
-\env{The elevator is connected to the main engine through a cable.}
-\env{The main engine is either stopped, winding or unwinding.}
-If the main engine is winding resp. unwinding, the elevator is moving up resp. down.
-If it is stopped the elevator doesn't move.
-%%\env{The main engine has a sensor indicating the position of the elevator.}
+First, we enumerate all entities which are relevant to the system.
 
+\env{There is an elevator with a door, a door engine and a cable engine.}
+\env{There is a controller which executes the system.}
+\env{There is a sequence of N+1 floor which are indexed from 0 to N. The floor with index 0 is at the bottom and the floor with index N is at the top.}
+\env{On every floor except the one with index N there is a up-button. On every floor except the one with index 0 there is a down-button.}
+\env{In the elevator there are N+1 so called elevator buttons indexed from 0 to N.}
+\env{For every botton there is a light.}
 
-\env{The door of the elevator has an engine to open and close the door.}
+All the entities have different possible states.
+\env{The elevator is either stopped, moving up or moving down.}
+\env{The cable engine is either stopped, winding or unwinding.}
 \env{The door engine is either opening, closing or stopped.}
 \env{The door can be fully open, half open or closed.}
-\env{The door has a sensor to detect the state of the door.}
+\env{Every button can be pressed or not pressed.}
+\env{Every light is either on or off.}
 
+Here are some basic relationships between the entities of the system.
+\env{The elevator is either between two consequtive floors or at one floor.}
+\env{If the door engine is opening the door status changes from closed to half open and/or from half open to open. If the door engine is closing the door status changes from open to half open and/or from half open to closed. If the door engine is stopped the door status does not change.}
+\env{If the cable motor is stopped the elevator is stopped. If the cable motor is winding the elevator moves up. If the cable motor is unwinding the elevator moves down.}
 
-%% floors
-\env{There are N+1 floors, named floor0, ..., floorN.}
-\env{Every floor has a sensor to detect if the elevator has reached that floor.}
-\env{Every floor sensor is either on or off. The sensor is on if and only if the elevator is on that floor.}
-If a floor sensor is on, then the elevator is on that floor. Otherwise the elevator is not on that floor.
+Now we list all input information.
+\env{For each entity there is a sensor which measures the state of the entity.}
+\env{There is a sensor, called floor sensor, which measures the index of the floor if the elevator is at that floor. If the elevator is between two floors, the sensor measures the value -1.}
 
-%% buttons
-\env{In the elevator are N+1 buttons numbered from 0 to N.}
-If a button is pressed the elevator eventually goes to the corresponding floor.
-
-\env{On every floor except floorN, there is a up-button. On every floor except floor0, there is a down-button.}
-If a button on a floor is pressed, the elevator eventually comes to that floor.
-
-\env{Every button can be on or off and has a light indicating the state.}
-The light is switched on when the button is pressed and switched off if the request is served.
-
-
-%% controller
-\env{There is a controller}
+This interconnects the whole system.
 \env{The controller is connected to all buttons, sensors and engines in the system.}
 
+\section{Functional Requirements}
+This is the basic functionality of the system.
+\fun{If a button is pressed the elevator eventually goes to the orresponding floor and the door opens.}
 
-%% functional requirements
-\fun{When the main engine is winding or unwinding then the door engine is closing.}
+We need an elevator schedule to know in which direction the elevator will go next.
+\fun{There is an elevator schedule which is either up or down.}
+\fun{If the elevator is on the floor with index 0, the elevator schedule is up.}
+\fun{If the elevator is on the floor with index N, the elevator schedule is down.}
 
+These requirements handle the user interface.
+\fun{If a button is pressed the corresponding light goes on.}
+\fun{If the light corresponding to an elevator button is on and the elevator is at the floor which corresponds to the button and the door is open, the light goes off.}
+\fun{If the light corresponding to a down button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is down and the door is open, the light goes off.}
+\fun{If the light corresponding to a up button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is up and the door is open, the light goes off.}
+
+Finally, some security requirements.
+\fun{When the cable engine is winding or unwinding then the door engine is closing.}
+\fun{When the cable engine is winding or unwinding then the door is closed.}
+\fun{If the elevator is between two floors the cable engine is not stopped.}
+\fun{If the elevator is at the floor with index 0 the cable engine is not unwinding.}
+\fun{If the elevator is at the floor with index N the cable engine is not winding.}
+
+And of course, nobody want's to reboot the elevator ;-)
+\fun{Once the system is started it never stops.}
 
 \end{document}
