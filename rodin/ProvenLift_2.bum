@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287058568441" org.eventb.texttools.text_representation="machine ProvenLift_2 refines ProvenLift_1  sees Context_2&#10;&#10;variables floor elevator main_engine&#10;&#10;invariants&#10;  @inv2_1 elevator ∈ ELEVATOR_STATUS&#10;  @inv2_2 main_engine ∈ MAIN_ENGINE_STATUS&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act2_1 elevator ≔ e_stopped&#10;      @act2_2 main_engine ≔ m_stopped&#10;  end&#10;&#10;  event move_up extends move_up&#10;  end&#10;&#10;  event move_down extends move_down&#10;  end&#10;&#10;&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_02PxodeMEd-F6oYoDV_tiA" org.eventb.core.target="ProvenLift_1"/>
+<org.eventb.core.seesContext name="_02Q_wNeMEd-F6oYoDV_tiA" org.eventb.core.target="Context_2"/>
+<org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
+<org.eventb.core.variable name="_1cMDMdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="elevator"/>
+<org.eventb.core.variable name="_1cMDMtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="main_engine"/>
+<org.eventb.core.invariant name="_1cMDM9d_Ed-Dle0at0Xgqg" org.eventb.core.label="inv2_1" org.eventb.core.predicate="elevator ∈ ELEVATOR_STATUS"/>
+<org.eventb.core.invariant name="_1cMqQNd_Ed-Dle0at0Xgqg" org.eventb.core.label="inv2_2" org.eventb.core.predicate="main_engine ∈ MAIN_ENGINE_STATUS"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_1cMqQdd_Ed-Dle0at0Xgqg" org.eventb.core.assignment="elevator ≔ e_stopped" org.eventb.core.label="act2_1"/>
+<org.eventb.core.action name="_1cMqQtd_Ed-Dle0at0Xgqg" org.eventb.core.assignment="main_engine ≔ m_stopped" org.eventb.core.label="act2_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9uFS0Nd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_up">
+<org.eventb.core.refinesEvent name="_02V4QNeMEd-F6oYoDV_tiA" org.eventb.core.target="move_up"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9uF54dd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_down">
+<org.eventb.core.refinesEvent name="_02WfUNeMEd-F6oYoDV_tiA" org.eventb.core.target="move_down"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

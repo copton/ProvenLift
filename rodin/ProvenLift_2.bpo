@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="N∈ℕ1" org.eventb.core.source="/ProvenLift/Context_1.buc|org.eventb.core.contextFile#Context_1|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poIdentifier name="ELEVATOR_STATUS" org.eventb.core.type="ℙ(ELEVATOR_STATUS)"/>
+<org.eventb.core.poIdentifier name="MAIN_ENGINE_STATUS" org.eventb.core.type="ℙ(MAIN_ENGINE_STATUS)"/>
+<org.eventb.core.poIdentifier name="e_stopped" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.poIdentifier name="moving_down" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="moving_up" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.poIdentifier name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ELEVATOR_STATUS={e_stopped,moving_up,moving_down}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUNd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="e_stopped≠moving_up" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUdd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="e_stopped≠moving_down" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUtd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="moving_down≠moving_up" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZsYNd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZsYdd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m_stopped≠winding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcNd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="m_stopped≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcdd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="winding≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTctd_Ed-Dle0at0Xgqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="elevator" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="floor∈ℕ" org.eventb.core.source="/ProvenLift/ProvenLift_1.bum|org.eventb.core.machineFile#ProvenLift_1|org.eventb.core.invariant#_9uEEsdd9Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="floor≤N" org.eventb.core.source="/ProvenLift/ProvenLift_1.bum|org.eventb.core.machineFile#ProvenLift_1|org.eventb.core.invariant#_9uEEstd9Ed-Dle0at0Xgqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT0" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="elevator'" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="main_engine'" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.poIdentifier name="floor'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT0" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#EVTIDENTEVT0" org.eventb.core.poStamp="2"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT1" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="floor'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT1" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#EVTIDENTEVT1" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor&lt;N" org.eventb.core.source="/ProvenLift/ProvenLift_1.bum|org.eventb.core.machineFile#ProvenLift_1|org.eventb.core.event#_9uFS0Nd9Ed-Dle0at0Xgqg|org.eventb.core.guard#_9uFS0dd9Ed-Dle0at0Xgqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT2" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="floor'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT2" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#EVTIDENTEVT2" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="0&lt;floor" org.eventb.core.source="/ProvenLift/ProvenLift_1.bum|org.eventb.core.machineFile#ProvenLift_1|org.eventb.core.event#_9uF54dd9Ed-Dle0at0Xgqg|org.eventb.core.guard#_9uGg8Nd9Ed-Dle0at0Xgqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/ProvenLift_2.bpo|org.eventb.core.poFile#ProvenLift_2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="elevator∈ELEVATOR_STATUS" org.eventb.core.source="/ProvenLift/ProvenLift_2.bum|org.eventb.core.machineFile#ProvenLift_2|org.eventb.core.invariant#_1cMDM9d_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS" org.eventb.core.source="/ProvenLift/ProvenLift_2.bum|org.eventb.core.machineFile#ProvenLift_2|org.eventb.core.invariant#_1cMqQNd_Ed-Dle0at0Xgqg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

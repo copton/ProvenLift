@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287052678594" org.eventb.texttools.text_representation="context Context_2 extends Context_1&#10;&#10;constants e_stopped moving_up moving_down m_stopped winding unwinding&#10;&#10;sets ELEVATOR_STATUS MAIN_ENGINE_STATUS&#10;&#10;axioms&#10;  @axm2_1 ELEVATOR_STATUS = {e_stopped, moving_up, moving_down}&#10;  @axm2_2 e_stopped ≠ moving_up&#10;  @axm2_3 e_stopped ≠  moving_down&#10;  @axm2_4 moving_down ≠ moving_up&#10;  @axm2_5 MAIN_ENGINE_STATUS = {m_stopped, winding, unwinding}&#10;  @axm2_6 m_stopped ≠ winding&#10;  @axm2_7 m_stopped ≠  unwinding&#10;  @axm2_8 winding ≠ unwinding&#10;&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_HLX3MNd_Ed-Dle0at0Xgqg" org.eventb.core.target="Context_1"/>
+<org.eventb.core.carrierSet name="_HLX3Mdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ELEVATOR_STATUS"/>
+<org.eventb.core.carrierSet name="_HLX3Mtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.constant name="_HLX3M9d_Ed-Dle0at0Xgqg" org.eventb.core.identifier="e_stopped"/>
+<org.eventb.core.constant name="_HLX3NNd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="moving_up"/>
+<org.eventb.core.constant name="_HLYeQNd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="moving_down"/>
+<org.eventb.core.constant name="_HLYeQdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="m_stopped"/>
+<org.eventb.core.constant name="_HLYeQtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="winding"/>
+<org.eventb.core.constant name="_HLYeQ9d_Ed-Dle0at0Xgqg" org.eventb.core.identifier="unwinding"/>
+<org.eventb.core.axiom name="_HLZFUNd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_1" org.eventb.core.predicate="ELEVATOR_STATUS = {e_stopped, moving_up, moving_down}"/>
+<org.eventb.core.axiom name="_HLZFUdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_2" org.eventb.core.predicate="e_stopped ≠ moving_up"/>
+<org.eventb.core.axiom name="_HLZFUtd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_3" org.eventb.core.predicate="e_stopped ≠  moving_down"/>
+<org.eventb.core.axiom name="_HLZsYNd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_4" org.eventb.core.predicate="moving_down ≠ moving_up"/>
+<org.eventb.core.axiom name="_HLZsYdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_5" org.eventb.core.predicate="MAIN_ENGINE_STATUS = {m_stopped, winding, unwinding}"/>
+<org.eventb.core.axiom name="_HLaTcNd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_6" org.eventb.core.predicate="m_stopped ≠ winding"/>
+<org.eventb.core.axiom name="_HLaTcdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_7" org.eventb.core.predicate="m_stopped ≠  unwinding"/>
+<org.eventb.core.axiom name="_HLaTctd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_8" org.eventb.core.predicate="winding ≠ unwinding"/>
+</org.eventb.core.contextFile>
