@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287405433537" org.eventb.texttools.text_representation="context Context_3 extends Context_2&#10;&#10;constants&#10;&#9;open close d_stopped&#10;&#10;sets&#10;&#9;DOOR_ENGINE&#10;&#10;axioms&#10;&#9;@axm3_1 DOOR_ENGINE = {open, close, d_stopped}&#10;&#9;@axm3_2 open ≠ close&#10;&#9;@axm3_3 close ≠ d_stopped&#10;&#9;@acm3_4 open ≠ d_stopped&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_bxPH4Nq0Ed-AAt710HomgA" org.eventb.core.target="Context_2"/>
+<org.eventb.core.carrierSet name="_STmasdqyEd-7IuFxCL4SWw" org.eventb.core.identifier="DOOR_ENGINE"/>
+<org.eventb.core.constant name="_STmastqyEd-7IuFxCL4SWw" org.eventb.core.identifier="open"/>
+<org.eventb.core.constant name="_STmas9qyEd-7IuFxCL4SWw" org.eventb.core.identifier="close"/>
+<org.eventb.core.constant name="_bxPu8Nq0Ed-AAt710HomgA" org.eventb.core.identifier="d_stopped"/>
+<org.eventb.core.axiom name="_STnBwNqyEd-7IuFxCL4SWw" org.eventb.core.label="axm3_1" org.eventb.core.predicate="DOOR_ENGINE = {open, close, d_stopped}"/>
+<org.eventb.core.axiom name="_STnBwdqyEd-7IuFxCL4SWw" org.eventb.core.label="axm3_2" org.eventb.core.predicate="open ≠ close"/>
+<org.eventb.core.axiom name="_bxQWANq0Ed-AAt710HomgA" org.eventb.core.label="axm3_3" org.eventb.core.predicate="close ≠ d_stopped"/>
+<org.eventb.core.axiom name="_bxQ9ENq0Ed-AAt710HomgA" org.eventb.core.label="acm3_4" org.eventb.core.predicate="open ≠ d_stopped"/>
+</org.eventb.core.contextFile>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287403421696" org.eventb.texttools.text_representation="context Context_2 extends Context_1&#10;&#10;constants stopped winding unwinding b2n&#10;&#10;sets ELEVATOR_STATUS MAIN_ENGINE_STATUS&#10;&#10;axioms&#10;  @axm2_5 MAIN_ENGINE_STATUS = {stopped, winding, unwinding}&#10;  @axm2_6 stopped ≠ winding&#10;  @axm2_7 stopped ≠  unwinding&#10;  @axm2_8 winding ≠ unwinding&#10;  @axm2_9 b2n ∈ BOOL ⤖ {0, 1}&#10;  @axm2_10 b2n(TRUE) = 1&#10;  @axm2_11 b2n(FALSE) = 0&#10;end" version="3">
-<org.eventb.core.extendsContext name="_v-2qANqvEd-O4vbSPlarTw" org.eventb.core.target="Context_1"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287405580457" org.eventb.texttools.text_representation="context Context_2 extends Context_1&#10;&#10;constants m_stopped winding unwinding b2n&#10;&#10;sets ELEVATOR_STATUS MAIN_ENGINE_STATUS&#10;&#10;axioms&#10;  @axm2_5 MAIN_ENGINE_STATUS = {m_stopped, winding, unwinding}&#10;  @axm2_6 m_stopped ≠ winding&#10;  @axm2_7 m_stopped ≠  unwinding&#10;  @axm2_8 winding ≠ unwinding&#10;  @axm2_9 b2n ∈ BOOL ⤖ {0, 1}&#10;  @axm2_10 b2n(TRUE) = 1&#10;  @axm2_11 b2n(FALSE) = 0&#10;end" version="3">
+<org.eventb.core.extendsContext name="_xsxLENq0Ed-AAt710HomgA" org.eventb.core.target="Context_1"/>
 <org.eventb.core.carrierSet name="_HLX3Mdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ELEVATOR_STATUS"/>
 <org.eventb.core.carrierSet name="_HLX3Mtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.constant name="_HLYeQdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="stopped"/>
+<org.eventb.core.constant name="_HLYeQdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="m_stopped"/>
 <org.eventb.core.constant name="_HLYeQtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="winding"/>
 <org.eventb.core.constant name="_HLYeQ9d_Ed-Dle0at0Xgqg" org.eventb.core.identifier="unwinding"/>
 <org.eventb.core.constant name="_v-3RENqvEd-O4vbSPlarTw" org.eventb.core.identifier="b2n"/>
-<org.eventb.core.axiom name="_HLZsYdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_5" org.eventb.core.predicate="MAIN_ENGINE_STATUS = {stopped, winding, unwinding}"/>
-<org.eventb.core.axiom name="_HLaTcNd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_6" org.eventb.core.predicate="stopped ≠ winding"/>
-<org.eventb.core.axiom name="_HLaTcdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_7" org.eventb.core.predicate="stopped ≠  unwinding"/>
+<org.eventb.core.axiom name="_HLZsYdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_5" org.eventb.core.predicate="MAIN_ENGINE_STATUS = {m_stopped, winding, unwinding}"/>
+<org.eventb.core.axiom name="_HLaTcNd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_6" org.eventb.core.predicate="m_stopped ≠ winding"/>
+<org.eventb.core.axiom name="_HLaTcdd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_7" org.eventb.core.predicate="m_stopped ≠  unwinding"/>
 <org.eventb.core.axiom name="_HLaTctd_Ed-Dle0at0Xgqg" org.eventb.core.label="axm2_8" org.eventb.core.predicate="winding ≠ unwinding"/>
 <org.eventb.core.axiom name="_v-34INqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_9" org.eventb.core.predicate="b2n ∈ BOOL ⤖ {0, 1}"/>
 <org.eventb.core.axiom name="_v-4fMNqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_10" org.eventb.core.predicate="b2n(TRUE) = 1"/>

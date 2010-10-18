@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287403865015" org.eventb.texttools.text_representation="machine ProvenLift_2 refines ProvenLift_1  sees Context_2&#10;&#10;variables floor main_engine moved&#10;&#10;invariants&#10;  @inv2_2 main_engine ∈ MAIN_ENGINE_STATUS&#10;  @inv2_3 moved ∈ BOOL&#10;  @dlf2_1 (main_engine = stopped ∧ floor &lt; N) ∨&#10;          (main_engine = winding) ∨&#10;          (main_engine = stopped ∧ floor &gt; 0) ∨&#10;          (main_engine = unwinding) ∨&#10;          (main_engine ≠ stopped ∧ moved = TRUE)&#10;&#10;variant&#10; &#9;2 ∗ b2n(moved) + card({main_engine} ∩ {stopped})&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act2_2 main_engine ≔ stopped&#10;      @act2_3 moved ≔ FALSE&#10;  end&#10;&#10;  convergent event start_move_up&#10;  where&#10;  &#9;@grd2_1 main_engine = stopped&#10;  &#9;@grd2_2 floor &lt; N&#10;  then&#10;    @act2_1 main_engine ≔ winding&#10;  end&#10;&#10;  event move_up extends move_up&#10;  where&#10;  &#9;@grd2_1 main_engine = winding&#10;  then&#10;  &#9;@act2_1 moved ≔ TRUE&#10;  end&#10;&#10;  convergent event start_move_down&#10;  where&#10;  &#9;@grd2_1 main_engine = stopped&#10;  &#9;@grd2_2 floor &gt; 0&#10;  then&#10;    @act2_1 main_engine ≔ unwinding&#10;  end&#10;&#10;  event move_down extends move_down&#10;  where&#10;  &#9;@grd2_1 main_engine = unwinding&#10;  then&#10;  &#9;@act2_1 moved ≔ TRUE&#10;  end&#10;&#10;  convergent event stop&#10;  where&#10;  &#9;@grd2_1 main_engine ≠ stopped&#10;  &#9;@grd2_2 moved = TRUE&#10;  then&#10;  &#9;@act2_1 main_engine ≔ stopped&#10;  &#9;@act2_2 moved ≔ FALSE&#10;  end&#10;end" version="5">
-<org.eventb.core.refinesMachine name="_yC03cNqwEd-O4vbSPlarTw" org.eventb.core.target="ProvenLift_1"/>
-<org.eventb.core.seesContext name="_yC03cdqwEd-O4vbSPlarTw" org.eventb.core.target="Context_2"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287405642821" org.eventb.texttools.text_representation="machine ProvenLift_2 refines ProvenLift_1  sees Context_2&#10;&#10;variables floor main_engine moved&#10;&#10;invariants&#10;  @inv2_2 main_engine ∈ MAIN_ENGINE_STATUS&#10;  @inv2_3 moved ∈ BOOL&#10;  @dlf2_1 (main_engine = m_stopped ∧ floor &lt; N) ∨&#10;          (main_engine = winding) ∨&#10;          (main_engine = m_stopped ∧ floor &gt; 0) ∨&#10;          (main_engine = unwinding) ∨&#10;          (main_engine ≠ m_stopped ∧ moved = TRUE)&#10;&#10;variant&#10; &#9;2 ∗ b2n(moved) + card({main_engine} ∩ {m_stopped})&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act2_2 main_engine ≔ m_stopped&#10;      @act2_3 moved ≔ FALSE&#10;  end&#10;&#10;  convergent event start_move_up&#10;  where&#10;  &#9;@grd2_1 main_engine = m_stopped&#10;  &#9;@grd2_2 floor &lt; N&#10;  then&#10;    @act2_1 main_engine ≔ winding&#10;  end&#10;&#10;  event move_up extends move_up&#10;  where&#10;  &#9;@grd2_1 main_engine = winding&#10;  then&#10;  &#9;@act2_1 moved ≔ TRUE&#10;  end&#10;&#10;  convergent event start_move_down&#10;  where&#10;  &#9;@grd2_1 main_engine = m_stopped&#10;  &#9;@grd2_2 floor &gt; 0&#10;  then&#10;    @act2_1 main_engine ≔ unwinding&#10;  end&#10;&#10;  event move_down extends move_down&#10;  where&#10;  &#9;@grd2_1 main_engine = unwinding&#10;  then&#10;  &#9;@act2_1 moved ≔ TRUE&#10;  end&#10;&#10;  convergent event stop&#10;  where&#10;  &#9;@grd2_1 main_engine ≠ m_stopped&#10;  &#9;@grd2_2 moved = TRUE&#10;  then&#10;  &#9;@act2_1 main_engine ≔ m_stopped&#10;  &#9;@act2_2 moved ≔ FALSE&#10;  end&#10;end" version="5">
+<org.eventb.core.refinesMachine name="_6-rbUNq0Ed-AAt710HomgA" org.eventb.core.target="ProvenLift_1"/>
+<org.eventb.core.seesContext name="_6-sCYNq0Ed-AAt710HomgA" org.eventb.core.target="Context_2"/>
 <org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
 <org.eventb.core.variable name="_1cMDMtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="main_engine"/>
 <org.eventb.core.variable name="_yC03ctqwEd-O4vbSPlarTw" org.eventb.core.identifier="moved"/>
 <org.eventb.core.invariant name="_1cMqQNd_Ed-Dle0at0Xgqg" org.eventb.core.label="inv2_2" org.eventb.core.predicate="main_engine ∈ MAIN_ENGINE_STATUS"/>
 <org.eventb.core.invariant name="_yC1egNqwEd-O4vbSPlarTw" org.eventb.core.label="inv2_3" org.eventb.core.predicate="moved ∈ BOOL"/>
-<org.eventb.core.invariant name="_yC1egdqwEd-O4vbSPlarTw" org.eventb.core.label="dlf2_1" org.eventb.core.predicate="(main_engine = stopped ∧ floor &lt; N) ∨&#10;          (main_engine = winding) ∨&#10;          (main_engine = stopped ∧ floor &gt; 0) ∨&#10;          (main_engine = unwinding) ∨&#10;          (main_engine ≠ stopped ∧ moved = TRUE)"/>
-<org.eventb.core.variant name="_yC2FkNqwEd-O4vbSPlarTw" org.eventb.core.expression="2 ∗ b2n(moved) + card({main_engine} ∩ {stopped})"/>
+<org.eventb.core.invariant name="_yC1egdqwEd-O4vbSPlarTw" org.eventb.core.label="dlf2_1" org.eventb.core.predicate="(main_engine = m_stopped ∧ floor &lt; N) ∨&#10;          (main_engine = winding) ∨&#10;          (main_engine = m_stopped ∧ floor &gt; 0) ∨&#10;          (main_engine = unwinding) ∨&#10;          (main_engine ≠ m_stopped ∧ moved = TRUE)"/>
+<org.eventb.core.variant name="_yC2FkNqwEd-O4vbSPlarTw" org.eventb.core.expression="2 ∗ b2n(moved) + card({main_engine} ∩ {m_stopped})"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="_1cMqQtd_Ed-Dle0at0Xgqg" org.eventb.core.assignment="main_engine ≔ stopped" org.eventb.core.label="act2_2"/>
+<org.eventb.core.action name="_1cMqQtd_Ed-Dle0at0Xgqg" org.eventb.core.assignment="main_engine ≔ m_stopped" org.eventb.core.label="act2_2"/>
 <org.eventb.core.action name="_yC2FkdqwEd-O4vbSPlarTw" org.eventb.core.assignment="moved ≔ FALSE" org.eventb.core.label="act2_3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="start_move_up">
-<org.eventb.core.guard name="_yC2sodqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = stopped"/>
+<org.eventb.core.guard name="_yC2sodqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = m_stopped"/>
 <org.eventb.core.guard name="_yC2sotqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_2" org.eventb.core.predicate="floor &lt; N"/>
 <org.eventb.core.action name="_yC2so9qwEd-O4vbSPlarTw" org.eventb.core.assignment="main_engine ≔ winding" org.eventb.core.label="act2_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uFS0Nd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_up">
-<org.eventb.core.refinesEvent name="_yC3TsNqwEd-O4vbSPlarTw" org.eventb.core.target="move_up"/>
+<org.eventb.core.refinesEvent name="_6-ueoNq0Ed-AAt710HomgA" org.eventb.core.target="move_up"/>
 <org.eventb.core.guard name="_yC3TsdqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = winding"/>
 <org.eventb.core.action name="_yC3TstqwEd-O4vbSPlarTw" org.eventb.core.assignment="moved ≔ TRUE" org.eventb.core.label="act2_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="start_move_down">
-<org.eventb.core.guard name="_yC36wdqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = stopped"/>
+<org.eventb.core.guard name="_yC36wdqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = m_stopped"/>
 <org.eventb.core.guard name="_yC36wtqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_2" org.eventb.core.predicate="floor &gt; 0"/>
 <org.eventb.core.action name="_yC4h0NqwEd-O4vbSPlarTw" org.eventb.core.assignment="main_engine ≔ unwinding" org.eventb.core.label="act2_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uF54dd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_down">
-<org.eventb.core.refinesEvent name="_yC4h0dqwEd-O4vbSPlarTw" org.eventb.core.target="move_down"/>
+<org.eventb.core.refinesEvent name="_6-wT0Nq0Ed-AAt710HomgA" org.eventb.core.target="move_down"/>
 <org.eventb.core.guard name="_yC4h0tqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine = unwinding"/>
 <org.eventb.core.action name="_yC5I4NqwEd-O4vbSPlarTw" org.eventb.core.assignment="moved ≔ TRUE" org.eventb.core.label="act2_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="stop">
-<org.eventb.core.guard name="_yC5I4tqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine ≠ stopped"/>
+<org.eventb.core.guard name="_yC5I4tqwEd-O4vbSPlarTw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="main_engine ≠ m_stopped"/>
 <org.eventb.core.guard name="_yC5I49qwEd-O4vbSPlarTw" org.eventb.core.label="grd2_2" org.eventb.core.predicate="moved = TRUE"/>
-<org.eventb.core.action name="_yC5v8NqwEd-O4vbSPlarTw" org.eventb.core.assignment="main_engine ≔ stopped" org.eventb.core.label="act2_1"/>
+<org.eventb.core.action name="_yC5v8NqwEd-O4vbSPlarTw" org.eventb.core.assignment="main_engine ≔ m_stopped" org.eventb.core.label="act2_1"/>
 <org.eventb.core.action name="_yC5v8dqwEd-O4vbSPlarTw" org.eventb.core.assignment="moved ≔ FALSE" org.eventb.core.label="act2_2"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
