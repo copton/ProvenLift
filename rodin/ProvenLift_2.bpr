@@ -320,428 +320,432 @@
 <org.eventb.core.prIdent name="elevator" org.eventb.core.type="ELEVATOR_STATUS"/>
 </org.eventb.core.prPred>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_up/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p21,p7,p1,p12,p9,p5,p17,p6,p13,p2,p14,p3,p20,p19,p16,p11,p15,p18,p10,p4,p8">
+<org.eventb.core.prProof name="start_move_up/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p4,p16,p5,p11,p2,p12,p3,p18,p6,p15,p10,p13,p19,p17,p9,p7,p1,p20,p21,p22,p23">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite({winding}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({winding}∩{m_stopped})&lt;2∗(b2n(moved))+card({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈dom(b2n)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="main_engine=m_stopped"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor&lt;N"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="N∈ℕ1"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_up/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20,p6,p1,p11,p8,p4,p16,p5,p12,p2,p13,p3,p19,p18,p15,p10,p14,p17,p9,p7">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({CABLE_WIND}∩{CABLE_STOP})&lt;2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({main_engine}∩{m_stopped})∈ℕ"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="winding≠unwinding"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite({CABLE_WIND}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈dom(b2n)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="main_engine=m_stopped"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_down/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p21,p7,p1,p13,p10,p5,p18,p6,p14,p2,p15,p3,p20,p19,p17,p12,p16,p8,p11,p4,p9">
+<org.eventb.core.prProof name="start_move_up/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p4,p15,p5,p10,p2,p11,p13,p3,p17,p6,p14,p9,p12,p18,p16,p8,p1">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite({unwinding}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="floor&gt;0"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="moved∈dom(b2n)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="main_engine=m_stopped"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="N∈ℕ1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({unwinding}∩{m_stopped})&lt;2∗(b2n(moved))+card({main_engine}∩{m_stopped})"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_down/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20,p6,p1,p12,p9,p4,p17,p5,p13,p2,p14,p3,p19,p18,p16,p11,p15,p7,p10,p8">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({main_engine}∩{m_stopped})∈ℕ"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&gt;0"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈dom(b2n)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="main_engine=m_stopped"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="N∈ℕ1"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="stop/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p21,p7,p2,p12,p9,p5,p18,p6,p13,p3,p14,p4,p20,p19,p17,p11,p15,p1,p16,p10,p8">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="moved=TRUE"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(FALSE))+card({m_stopped}∩{m_stopped})&lt;2∗(b2n(moved))+card({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈dom(b2n)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="main_engine≠m_stopped"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="finite({m_stopped}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="N∈ℕ1"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="stop/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20,p7,p2,p12,p9,p5,p17,p6,p13,p3,p14,p4,p19,p18,p16,p11,p15,p1,p10,p8">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="moved=TRUE"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({main_engine}∩{m_stopped})∈ℕ"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈dom(b2n)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="main_engine≠m_stopped"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="N∈ℕ1"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="VWD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p16,p6,p1,p9,p7,p4,p13,p5,p10,p2,p11,p3,p15,p14,p12,p8">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="moved∈dom(b2n)∧b2n∈BOOL ⇸ ℤ∧finite({main_engine}∩{m_stopped})"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="m_stopped≠unwinding"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈dom(b2n)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈BOOL"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="INITIALISATION/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p3,p11,p9,p6,p7,p5,p2,p4,p1">
+<org.eventb.core.prProof name="start_move_down/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p4,p16,p5,p11,p2,p12,p3,p18,p7,p15,p10,p13,p19,p6,p9,p17,p1,p20,p21,p22,p23">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({CABLE_UNWIND}∩{CABLE_STOP})&lt;2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&gt;0"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="finite({CABLE_UNWIND}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="start_move_down/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p4,p16,p5,p11,p2,p12,p14,p3,p17,p7,p15,p10,p13,p18,p6,p9,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&gt;0"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="stop/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p5,p17,p6,p11,p3,p12,p14,p4,p18,p7,p16,p10,p13,p19,p2,p15,p9,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="moved=TRUE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(FALSE))+card({CABLE_STOP}∩{CABLE_STOP})&lt;2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="finite({CABLE_STOP}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="stop/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p5,p16,p6,p11,p3,p12,p14,p4,p17,p7,p15,p10,p13,p18,p2,p9,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="moved=TRUE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∗(b2n(moved))+card({ctrlCableCommand}∩{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="VWD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p13,p4,p8,p1,p9,p11,p2,p14,p5,p12,p7,p10">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="moved∈dom(b2n)∧b2n∈BOOL ⇸ ℤ∧finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p6,p7,p5,p2,p3,p1,p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(m_stopped=m_stopped∧0&lt;N)∨m_stopped=winding∨(m_stopped=m_stopped∧0&gt;0)∨m_stopped=unwinding∨(m_stopped≠m_stopped∧FALSE=TRUE)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="N∈ℕ1"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="m_stopped≠unwinding"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(CABLE_STOP=CABLE_STOP∧0&lt;LAST_FLOOR)∨CABLE_STOP=CABLE_WIND∨(CABLE_STOP=CABLE_STOP∧0&gt;0)∨CABLE_STOP=CABLE_UNWIND∨(CABLE_STOP≠CABLE_STOP∧FALSE=TRUE)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_up/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p6,p1,p9,p7,p4,p14,p5,p10,p2,p11,p3,p18,p17,p13,p8,p16,p12,p15">
+<org.eventb.core.prProof name="start_move_up/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p13,p4,p8,p1,p9,p11,p2,p15,p5,p12,p7,p10,p16,p14">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(winding=m_stopped∧floor&lt;N)∨winding=winding∨(winding=m_stopped∧floor&gt;0)∨winding=unwinding∨(winding≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="main_engine=m_stopped"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(CABLE_WIND=CABLE_STOP∧floor&lt;LAST_FLOOR)∨CABLE_WIND=CABLE_WIND∨(CABLE_WIND=CABLE_STOP∧floor&gt;0)∨CABLE_WIND=CABLE_UNWIND∨(CABLE_WIND≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="move_up/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p14,p4,p8,p1,p9,p12,p2,p16,p5,p13,p7,p11,p15,p10">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor+1&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor+1&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧TRUE=TRUE)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(main_engine=m_stopped∧floor&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor&lt;N"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_up/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p6,p1,p9,p7,p4,p14,p5,p10,p2,p11,p3,p18,p17,p13,p8,p16,p15,p12">
+<org.eventb.core.prProof name="start_move_down/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p3,p14,p4,p9,p1,p10,p12,p2,p15,p6,p13,p8,p11,p16,p5">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(main_engine=m_stopped∧floor+1&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor+1&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧TRUE=TRUE)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="winding≠unwinding"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(CABLE_UNWIND=CABLE_STOP∧floor&lt;LAST_FLOOR)∨CABLE_UNWIND=CABLE_WIND∨(CABLE_UNWIND=CABLE_STOP∧floor&gt;0)∨CABLE_UNWIND=CABLE_UNWIND∨(CABLE_UNWIND≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="floor&gt;0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="main_engine=winding"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(main_engine=m_stopped∧floor&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor&lt;N"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_move_down/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p6,p1,p10,p8,p4,p15,p5,p11,p2,p12,p3,p18,p17,p14,p9,p16,p13,p7">
+<org.eventb.core.prProof name="move_down/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p4,p14,p5,p9,p2,p10,p12,p3,p15,p6,p13,p8,p11,p1,p16">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="floor&gt;0"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="main_engine=m_stopped"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(unwinding=m_stopped∧floor&lt;N)∨unwinding=winding∨(unwinding=m_stopped∧floor&gt;0)∨unwinding=unwinding∨(unwinding≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(main_engine=m_stopped∧floor&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="N∈ℕ1"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_down/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p7,p2,p10,p8,p5,p15,p6,p12,p3,p13,p4,p18,p17,p14,p9,p16,p1,p11">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="0&lt;floor"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="main_engine=unwinding"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(main_engine=m_stopped∧floor − 1&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor − 1&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧TRUE=TRUE)"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(main_engine=m_stopped∧floor&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor − 1&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor − 1&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧TRUE=TRUE)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="stop/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="MAIN_ENGINE_STATUS">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p7,p2,p10,p8,p5,p15,p6,p11,p3,p12,p4,p18,p17,p14,p9,p16,p13,p1">
+<org.eventb.core.prProof name="stop/dlf2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p17,p18,p19,p20"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p17,p18,p19,p20"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p4,p14,p5,p9,p2,p10,p3,p15,p6,p13,p8,p12,p16,p1,p17,p18,p19,p20">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="N" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="main_engine" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prIdent name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="moved=TRUE"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m_stopped≠winding"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(m_stopped=m_stopped∧floor&lt;N)∨m_stopped=winding∨(m_stopped=m_stopped∧floor&gt;0)∨m_stopped=unwinding∨(m_stopped≠m_stopped∧FALSE=TRUE)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="winding≠unwinding"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="m_stopped≠unwinding"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="main_engine≠m_stopped"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="main_engine∈MAIN_ENGINE_STATUS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(main_engine=m_stopped∧floor&lt;N)∨main_engine=winding∨(main_engine=m_stopped∧floor&gt;0)∨main_engine=unwinding∨(main_engine≠m_stopped∧moved=TRUE)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor≤N"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;N∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="N∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(CABLE_STOP=CABLE_STOP∧floor&lt;LAST_FLOOR)∨CABLE_STOP=CABLE_WIND∨(CABLE_STOP=CABLE_STOP∧floor&gt;0)∨CABLE_STOP=CABLE_UNWIND∨(CABLE_STOP≠CABLE_STOP∧FALSE=TRUE)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
