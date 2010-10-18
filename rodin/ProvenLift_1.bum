@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287052185693" org.eventb.texttools.text_representation="machine ProvenLift_1 sees Context_1&#10;&#10;variables floor&#10;&#10;invariants&#10;  @inv1_1 floor ∈ ℕ&#10;  @inv1_2 floor ≤ N&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1_1 floor ≔ 0&#10;  end&#10;&#10;  event move_up&#10;  &#9;where&#10;  &#9;  @grd1_1 floor &lt; N&#10;  &#9;then&#10;  &#9;  @act1_1 floor ≔ floor + 1&#10;  end&#10;&#10;  event move_down&#10;  &#9;where&#10;  &#9;  @grd1_1 0 &lt; floor&#10;  &#9;then&#10;  &#9;  @act1_1 floor ≔ floor − 1&#10;  end&#10;&#10;&#10;end&#10;" version="5">
-<org.eventb.core.seesContext name="_9uDdoNd9Ed-Dle0at0Xgqg" org.eventb.core.target="Context_1"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287403671791" org.eventb.texttools.text_representation="machine ProvenLift_1 sees Context_1&#10;&#10;variables floor&#10;&#10;invariants&#10;  @inv1_1 floor ∈ ℕ&#10;  @inv1_2 floor ≤ N&#10;  @dlf1_1 floor &lt; N ∨ 0 &lt; floor&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1_1 floor ≔ 0&#10;  end&#10;&#10;  event move_up&#10;    where&#10;      @grd1_1 floor &lt; N&#10;    then&#10;      @act1_1 floor ≔ floor + 1&#10;  end&#10;&#10;  event move_down&#10;    where&#10;      @grd1_1 0 &lt; floor&#10;    then&#10;      @act1_1 floor ≔ floor − 1&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_VO8cYNqwEd-O4vbSPlarTw" org.eventb.core.target="Context_1"/>
 <org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
 <org.eventb.core.invariant name="_9uEEsdd9Ed-Dle0at0Xgqg" org.eventb.core.label="inv1_1" org.eventb.core.predicate="floor ∈ ℕ"/>
 <org.eventb.core.invariant name="_9uEEstd9Ed-Dle0at0Xgqg" org.eventb.core.label="inv1_2" org.eventb.core.predicate="floor ≤ N"/>
+<org.eventb.core.invariant name="_VO9DcNqwEd-O4vbSPlarTw" org.eventb.core.label="dlf1_1" org.eventb.core.predicate="floor &lt; N ∨ 0 &lt; floor"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="_9uErwNd9Ed-Dle0at0Xgqg" org.eventb.core.assignment="floor ≔ 0" org.eventb.core.label="act1_1"/>
 </org.eventb.core.event>

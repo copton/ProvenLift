@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="N" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="N∈ℕ1" org.eventb.core.source="/ProvenLift/Context_1.buc|org.eventb.core.contextFile#Context_1|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
 <org.eventb.core.poIdentifier name="ELEVATOR_STATUS" org.eventb.core.type="ℙ(ELEVATOR_STATUS)"/>
 <org.eventb.core.poIdentifier name="MAIN_ENGINE_STATUS" org.eventb.core.type="ℙ(MAIN_ENGINE_STATUS)"/>
-<org.eventb.core.poIdentifier name="e_stopped" org.eventb.core.type="ELEVATOR_STATUS"/>
-<org.eventb.core.poIdentifier name="m_stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
-<org.eventb.core.poIdentifier name="moving_down" org.eventb.core.type="ELEVATOR_STATUS"/>
-<org.eventb.core.poIdentifier name="moving_up" org.eventb.core.type="ELEVATOR_STATUS"/>
+<org.eventb.core.poIdentifier name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.poIdentifier name="stopped" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.poIdentifier name="unwinding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 <org.eventb.core.poIdentifier name="winding" org.eventb.core.type="MAIN_ENGINE_STATUS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ELEVATOR_STATUS={e_stopped,moving_up,moving_down}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUNd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="e_stopped≠moving_up" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUdd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="e_stopped≠moving_down" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZFUtd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="moving_down≠moving_up" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZsYNd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="MAIN_ENGINE_STATUS={m_stopped,winding,unwinding}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZsYdd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m_stopped≠winding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcNd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m_stopped≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcdd_Ed-Dle0at0Xgqg"/>
-<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="winding≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTctd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poSequent name="axm2_10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM4"/>
+<org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="TRUE∈dom(b2n)∧b2n∈BOOL ⇸ ℤ" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMNqvEd-O4vbSPlarTw"/>
+<org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMNqvEd-O4vbSPlarTw"/>
+<org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm2_11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM5"/>
+<org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="FALSE∈dom(b2n)∧b2n∈BOOL ⇸ ℤ" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMdqvEd-O4vbSPlarTw"/>
+<org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMdqvEd-O4vbSPlarTw"/>
+<org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPAXM4" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="MAIN_ENGINE_STATUS={stopped,winding,unwinding}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLZsYdd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="stopped≠winding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcNd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="stopped≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTcdd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="winding≠unwinding" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_HLaTctd_Ed-Dle0at0Xgqg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-34INqvEd-O4vbSPlarTw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPAXM5" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM4" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="b2n(TRUE)=1" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMNqvEd-O4vbSPlarTw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/Context_2.bpo|org.eventb.core.poFile#Context_2|org.eventb.core.poPredicateSet#HYPAXM5" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="b2n(FALSE)=0" org.eventb.core.source="/ProvenLift/Context_2.buc|org.eventb.core.contextFile#Context_2|org.eventb.core.axiom#_v-4fMdqvEd-O4vbSPlarTw"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
