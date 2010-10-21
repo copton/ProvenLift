@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287409688779" org.eventb.texttools.text_representation="context ctx2_main_engine extends ctx1_floors&#10;&#10;constants CABLE_STOP CABLE_WIND CABLE_UNWIND b2n&#10;&#10;sets ELEVATOR_STATUS CABLE_COMMAND&#10;&#10;axioms&#10;  @axm2_1 partition(CABLE_COMMAND, {CABLE_STOP}, {CABLE_WIND}, {CABLE_UNWIND})&#10;  @axm2_9 b2n ∈ BOOL ⤖ {0, 1}&#10;  @axm2_10 b2n(TRUE) = 1&#10;  @axm2_11 b2n(FALSE) = 0&#10;end&#10;" version="3">
-<org.eventb.core.extendsContext name="_V2BiINq-Ed-L_e8_V4iXIg" org.eventb.core.target="ctx1_floors"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287666677043" org.eventb.texttools.text_representation="context ctx2_main_engine extends ctx1_floors&#10;&#10;constants CABLE_STOP CABLE_WIND CABLE_UNWIND b2n&#10;&#10;sets ELEVATOR_STATUS CABLE_COMMAND&#10;&#10;axioms&#10;  @axm2_1 b2n ∈ BOOL ⤖ {0, 1}&#10;  @axm2_2 b2n(TRUE) = 1&#10;  @axm2_3 b2n(FALSE) = 0&#10;  @axm2_4 partition(CABLE_COMMAND, {CABLE_STOP}, {CABLE_WIND}, {CABLE_UNWIND})&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_sEpUsN0UEd-DHKwvWNa8WQ" org.eventb.core.target="ctx1_floors"/>
 <org.eventb.core.carrierSet name="_HLX3Mdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ELEVATOR_STATUS"/>
 <org.eventb.core.carrierSet name="_HLX3Mtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="CABLE_COMMAND"/>
 <org.eventb.core.constant name="_HLYeQdd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="CABLE_STOP"/>
 <org.eventb.core.constant name="_HLYeQtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="CABLE_WIND"/>
 <org.eventb.core.constant name="_HLYeQ9d_Ed-Dle0at0Xgqg" org.eventb.core.identifier="CABLE_UNWIND"/>
 <org.eventb.core.constant name="_v-3RENqvEd-O4vbSPlarTw" org.eventb.core.identifier="b2n"/>
-<org.eventb.core.axiom name="_v-34INqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_9" org.eventb.core.predicate="b2n ∈ BOOL ⤖ {0, 1}"/>
-<org.eventb.core.axiom name="_v-4fMNqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_10" org.eventb.core.predicate="b2n(TRUE) = 1"/>
-<org.eventb.core.axiom name="_v-4fMdqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_11" org.eventb.core.predicate="b2n(FALSE) = 0"/>
-<org.eventb.core.axiom name="_V2CJMNq-Ed-L_e8_V4iXIg" org.eventb.core.label="axm2_1" org.eventb.core.predicate="partition(CABLE_COMMAND, {CABLE_STOP}, {CABLE_WIND}, {CABLE_UNWIND})"/>
+<org.eventb.core.axiom name="_v-34INqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_1" org.eventb.core.predicate="b2n ∈ BOOL ⤖ {0, 1}"/>
+<org.eventb.core.axiom name="_v-4fMNqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_2" org.eventb.core.predicate="b2n(TRUE) = 1"/>
+<org.eventb.core.axiom name="_v-4fMdqvEd-O4vbSPlarTw" org.eventb.core.label="axm2_3" org.eventb.core.predicate="b2n(FALSE) = 0"/>
+<org.eventb.core.axiom name="_V2CJMNq-Ed-L_e8_V4iXIg" org.eventb.core.label="axm2_4" org.eventb.core.predicate="partition(CABLE_COMMAND, {CABLE_STOP}, {CABLE_WIND}, {CABLE_UNWIND})"/>
 </org.eventb.core.contextFile>
