@@ -42,15 +42,16 @@ Here are some basic relationships between the entities of the system.
 \env{If the cable motor is stopped the elevator is stopped. If the cable motor is winding the elevator moves up. If the cable motor is unwinding the elevator moves down.}
 
 Now we list all input information.
-\env{For each entity there is a sensor which measures the state of the entity.}
+\env{For each entity except the lights there is a sensor which measures the state of the entity.}
 \env{There is a sensor, called floor sensor, which measures the index of the floor if the elevator is at that floor. If the elevator is between two floors, the sensor measures the value -1.}
 
 This interconnects the whole system.
+\env{The controler can send commands to the cable engine, the door engine and the lights of the buttons in order to alter their state.}
 \env{The controller is connected to all buttons, sensors and engines in the system.}
 
 \section{Functional Requirements}
 This is the basic functionality of the system.
-\fun{If a button is pressed the elevator eventually goes to the orresponding floor and the door opens.}
+\fun{If a button is pressed the elevator eventually goes to the corresponding floor and the door opens.}
 
 We need an elevator schedule to know in which direction the elevator will go next.
 \fun{There is an elevator schedule which is either up or down.}
