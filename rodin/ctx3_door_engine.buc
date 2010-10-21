@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287408305081" org.eventb.texttools.text_representation="context ctx3_door_engine extends ctx2_main_engine&#10;&#10;constants&#10;&#9;open close d_stopped&#10;&#10;sets&#10;&#9;DOOR_ENGINE&#10;&#10;axioms&#10;&#9;@axm3_1 DOOR_ENGINE = {open, close, d_stopped}&#10;&#9;@axm3_2 open ≠ close&#10;&#9;@axm3_3 close ≠ d_stopped&#10;&#9;@acm3_4 open ≠ d_stopped&#10;end&#10;" version="3">
-<org.eventb.core.extendsContext name="_HpWIYNq7Ed-gPNw0slEBPQ" org.eventb.core.target="ctx2_main_engine"/>
-<org.eventb.core.carrierSet name="_STmasdqyEd-7IuFxCL4SWw" org.eventb.core.identifier="DOOR_ENGINE"/>
-<org.eventb.core.constant name="_STmastqyEd-7IuFxCL4SWw" org.eventb.core.identifier="open"/>
-<org.eventb.core.constant name="_STmas9qyEd-7IuFxCL4SWw" org.eventb.core.identifier="close"/>
-<org.eventb.core.constant name="_bxPu8Nq0Ed-AAt710HomgA" org.eventb.core.identifier="d_stopped"/>
-<org.eventb.core.axiom name="_STnBwNqyEd-7IuFxCL4SWw" org.eventb.core.label="axm3_1" org.eventb.core.predicate="DOOR_ENGINE = {open, close, d_stopped}"/>
-<org.eventb.core.axiom name="_STnBwdqyEd-7IuFxCL4SWw" org.eventb.core.label="axm3_2" org.eventb.core.predicate="open ≠ close"/>
-<org.eventb.core.axiom name="_bxQWANq0Ed-AAt710HomgA" org.eventb.core.label="axm3_3" org.eventb.core.predicate="close ≠ d_stopped"/>
-<org.eventb.core.axiom name="_bxQ9ENq0Ed-AAt710HomgA" org.eventb.core.label="acm3_4" org.eventb.core.predicate="open ≠ d_stopped"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1287667102197" org.eventb.texttools.text_representation="context ctx3_door_engine extends ctx2_main_engine&#10;&#10;constants DOOR_OPEN DOOR_CLOSE DOOR_STOP&#10;&#10;sets DOOR_COMMAND&#10;&#10;axioms&#10;  @axm3_1 partition(DOOR_COMMAND, {DOOR_STOP}, {DOOR_OPEN}, {DOOR_CLOSE})&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_ra8a8N0VEd-DHKwvWNa8WQ" org.eventb.core.target="ctx2_main_engine"/>
+<org.eventb.core.carrierSet name="_STmasdqyEd-7IuFxCL4SWw" org.eventb.core.identifier="DOOR_COMMAND"/>
+<org.eventb.core.constant name="_STmastqyEd-7IuFxCL4SWw" org.eventb.core.identifier="DOOR_OPEN"/>
+<org.eventb.core.constant name="_STmas9qyEd-7IuFxCL4SWw" org.eventb.core.identifier="DOOR_CLOSE"/>
+<org.eventb.core.constant name="_bxPu8Nq0Ed-AAt710HomgA" org.eventb.core.identifier="DOOR_STOP"/>
+<org.eventb.core.axiom name="_STnBwNqyEd-7IuFxCL4SWw" org.eventb.core.label="axm3_1" org.eventb.core.predicate="partition(DOOR_COMMAND, {DOOR_STOP}, {DOOR_OPEN}, {DOOR_CLOSE})"/>
 </org.eventb.core.contextFile>

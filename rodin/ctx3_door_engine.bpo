@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
 <org.eventb.core.poIdentifier name="CABLE_COMMAND" org.eventb.core.type="ℙ(CABLE_COMMAND)"/>
@@ -13,15 +13,12 @@
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b2n(TRUE)=1" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_v-4fMNqvEd-O4vbSPlarTw"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b2n(FALSE)=0" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_v-4fMdqvEd-O4vbSPlarTw"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_V2CJMNq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poIdentifier name="DOOR_ENGINE" org.eventb.core.type="ℙ(DOOR_ENGINE)"/>
-<org.eventb.core.poIdentifier name="close" org.eventb.core.type="DOOR_ENGINE"/>
-<org.eventb.core.poIdentifier name="d_stopped" org.eventb.core.type="DOOR_ENGINE"/>
-<org.eventb.core.poIdentifier name="open" org.eventb.core.type="DOOR_ENGINE"/>
+<org.eventb.core.poIdentifier name="DOOR_COMMAND" org.eventb.core.type="ℙ(DOOR_COMMAND)"/>
+<org.eventb.core.poIdentifier name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.poIdentifier name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.poIdentifier name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/ctx3_door_engine.bpo|org.eventb.core.poFile#ctx3_door_engine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="DOOR_ENGINE={open,close,d_stopped}" org.eventb.core.source="/ProvenLift/ctx3_door_engine.buc|org.eventb.core.contextFile#ctx3_door_engine|org.eventb.core.axiom#_STnBwNqyEd-7IuFxCL4SWw"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="open≠close" org.eventb.core.source="/ProvenLift/ctx3_door_engine.buc|org.eventb.core.contextFile#ctx3_door_engine|org.eventb.core.axiom#_STnBwdqyEd-7IuFxCL4SWw"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="close≠d_stopped" org.eventb.core.source="/ProvenLift/ctx3_door_engine.buc|org.eventb.core.contextFile#ctx3_door_engine|org.eventb.core.axiom#_bxQWANq0Ed-AAt710HomgA"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="open≠d_stopped" org.eventb.core.source="/ProvenLift/ctx3_door_engine.buc|org.eventb.core.contextFile#ctx3_door_engine|org.eventb.core.axiom#_bxQ9ENq0Ed-AAt710HomgA"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/ctx3_door_engine.bpo|org.eventb.core.poFile#ctx3_door_engine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})" org.eventb.core.source="/ProvenLift/ctx3_door_engine.buc|org.eventb.core.contextFile#ctx3_door_engine|org.eventb.core.axiom#_STnBwNqyEd-7IuFxCL4SWw"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
