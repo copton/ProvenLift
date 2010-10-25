@@ -16,29 +16,29 @@
 <org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
 <org.eventb.core.variable name="_KgY80OAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorEngine"/>
 <org.eventb.core.variable name="_KgY80eAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorPosition"/>
-<org.eventb.core.variable name="_tIzE0OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyButtons"/>
-<org.eventb.core.variable name="_tIzr4OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="snsrButtons"/>
-<org.eventb.core.variable name="_tIzr4eA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyButtonLights"/>
-<org.eventb.core.variable name="_tIzr4uA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="ctrlButtonLights"/>
-<org.eventb.core.variant name="_0fwfwOBJEd-78bCl9yYd-Q" org.eventb.core.expression="dom(PhyButtonLights ▷ {TRUE})"/>
+<org.eventb.core.variable name="_tIzE0OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="snsrFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4eA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtonLights"/>
+<org.eventb.core.variable name="_tIzr4uA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="ctrlFloorButtonLights"/>
+<org.eventb.core.variant name="_0fwfwOBJEd-78bCl9yYd-Q" org.eventb.core.expression="dom(PhyFloorButtonLights ▷ {TRUE})"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
-<org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_PRESSES_BUTTON">
-<org.eventb.core.refinesEvent name="_0fxG0OBJEd-78bCl9yYd-Q" org.eventb.core.target="USER_PRESSES_BUTTON"/>
+<org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_PRESSES_FLOOR_BUTTON">
+<org.eventb.core.refinesEvent name="_0fxG0OBJEd-78bCl9yYd-Q" org.eventb.core.target="USER_PRESSES_FLOOR_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI2II-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_BUTTON">
-<org.eventb.core.refinesEvent name="_0fxG0eBJEd-78bCl9yYd-Q" org.eventb.core.target="USER_RELEASES_BUTTON"/>
+<org.eventb.core.event name="_tI2II-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_FLOOR_BUTTON">
+<org.eventb.core.refinesEvent name="_0fxG0eBJEd-78bCl9yYd-Q" org.eventb.core.target="USER_RELEASES_FLOOR_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_0fxt4OBJEd-78bCl9yYd-Q" org.eventb.core.target="TURNS_ON_BUTTON_LIGHT"/>
+<org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_FLOOR_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_0fxt4OBJEd-78bCl9yYd-Q" org.eventb.core.target="TURNS_ON_FLOOR_BUTTON_LIGHT"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI39UeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="TURNS_OFF_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_0fyU8OBJEd-78bCl9yYd-Q" org.eventb.core.target="TURNS_OFF_BUTTON_LIGHT"/>
+<org.eventb.core.event name="_tI39UeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="TURNS_OFF_FLOOR_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_0fyU8OBJEd-78bCl9yYd-Q" org.eventb.core.target="TURNS_OFF_FLOOR_BUTTON_LIGHT"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 24" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="turn_light_on">
-<org.eventb.core.refinesEvent name="_0fyU8eBJEd-78bCl9yYd-Q" org.eventb.core.target="turn_light_on"/>
+<org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 24" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="turn_floor_button_light_on">
+<org.eventb.core.refinesEvent name="_0fyU8eBJEd-78bCl9yYd-Q" org.eventb.core.target="turn_floor_button_light_on"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 25" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="turn_light_off">
-<org.eventb.core.refinesEvent name="_0fyU8uBJEd-78bCl9yYd-Q" org.eventb.core.target="turn_light_off"/>
+<org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 25" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="turn_floor_button_light_off">
+<org.eventb.core.refinesEvent name="_0fyU8uBJEd-78bCl9yYd-Q" org.eventb.core.target="turn_floor_button_light_off"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgayBOAzEd-73py7lbE8bg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_CLOSED">
 <org.eventb.core.refinesEvent name="_0fy8AOBJEd-78bCl9yYd-Q" org.eventb.core.target="DOOR_OPENS_WHEN_CLOSED"/>

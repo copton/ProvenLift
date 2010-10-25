@@ -16,62 +16,62 @@
 <org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
 <org.eventb.core.variable name="_KgY80OAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorEngine"/>
 <org.eventb.core.variable name="_KgY80eAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorPosition"/>
-<org.eventb.core.variable name="_tIzE0OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyButtons"/>
-<org.eventb.core.variable name="_tIzr4OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="snsrButtons"/>
-<org.eventb.core.variable name="_tIzr4eA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyButtonLights"/>
-<org.eventb.core.variable name="_tIzr4uA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="ctrlButtonLights"/>
-<org.eventb.core.invariant name="_tIzr4-A_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_1" org.eventb.core.predicate="PhyButtons ∈ 0‥LAST_FLOOR → BOOL"/>
-<org.eventb.core.invariant name="_tI0S8OA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_2" org.eventb.core.predicate="snsrButtons ∈ 0‥LAST_FLOOR → BOOL"/>
-<org.eventb.core.invariant name="_tI0S8eA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_3" org.eventb.core.predicate="snsrButtons = PhyButtons"/>
-<org.eventb.core.invariant name="_tI0S8uA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_4" org.eventb.core.predicate="PhyButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
-<org.eventb.core.invariant name="_tI0S8-A_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_5" org.eventb.core.predicate="ctrlButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
-<org.eventb.core.variant name="_tI06AOA_Ed-78bCl9yYd-Q" org.eventb.core.expression="card({snsrDoorPosition} ∩ {DOOR_OPENED}) ∗ card({ctrlButtonLights(floor)} ∩ {TRUE})"/>
+<org.eventb.core.variable name="_tIzE0OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="snsrFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4eA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtonLights"/>
+<org.eventb.core.variable name="_tIzr4uA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="ctrlFloorButtonLights"/>
+<org.eventb.core.invariant name="_tIzr4-A_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_1" org.eventb.core.predicate="PhyFloorButtons ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_tI0S8OA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_2" org.eventb.core.predicate="snsrFloorButtons ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_tI0S8eA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_3" org.eventb.core.predicate="snsrFloorButtons = PhyFloorButtons"/>
+<org.eventb.core.invariant name="_tI0S8uA_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_4" org.eventb.core.predicate="PhyFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_tI0S8-A_Ed-78bCl9yYd-Q" org.eventb.core.label="inv11_5" org.eventb.core.predicate="ctrlFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.variant name="_tI06AOA_Ed-78bCl9yYd-Q" org.eventb.core.expression="card({snsrDoorPosition} ∩ {DOOR_OPENED}) ∗ card({ctrlFloorButtonLights(floor)} ∩ {TRUE})"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="_tI06AeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_1"/>
-<org.eventb.core.action name="_tI1hEOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_2"/>
-<org.eventb.core.action name="_tI1hEeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_3"/>
-<org.eventb.core.action name="_tI1hEuA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_4"/>
+<org.eventb.core.action name="_tI06AeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_1"/>
+<org.eventb.core.action name="_tI1hEOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_2"/>
+<org.eventb.core.action name="_tI1hEeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_3"/>
+<org.eventb.core.action name="_tI1hEuA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act11_4"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_PRESSES_BUTTON">
+<org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_PRESSES_FLOOR_BUTTON">
 <org.eventb.core.parameter name="_tI1hFOA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="x"/>
 <org.eventb.core.guard name="_tI1hFeA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="x ∈ 0‥LAST_FLOOR"/>
-<org.eventb.core.guard name="_tI2IIOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="PhyButtons(x) = FALSE"/>
-<org.eventb.core.action name="_tI2IIeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtons(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
-<org.eventb.core.action name="_tI2IIuA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrButtons(x) ≔ TRUE" org.eventb.core.label="act11_2"/>
+<org.eventb.core.guard name="_tI2IIOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="PhyFloorButtons(x) = FALSE"/>
+<org.eventb.core.action name="_tI2IIeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtons(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.action name="_tI2IIuA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrFloorButtons(x) ≔ TRUE" org.eventb.core.label="act11_2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI2II-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_RELEASES_BUTTON">
+<org.eventb.core.event name="_tI2II-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_RELEASES_FLOOR_BUTTON">
 <org.eventb.core.parameter name="_tI2vMOA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="x"/>
 <org.eventb.core.guard name="_tI2vMeA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="x ∈ 0‥LAST_FLOOR"/>
-<org.eventb.core.guard name="_tI2vMuA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="PhyButtons(x) = TRUE"/>
-<org.eventb.core.action name="_tI2vM-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtons(x) ≔ FALSE" org.eventb.core.label="act11_1"/>
-<org.eventb.core.action name="_tI2vNOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrButtons(x) ≔ FALSE" org.eventb.core.label="act11_2"/>
+<org.eventb.core.guard name="_tI2vMuA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="PhyFloorButtons(x) = TRUE"/>
+<org.eventb.core.action name="_tI2vM-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtons(x) ≔ FALSE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.action name="_tI2vNOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="snsrFloorButtons(x) ≔ FALSE" org.eventb.core.label="act11_2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="TURNS_ON_BUTTON_LIGHT">
+<org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="TURNS_ON_FLOOR_BUTTON_LIGHT">
 <org.eventb.core.parameter name="_tI3WQOA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="x"/>
 <org.eventb.core.guard name="_tI3WQeA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="x ∈ 0‥LAST_FLOOR"/>
-<org.eventb.core.guard name="_tI3WQuA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlButtonLights(x) = TRUE"/>
-<org.eventb.core.guard name="_tI3WQ-A_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="PhyButtonLights(x) = FALSE"/>
-<org.eventb.core.action name="_tI39UOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtonLights(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.guard name="_tI3WQuA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlFloorButtonLights(x) = TRUE"/>
+<org.eventb.core.guard name="_tI3WQ-A_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="PhyFloorButtonLights(x) = FALSE"/>
+<org.eventb.core.action name="_tI39UOA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtonLights(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI39UeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="TURNS_OFF_BUTTON_LIGHT">
+<org.eventb.core.event name="_tI39UeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="TURNS_OFF_FLOOR_BUTTON_LIGHT">
 <org.eventb.core.parameter name="_tI39UuA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="x"/>
 <org.eventb.core.guard name="_tI39U-A_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="x ∈ 0‥LAST_FLOOR"/>
-<org.eventb.core.guard name="_tI39VOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlButtonLights(x) = FALSE"/>
-<org.eventb.core.guard name="_tI4kYOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="PhyButtonLights(x) = TRUE"/>
-<org.eventb.core.action name="_tI4kYeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyButtonLights(x) ≔ FALSE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.guard name="_tI39VOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlFloorButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="_tI4kYOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="PhyFloorButtonLights(x) = TRUE"/>
+<org.eventb.core.action name="_tI4kYeA_Ed-78bCl9yYd-Q" org.eventb.core.assignment="PhyFloorButtonLights(x) ≔ FALSE" org.eventb.core.label="act11_1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 24" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="turn_light_on">
+<org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 24" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="turn_floor_button_light_on">
 <org.eventb.core.parameter name="_tI4kY-A_Ed-78bCl9yYd-Q" org.eventb.core.identifier="x"/>
 <org.eventb.core.guard name="_tI4kZOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="x ∈ 0‥LAST_FLOOR"/>
-<org.eventb.core.guard name="_tI5LcOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="snsrButtons(x) = TRUE"/>
-<org.eventb.core.guard name="_tI5LceA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="ctrlButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="_tI5LcOA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="snsrFloorButtons(x) = TRUE"/>
+<org.eventb.core.guard name="_tI5LceA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_3" org.eventb.core.predicate="ctrlFloorButtonLights(x) = FALSE"/>
 <org.eventb.core.guard name="_tI5LcuA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_4" org.eventb.core.predicate="floor ≠ x ∨ snsrDoorPosition ≠ DOOR_OPENED"/>
-<org.eventb.core.action name="_tI5Lc-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlButtonLights(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.action name="_tI5Lc-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlFloorButtonLights(x) ≔ TRUE" org.eventb.core.label="act11_1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 25" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_light_off">
+<org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.comment="FUN 25" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_floor_button_light_off">
 <org.eventb.core.guard name="_tI5ygeA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
-<org.eventb.core.guard name="_tI5yguA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlButtonLights(floor) = TRUE"/>
-<org.eventb.core.action name="_tI5yg-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlButtonLights(floor) ≔ FALSE" org.eventb.core.label="act11_1"/>
+<org.eventb.core.guard name="_tI5yguA_Ed-78bCl9yYd-Q" org.eventb.core.label="grd11_2" org.eventb.core.predicate="ctrlFloorButtonLights(floor) = TRUE"/>
+<org.eventb.core.action name="_tI5yg-A_Ed-78bCl9yYd-Q" org.eventb.core.assignment="ctrlFloorButtonLights(floor) ≔ FALSE" org.eventb.core.label="act11_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgayBOAzEd-73py7lbE8bg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_CLOSED">
 <org.eventb.core.refinesEvent name="_tI6ZkOA_Ed-78bCl9yYd-Q" org.eventb.core.target="DOOR_OPENS_WHEN_CLOSED"/>
