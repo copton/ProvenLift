@@ -7709,4 +7709,785 @@
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="VWD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p24,p3,p16,p2,p10,p21,p27,p14,p13,p1,p32,p23,p31,p26,p29,p11,p7,p12,p20,p28,p9,p18,p8,p33,p4,p6,p30,p25,p22,p17,p15,p19,p5">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})∧finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p40,p41,p42,p43"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p40,p41,p42,p43"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p26,p3,p18,p4,p11,p23,p31,p16,p2,p38,p25,p34,p28,p33,p13,p8,p12,p22,p30,p10,p20,p9,p37,p5,p7,p35,p29,p24,p19,p17,p21,p6,p27,p14,p32,p1,p39,p36,p40,p41,p42,p43">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="finite({CABLE_WIND}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({CABLE_WIND}∪{CABLE_STOP})≤card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p39,p40,p41,p42"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p39,p40,p41,p42"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p26,p3,p18,p4,p11,p23,p31,p16,p2,p38,p25,p34,p28,p33,p13,p8,p12,p22,p30,p10,p20,p9,p37,p5,p7,p35,p29,p24,p19,p17,p21,p6,p27,p14,p32,p1,p36,p39,p40,p41,p42">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p25,p4,p17,p3,p11,p22,p28,p15,p14,p2,p36,p24,p33,p27,p31,p12,p8,p13,p21,p29,p10,p19,p9,p37,p5,p7,p32,p26,p23,p18,p16,p20,p6,p38,p30,p1,p35,p34">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="finite({CABLE_WIND}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({CABLE_WIND}∪{CABLE_STOP})≤card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p25,p4,p17,p3,p11,p22,p28,p15,p14,p2,p35,p24,p33,p27,p31,p12,p8,p13,p21,p29,p10,p19,p9,p36,p5,p7,p32,p26,p23,p18,p16,p20,p6,p37,p30,p1,p34">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p40,p41,p42,p43"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p40,p41,p42,p43"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p26,p3,p18,p4,p12,p23,p31,p16,p2,p37,p25,p33,p28,p32,p13,p9,p14,p22,p30,p11,p20,p10,p36,p5,p7,p34,p29,p24,p19,p17,p21,p6,p27,p38,p39,p1,p8,p35,p40,p41,p42,p43">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({CABLE_UNWIND}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({CABLE_UNWIND}∪{CABLE_STOP})≤card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="PhyElevatorFloor≠0"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_DOWN/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p39,p40,p41,p42"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p39,p40,p41,p42"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p25,p3,p17,p4,p11,p22,p30,p15,p2,p36,p24,p32,p27,p31,p13,p8,p12,p21,p29,p10,p19,p9,p35,p5,p7,p33,p28,p23,p18,p16,p20,p6,p26,p37,p38,p1,p34,p39,p40,p41,p42">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorFloor≠0"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p26,p4,p18,p3,p12,p23,p29,p16,p15,p2,p35,p25,p33,p28,p31,p13,p9,p14,p22,p30,p11,p20,p10,p36,p5,p8,p32,p27,p24,p19,p17,p21,p6,p38,p37,p1,p7,p34">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite({CABLE_UNWIND}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({CABLE_UNWIND}∪{CABLE_STOP})≤card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_DOWN/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p25,p4,p17,p3,p11,p22,p28,p15,p14,p2,p34,p24,p32,p27,p30,p12,p8,p13,p21,p29,p10,p19,p9,p35,p5,p7,p31,p26,p23,p18,p16,p20,p6,p37,p36,p1,p33">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p28,p4,p19,p3,p13,p25,p31,p17,p16,p2,p37,p27,p35,p30,p33,p14,p9,p15,p24,p32,p11,p22,p10,p38,p5,p7,p34,p29,p26,p21,p18,p23,p6,p12,p20,p1,p8,p36">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite({CABLE_STOP}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({CABLE_STOP}∪{CABLE_STOP})&lt;card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p27,p4,p18,p3,p12,p24,p30,p16,p15,p2,p36,p26,p34,p29,p32,p13,p8,p14,p23,p31,p10,p21,p9,p37,p5,p7,p33,p28,p25,p20,p17,p22,p6,p11,p19,p1,p35">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite({ctrlCableCommand}∩{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card({ctrlCableCommand}∩{CABLE_STOP})∗card({PhyCableEngine}∪{CABLE_STOP})∈ℕ"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="FIN" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p24,p3,p16,p2,p10,p21,p27,p14,p13,p1,p32,p23,p31,p26,p29,p11,p7,p12,p20,p28,p9,p18,p8,p33,p4,p6,p30,p25,p22,p17,p15,p19,p5">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPEN" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="PhyElevatorBetweenTwoFloors" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="opened∈BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0∧ctrlDoorCommand=DOOR_CLOSE)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)∨(ctrlCableCommand=CABLE_STOP∧opened=FALSE)∨ctrlDoorCommand=DOOR_STOP∨ctrlDoorCommand=DOOR_OPEN"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="(ctrlCableCommand=CABLE_STOP∧floor&lt;LAST_FLOOR)∨ctrlCableCommand=CABLE_WIND∨(ctrlCableCommand=CABLE_STOP∧floor&gt;0)∨ctrlCableCommand=CABLE_UNWIND∨(ctrlCableCommand≠CABLE_STOP∧moved=TRUE)"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite({PhyCableEngine}∪{CABLE_STOP})"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="EXTENDS0" org.eventb.core.scTarget="/ProvenLift/ctx1_floors.bcc|org.eventb.core.scContextFile#ctx1_floors" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.extendsContext#_B_rrkeApEd-pAbDae3T1Gg"/>
+<org.eventb.core.scInternalContext name="ctx1_floors">
+<org.eventb.core.scAxiom name="AXM0" org.eventb.core.label="axm1_1" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="LAST_FLOOR" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.constant#_lTa6wNd9Ed-Dle0at0Xgqg" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="AXM0" org.eventb.core.label="axm2_1" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_v-34INqvEd-O4vbSPlarTw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="AXM1" org.eventb.core.label="axm2_2" org.eventb.core.predicate="b2n(TRUE)=1" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_v-4fMNqvEd-O4vbSPlarTw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="AXM2" org.eventb.core.label="axm2_3" org.eventb.core.predicate="b2n(FALSE)=0" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_v-4fMdqvEd-O4vbSPlarTw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="AXM3" org.eventb.core.label="axm2_4" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.axiom#_V2CJMNq-Ed-L_e8_V4iXIg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CABLE_COMMAND" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.carrierSet#_HLX3Mtd_Ed-Dle0at0Xgqg" org.eventb.core.type="ℙ(CABLE_COMMAND)"/>
+<org.eventb.core.scConstant name="CABLE_STOP" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.constant#_HLYeQdd_Ed-Dle0at0Xgqg" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.scConstant name="CABLE_UNWIND" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.constant#_HLYeQ9d_Ed-Dle0at0Xgqg" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.scConstant name="CABLE_WIND" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.constant#_HLYeQtd_Ed-Dle0at0Xgqg" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.scConstant name="b2n" org.eventb.core.source="/ProvenLift/ctx2_main_engine.buc|org.eventb.core.contextFile#ctx2_main_engine|org.eventb.core.constant#_v-3RENqvEd-O4vbSPlarTw" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+</org.eventb.core.scContextFile>
