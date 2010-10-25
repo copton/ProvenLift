@@ -228,4 +228,24 @@
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/dlf7/INV"/>
+<org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/dlf7/INV"/>
+<org.eventb.core.prProof name="DOOR_OPENS_WHEN_HALF/dlf7/INV"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_OPENED/dlf7/INV"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_HALF/dlf7/INV"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_CLOSED/dlf7/INV"/>
+<org.eventb.core.prProof name="STOP_DOOR_ENGINE/dlf7/INV"/>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/dlf7/INV"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/dlf7/INV"/>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_DOWN/dlf7/INV"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_DOWN/dlf7/INV"/>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/dlf7/INV"/>
+<org.eventb.core.prProof name="open_door/dlf7/INV"/>
+<org.eventb.core.prProof name="stop_door/dlf7/INV"/>
+<org.eventb.core.prProof name="close_door/dlf7/INV"/>
+<org.eventb.core.prProof name="start_move_up/dlf7/INV"/>
+<org.eventb.core.prProof name="move_up/dlf7/INV"/>
+<org.eventb.core.prProof name="start_move_down/dlf7/INV"/>
+<org.eventb.core.prProof name="move_down/dlf7/INV"/>
+<org.eventb.core.prProof name="stop/dlf7/INV"/>
 </org.eventb.core.prFile>
