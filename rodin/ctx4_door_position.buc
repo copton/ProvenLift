@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1288007893702" org.eventb.texttools.text_representation="context ctx4_door_position extends ctx3_door_engine&#10;&#10;constants DOOR_OPENED DOOR_HALF DOOR_CLOSED&#10;&#10;sets DOOR_POSITION&#10;&#10;axioms&#10;  @axm2 partition(DOOR_POSITION, {DOOR_OPENED}, {DOOR_HALF}, {DOOR_CLOSED})&#10;&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_JTwHYeAvEd-73py7lbE8bg" org.eventb.core.target="ctx3_door_engine"/>
+<org.eventb.core.carrierSet name="_JTwucOAvEd-73py7lbE8bg" org.eventb.core.identifier="DOOR_POSITION"/>
+<org.eventb.core.constant name="_JTwuceAvEd-73py7lbE8bg" org.eventb.core.identifier="DOOR_HALF"/>
+<org.eventb.core.constant name="_JTwucuAvEd-73py7lbE8bg" org.eventb.core.identifier="DOOR_CLOSED"/>
+<org.eventb.core.constant name="_JTwuc-AvEd-73py7lbE8bg" org.eventb.core.identifier="DOOR_OPENED"/>
+<org.eventb.core.axiom name="_JTwudOAvEd-73py7lbE8bg" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(DOOR_POSITION, {DOOR_OPENED}, {DOOR_HALF}, {DOOR_CLOSED})"/>
+</org.eventb.core.contextFile>
