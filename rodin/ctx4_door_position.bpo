@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
 <org.eventb.core.poIdentifier name="CABLE_COMMAND" org.eventb.core.type="ℙ(CABLE_COMMAND)"/>
-<org.eventb.core.poIdentifier name="ELEVATOR_STATUS" org.eventb.core.type="ℙ(ELEVATOR_STATUS)"/>
 <org.eventb.core.poIdentifier name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
@@ -23,7 +22,7 @@
 <org.eventb.core.poIdentifier name="DOOR_HALF" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.poIdentifier name="DOOR_OPENED" org.eventb.core.type="DOOR_POSITION"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/ctx4_door_position.bpo|org.eventb.core.poFile#ctx4_door_position|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/ctx4_door_position.bpo|org.eventb.core.poFile#ctx4_door_position|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})" org.eventb.core.source="/ProvenLift/ctx4_door_position.buc|org.eventb.core.contextFile#ctx4_door_position|org.eventb.core.axiom#_JTwudOAvEd-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
