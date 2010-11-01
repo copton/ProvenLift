@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
+<org.eventb.core.psStatus name="FIN" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv23_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv23_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv23_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
@@ -8,10 +9,12 @@
 <org.eventb.core.psStatus name="set_schedule_up/inv23_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="set_schedule_up/inv23_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="set_schedule_up/inv23_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="set_schedule_up/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="set_schedule_down/grd23_3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="set_schedule_down/inv23_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="set_schedule_down/inv23_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="set_schedule_down/inv23_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="set_schedule_down/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="start_move_up/inv23_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="start_move_up/inv23_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="start_move_up/inv23_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>

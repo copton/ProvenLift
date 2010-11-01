@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="37">
+<org.eventb.core.poFile org.eventb.core.poStamp="38">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="22">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -114,6 +114,11 @@
 <org.eventb.core.poPredicate name="PRD62" org.eventb.core.predicate="PhyDownButtonLights∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift19_down_buttons.bum|org.eventb.core.machineFile#lift19_down_buttons|org.eventb.core.invariant#_3IkBseWyEd-64JNDK1TKiQ"/>
 <org.eventb.core.poPredicate name="PRD63" org.eventb.core.predicate="ctrlDownButtonLights∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift19_down_buttons.bum|org.eventb.core.machineFile#lift19_down_buttons|org.eventb.core.invariant#_3IkBsuWyEd-64JNDK1TKiQ"/>
 </org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="FIN" org.eventb.core.accurate="true" org.eventb.core.poDesc="Finiteness of variant" org.eventb.core.poStamp="38">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP"/>
+<org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="finite({schedule}∩{SCHEDULER_WAIT})" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+<org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+</org.eventb.core.poSequent>
 <org.eventb.core.poSequent name="INITIALISATION/inv23_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="37">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#EVTALLHYPEVT0"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="CABLE_STOP=CABLE_STOP∧0=0⇒SCHEDULER_WAIT≠SCHEDULER_DOWN" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.invariant#_SS_ws-XJEd-64JNDK1TKiQ"/>
@@ -211,6 +216,13 @@
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poSequent#set_schedule_up\/inv23_5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="HINT1" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="set_schedule_up/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="38">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#EVTALLHYPEVT1"/>
+<org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="{SCHEDULER_UP}∩{SCHEDULER_WAIT}⊂{schedule}∩{SCHEDULER_WAIT}" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+<org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.event#_STA-0uXJEd-64JNDK1TKiQ"/>
+<org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poSequent#set_schedule_up\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT1" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="37">
 <org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="schedule'" org.eventb.core.type="SCHEDULER_STRATEGY"/>
@@ -253,6 +265,13 @@
 <org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.invariant#_STAXwuXJEd-64JNDK1TKiQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poSequent#set_schedule_down\/inv23_5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="HINT1" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="set_schedule_down/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="38">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#EVTALLHYPEVT2"/>
+<org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="{SCHEDULER_DOWN}∩{SCHEDULER_WAIT}⊂{schedule}∩{SCHEDULER_WAIT}" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+<org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.variant#_ZWZFgOXKEd-Sn9i-RCf-mg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift23_scheduler.bum|org.eventb.core.machineFile#lift23_scheduler|org.eventb.core.event#_STBl5OXJEd-64JNDK1TKiQ"/>
+<org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poSequent#set_schedule_down\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT2" org.eventb.core.parentSet="/ProvenLift/lift23_scheduler.bpo|org.eventb.core.poFile#lift23_scheduler|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="37">
 <org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
