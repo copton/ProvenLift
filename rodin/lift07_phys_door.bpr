@@ -51,7 +51,7 @@
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_CLOSE=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_STOP=DOOR_CLOSE"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv7_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
@@ -69,9 +69,9 @@
 <org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_STOP=DOOR_STOP"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSE=DOOR_CLOSE"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
@@ -106,7 +106,7 @@
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSED=DOOR_CLOSED"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_OPENED=DOOR_OPENED"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="STOP_DOOR_ENGINE/inv7_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p31,p4,p19,p3,p12,p25,p34,p16,p15,p27,p2,p40,p29,p38,p33,p36,p13,p8,p14,p24,p35,p11,p21,p10,p41,p5,p7,p37,p32,p26,p20,p17,p23,p6,p9,p18,p39,p30,p22,p42,p28,p1">
@@ -863,8 +863,8 @@
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_CLOSED=DOOR_CLOSED"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_OPENED=DOOR_CLOSED"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv7_7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p33,p4,p19,p3,p12,p26,p36,p16,p15,p28,p2,p42,p31,p40,p35,p38,p13,p8,p14,p25,p37,p11,p22,p10,p43,p5,p7,p39,p34,p27,p21,p17,p24,p6,p9,p18,p41,p32,p23,p44,p30,p1,p20,p29">

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1288619051458" org.eventb.texttools.text_representation="context ctx5_scheduler extends ctx4_door_position&#10;&#10;constants SCHEDULER_UP SCHEDULER_DOWN SCHEDULER_WAIT&#10;&#10;sets SCHEDULER_STRATEGY&#10;&#10;axioms&#10;@axm5_1 partition(SCHEDULER_STRATEGY, {SCHEDULER_UP}, {SCHEDULER_DOWN}, {SCHEDULER_WAIT})&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_G6XFgOW-Ed-64JNDK1TKiQ" org.eventb.core.target="ctx4_door_position"/>
+<org.eventb.core.carrierSet name="_G6XskOW-Ed-64JNDK1TKiQ" org.eventb.core.identifier="SCHEDULER_STRATEGY"/>
+<org.eventb.core.constant name="_G6XskeW-Ed-64JNDK1TKiQ" org.eventb.core.identifier="SCHEDULER_UP"/>
+<org.eventb.core.constant name="_G6XskuW-Ed-64JNDK1TKiQ" org.eventb.core.identifier="SCHEDULER_DOWN"/>
+<org.eventb.core.constant name="_G6Xsk-W-Ed-64JNDK1TKiQ" org.eventb.core.identifier="SCHEDULER_WAIT"/>
+<org.eventb.core.axiom name="_G6XslOW-Ed-64JNDK1TKiQ" org.eventb.core.label="axm5_1" org.eventb.core.predicate="partition(SCHEDULER_STRATEGY, {SCHEDULER_UP}, {SCHEDULER_DOWN}, {SCHEDULER_WAIT})"/>
+</org.eventb.core.contextFile>

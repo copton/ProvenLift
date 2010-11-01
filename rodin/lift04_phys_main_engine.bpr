@@ -3586,7 +3586,7 @@
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_CLOSE=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒DOOR_STOP=DOOR_CLOSE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/inv4_12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND">

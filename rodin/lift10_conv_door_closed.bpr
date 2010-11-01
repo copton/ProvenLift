@@ -252,8 +252,8 @@
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(DOOR_CLOSED=DOOR_CLOSED∧DOOR_CLOSE=DOOR_OPEN)∨(DOOR_CLOSED=DOOR_HALF∧DOOR_CLOSE=DOOR_OPEN)∨(DOOR_CLOSED=DOOR_OPENED∧DOOR_CLOSE=DOOR_CLOSE)∨(DOOR_CLOSED=DOOR_HALF∧DOOR_CLOSE=DOOR_CLOSE)∨(DOOR_CLOSE≠DOOR_STOP∧DOOR_CLOSE=DOOR_STOP)∨(FALSE=FALSE∧0≠LAST_FLOOR∧CABLE_STOP=CABLE_WIND)∨(FALSE=TRUE∧CABLE_STOP=CABLE_WIND)∨(FALSE=FALSE∧0≠0∧CABLE_STOP=CABLE_UNWIND)∨(FALSE=TRUE∧CABLE_STOP=CABLE_UNWIND)∨(CABLE_STOP≠CABLE_STOP∧CABLE_STOP=CABLE_STOP)∨(CABLE_STOP=CABLE_STOP∧FALSE=FALSE∧CABLE_STOP=CABLE_STOP)∨(DOOR_CLOSE=DOOR_OPEN∧DOOR_CLOSED=DOOR_OPENED)∨(DOOR_CLOSE=DOOR_STOP∧DOOR_CLOSE=DOOR_STOP)∨(CABLE_STOP=CABLE_STOP∧0&lt;LAST_FLOOR∧DOOR_CLOSE=DOOR_CLOSE∧CABLE_STOP=CABLE_STOP∧DOOR_CLOSED=DOOR_CLOSED∧DOOR_CLOSE=DOOR_CLOSE)∨(0&lt;LAST_FLOOR∧CABLE_STOP=CABLE_WIND∧0&lt;0)∨(CABLE_STOP=CABLE_STOP∧0&gt;0∧DOOR_CLOSE=DOOR_CLOSE∧CABLE_STOP=CABLE_STOP∧DOOR_CLOSED=DOOR_CLOSED∧DOOR_CLOSE=DOOR_CLOSE)∨(0&lt;0∧CABLE_STOP=CABLE_UNWIND∧0≠−1∧0&lt;0)∨(CABLE_STOP≠CABLE_STOP∧FALSE=TRUE∧0≠−1∧0=0)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(DOOR_OPENED=DOOR_CLOSED∧DOOR_STOP=DOOR_OPEN)∨(DOOR_OPENED=DOOR_HALF∧DOOR_STOP=DOOR_OPEN)∨(DOOR_OPENED=DOOR_OPENED∧DOOR_STOP=DOOR_CLOSE)∨(DOOR_OPENED=DOOR_HALF∧DOOR_STOP=DOOR_CLOSE)∨(DOOR_STOP≠DOOR_STOP∧DOOR_STOP=DOOR_STOP)∨(FALSE=FALSE∧0≠LAST_FLOOR∧CABLE_STOP=CABLE_WIND)∨(FALSE=TRUE∧CABLE_STOP=CABLE_WIND)∨(FALSE=FALSE∧0≠0∧CABLE_STOP=CABLE_UNWIND)∨(FALSE=TRUE∧CABLE_STOP=CABLE_UNWIND)∨(CABLE_STOP≠CABLE_STOP∧CABLE_STOP=CABLE_STOP)∨(CABLE_STOP=CABLE_STOP∧TRUE=FALSE∧CABLE_STOP=CABLE_STOP)∨(DOOR_STOP=DOOR_OPEN∧DOOR_OPENED=DOOR_OPENED)∨(DOOR_STOP=DOOR_STOP∧DOOR_STOP=DOOR_STOP)∨(CABLE_STOP=CABLE_STOP∧0&lt;LAST_FLOOR∧DOOR_STOP=DOOR_CLOSE∧CABLE_STOP=CABLE_STOP∧DOOR_OPENED=DOOR_CLOSED∧DOOR_STOP=DOOR_CLOSE)∨(0&lt;LAST_FLOOR∧CABLE_STOP=CABLE_WIND∧0&lt;0)∨(CABLE_STOP=CABLE_STOP∧0&gt;0∧DOOR_STOP=DOOR_CLOSE∧CABLE_STOP=CABLE_STOP∧DOOR_OPENED=DOOR_CLOSED∧DOOR_STOP=DOOR_CLOSE)∨(0&lt;0∧CABLE_STOP=CABLE_UNWIND∧0≠−1∧0&lt;0)∨(CABLE_STOP≠CABLE_STOP∧FALSE=TRUE∧0≠−1∧0=0)"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/dlf10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p4,p19,p3,p12,p26,p37,p16,p15,p28,p2,p43,p32,p41,p36,p39,p13,p8,p14,p25,p38,p11,p22,p10,p44,p5,p7,p40,p35,p27,p21,p17,p24,p6,p9,p18,p42,p33,p23,p45,p31,p1,p29,p20,p30">
@@ -4052,7 +4052,6 @@
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSED≠DOOR_CLOSED⇒CABLE_STOP=CABLE_STOP∧CABLE_STOP=CABLE_STOP"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
@@ -4060,6 +4059,7 @@
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_OPENED≠DOOR_CLOSED⇒CABLE_STOP=CABLE_STOP∧CABLE_STOP=CABLE_STOP"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv10_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
@@ -5105,8 +5105,8 @@
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_STOP≠DOOR_CLOSE⇒CABLE_STOP=CABLE_STOP∧CABLE_STOP=CABLE_STOP"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSE≠DOOR_CLOSE⇒CABLE_STOP=CABLE_STOP∧CABLE_STOP=CABLE_STOP"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv10_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p4,p19,p3,p12,p27,p38,p16,p15,p29,p2,p45,p33,p42,p37,p40,p13,p8,p14,p26,p39,p11,p23,p10,p46,p5,p7,p41,p36,p28,p22,p17,p25,p6,p9,p18,p43,p34,p24,p47,p32,p1,p20,p44,p30,p21,p31">
@@ -6230,6 +6230,7 @@
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TRUE=FALSE⇒DOOR_STOP=DOOR_CLOSE∧DOOR_OPENED=DOOR_CLOSED"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
@@ -6238,7 +6239,6 @@
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FALSE=FALSE⇒DOOR_CLOSE=DOOR_CLOSE∧DOOR_CLOSED=DOOR_CLOSED"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv10_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
@@ -6984,24 +6984,8 @@
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv10_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="0">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p11,p12,p13,p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p11,p12,p13,p14"/>
-<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="0">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15,p16,p17,p18"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p15,p16,p17,p18"/>
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p9,p7,p2,p3,p1,p6,p11,p12,p13,p14,p15,p16,p17,p18">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p9,p7,p2,p3,p1,p6,p5,p4">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
@@ -7014,25 +6998,17 @@
 <org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬DOOR_STOP=DOOR_OPEN"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬DOOR_STOP=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSE=DOOR_STOP⇒DOOR_CLOSED=DOOR_OPENED"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬DOOR_OPEN=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="DOOR_COMMAND={DOOR_STOP,DOOR_OPEN,DOOR_CLOSE}"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_STOP=DOOR_STOP⇒DOOR_OPENED=DOOR_OPENED"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv10_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
@@ -7613,24 +7589,8 @@
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv10_5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="0">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p11,p12,p13,p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p11,p12,p13,p14"/>
-<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="0">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15,p16,p17,p18"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p15,p16,p17,p18"/>
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p9,p7,p2,p3,p1,p6,p11,p12,p13,p14,p15,p16,p17,p18">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p9,p7,p2,p3,p1,p6,p5,p4">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
@@ -7643,25 +7603,17 @@
 <org.eventb.core.prIdent name="DOOR_STOP" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬DOOR_STOP=DOOR_OPEN"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬DOOR_STOP=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_CLOSE=DOOR_STOP⇒DOOR_CLOSED=DOOR_OPENED"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬DOOR_OPEN=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="DOOR_COMMAND={DOOR_STOP,DOOR_OPEN,DOOR_CLOSE}"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="DOOR_STOP=DOOR_STOP⇒DOOR_OPENED=DOOR_OPENED"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/inv10_5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
