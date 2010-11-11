@@ -51,12 +51,17 @@ This interconnects the whole system.
 
 \section{Functional Requirements}
 This is the basic functionality of the system.
-\fun{If a button is pressed the elevator eventually goes to the corresponding floor and the door opens.}
+\fun{Users signal requests for a floor by pressing the corresponding buttons of that floor. Every request is eventually served as the elevator goes to the corresponding floor and opens the door.}
+\fun{If all requests are served the elevator waits at the current floor for new requests with the door open.}
 
-We need an elevator schedule to know in which direction the elevator will go next.
-\fun{There is an elevator schedule which is either up or down.}
-\fun{If the elevator is on the floor with index 0, the elevator schedule is up.}
-\fun{If the elevator is on the floor with index N, the elevator schedule is down.}
+Now we describe the schedule which is used by the elevator to serve requests.
+\fun{There is an elevator schedule which can be either waiting, up or down.}
+\fun{The elevator schedule is set to waiting iff there is no request.}
+\fun{If the elevator schedule is waiting and then a request for an upper/lower floor is signaled the elevator schedule is set to up/down.}
+\fun{The elevator starts to move up/down only if the elevator schedule is up/down.}
+\fun{The elevator stops at a floor iff there is a request for that floor.}
+Once the elevator decided to schedule upwards it serves all upper floors until it starts to schedule downwards and vice versa.
+\fun{The elevator schedule switches from up/down to down/up iff there is no request for a floor further up/down.}
 
 These requirements handle the user interface.
 \fun{If a button is pressed the corresponding light goes on.}
