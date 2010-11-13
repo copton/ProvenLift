@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -78,10 +78,10 @@
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT1" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT1" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIqngOAzEd-73py7lbE8bg|org.eventb.core.guard#_aGyMttq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIqngOAzEd-73py7lbE8bg|org.eventb.core.guard#_aGyzwNq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIqngOAzEd-73py7lbE8bg|org.eventb.core.guard#_aGyzwdq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT1" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT1" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDRAYO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aGyMttq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDRAYO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aGyzwNq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDRAYO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aGyzwdq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT2" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
@@ -90,22 +90,22 @@
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyElevatorFloor'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT2" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT2" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIrOkOAzEd-73py7lbE8bg|org.eventb.core.guard#_aGza0dq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIrOkOAzEd-73py7lbE8bg|org.eventb.core.guard#_aGza0tq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT2" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT2" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDRncO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aGza0dq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDRncO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aGza0tq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTALLHYPEVT3"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="2∗(PhyElevatorFloor − 1)+b2n(TRUE)&lt;2∗PhyElevatorFloor+b2n(PhyElevatorBetweenTwoFloors)" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
-<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_TMHJE-AuEd-pAbDae3T1Gg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_58HQYe8TEd-cCPmubL_L3Q"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poSequent#ELEVATOR_LEAVES_FLOOR_DOWN\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="ELEVATOR_LEAVES_FLOOR_DOWN/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="ELEVATOR_LEAVES_FLOOR_DOWN/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTALLHYPEVT3"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="2∗PhyElevatorFloor+b2n(PhyElevatorBetweenTwoFloors)∈ℕ" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
-<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_TMHJE-AuEd-pAbDae3T1Gg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_58HQYe8TEd-cCPmubL_L3Q"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poSequent#ELEVATOR_LEAVES_FLOOR_DOWN\/NAT|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT3" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
@@ -115,23 +115,23 @@
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyElevatorFloor'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT3" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT3" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIscsOAzEd-73py7lbE8bg|org.eventb.core.guard#_aG0B49q-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠0" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIscsOAzEd-73py7lbE8bg|org.eventb.core.guard#_aG0B5Nq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WIscsOAzEd-73py7lbE8bg|org.eventb.core.guard#_aG0B5dq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT3" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT3" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDSOgO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aG0B49q-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠0" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDSOgO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aG0B5Nq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDSOgO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aG0B5dq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTALLHYPEVT4"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="2∗PhyElevatorFloor+b2n(FALSE)&lt;2∗PhyElevatorFloor+b2n(PhyElevatorBetweenTwoFloors)" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
-<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_TMHwIOAuEd-pAbDae3T1Gg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_58HQY-8TEd-cCPmubL_L3Q"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poSequent#ELEVATOR_REACHES_FLOOR_DOWN\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="ELEVATOR_REACHES_FLOOR_DOWN/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="ELEVATOR_REACHES_FLOOR_DOWN/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTALLHYPEVT4"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="2∗PhyElevatorFloor+b2n(PhyElevatorBetweenTwoFloors)∈ℕ" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.variant#_TMGiAOAuEd-pAbDae3T1Gg"/>
-<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_TMHwIOAuEd-pAbDae3T1Gg"/>
+<org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift06_conv_floor_down.bum|org.eventb.core.machineFile#lift06_conv_floor_down|org.eventb.core.event#_58HQY-8TEd-cCPmubL_L3Q"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poSequent#ELEVATOR_REACHES_FLOOR_DOWN\/NAT|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT4" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
@@ -140,9 +140,9 @@
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT4" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT4" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WItq0OAzEd-73py7lbE8bg|org.eventb.core.guard#_aG1QANq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_WItq0OAzEd-73py7lbE8bg|org.eventb.core.guard#_aG1QAdq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT4" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#EVTIDENTEVT4" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDS1kO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aG1QANq-Ed-L_e8_V4iXIg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_xDS1kO8TEd-cCPmubL_L3Q|org.eventb.core.guard#_aG1QAdq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT5" org.eventb.core.parentSet="/ProvenLift/lift06_conv_floor_down.bpo|org.eventb.core.poFile#lift06_conv_floor_down|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>

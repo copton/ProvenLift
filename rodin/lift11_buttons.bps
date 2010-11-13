@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="FIN" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="FIN" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TURNS_ON_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TURNS_ON_FLOOR_BUTTON_LIGHT/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TURNS_OFF_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TURNS_OFF_FLOOR_BUTTON_LIGHT/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="turn_floor_button_light_on/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="turn_floor_button_light_on/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="turn_floor_button_light_off/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_PRESSES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TURNS_ON_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TURNS_ON_FLOOR_BUTTON_LIGHT/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TURNS_OFF_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TURNS_OFF_FLOOR_BUTTON_LIGHT/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="turn_floor_button_light_on/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="turn_floor_button_light_on/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="turn_floor_button_light_off/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="turn_floor_button_light_off/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

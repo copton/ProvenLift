@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1288007196100" org.eventb.texttools.text_representation="machine ProvenLift_5 refines ProvenLift_4  sees ctx3_door_engine&#10;&#10;variables floor moved ctrlDoorCommand opened PhyCableEngine PhyElevatorFloor PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor&#10;&#10;variant card({ctrlCableCommand} ∩ {CABLE_WIND}) ∗ ((1 − b2n(PhyElevatorBetweenTwoFloors)) + 2 ∗ (LAST_FLOOR − PhyElevatorFloor))&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  convergent event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  convergent event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  event open_door extends open_door&#10;  end&#10;&#10;  event stop_door extends stop_door&#10;  end&#10;&#10;  event close_door extends close_door&#10;  end&#10;&#10;  event start_move_up extends start_move_up&#10;  end&#10;&#10;  event move_up extends move_up&#10;  end&#10;&#10;  event start_move_down extends start_move_down&#10;  end&#10;&#10;  event move_down extends move_down&#10;  end&#10;&#10;  event stop extends stop&#10;  end&#10;end&#10;" version="5">
-<org.eventb.core.refinesMachine name="_hYe9oOAtEd-pAbDae3T1Gg" org.eventb.core.target="lift04_phys_main_engine"/>
-<org.eventb.core.seesContext name="_hYe9oeAtEd-pAbDae3T1Gg" org.eventb.core.target="ctx3_door_engine"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1289645429916" org.eventb.texttools.text_representation="machine lift05_conv_floor_up refines lift04_phys_main_engine  sees ctx3_door_engine&#10;&#10;variables floor moved ctrlDoorCommand opened PhyCableEngine PhyElevatorFloor PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor&#10;&#10;variant card({ctrlCableCommand} ∩ {CABLE_WIND}) ∗ ((1 − b2n(PhyElevatorBetweenTwoFloors)) + 2 ∗ (LAST_FLOOR − PhyElevatorFloor))&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  convergent event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  convergent event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  convergent event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  convergent event open_door extends open_door&#10;  end&#10;&#10;  convergent event stop_door extends stop_door&#10;  end&#10;&#10;  convergent event close_door extends close_door&#10;  end&#10;&#10;  convergent event start_move_up extends start_move_up&#10;  end&#10;&#10;  event move_up extends move_up&#10;  end&#10;&#10;  convergent event start_move_down extends start_move_down&#10;  end&#10;&#10;  event move_down extends move_down&#10;  end&#10;&#10;  convergent event stop extends stop&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_1O89sO8TEd-cCPmubL_L3Q" org.eventb.core.target="lift04_phys_main_engine"/>
+<org.eventb.core.seesContext name="_1O9kwO8TEd-cCPmubL_L3Q" org.eventb.core.target="ctx3_door_engine"/>
 <org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
 <org.eventb.core.variable name="_BGiegNrCEd-L_e8_V4iXIg" org.eventb.core.identifier="moved"/>
 <org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
@@ -14,43 +14,43 @@
 <org.eventb.core.variable name="_aGwXg9q-Ed-L_e8_V4iXIg" org.eventb.core.identifier="snsrElevatorFloor"/>
 <org.eventb.core.variant name="_ONwDkOAsEd-pAbDae3T1Gg" org.eventb.core.expression="card({ctrlCableCommand} ∩ {CABLE_WIND}) ∗ ((1 − b2n(PhyElevatorBetweenTwoFloors)) + 2 ∗ (LAST_FLOOR − PhyElevatorFloor))"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
-<org.eventb.core.event name="_hYgLwOAtEd-pAbDae3T1Gg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
-<org.eventb.core.refinesEvent name="_hYgLweAtEd-pAbDae3T1Gg" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
+<org.eventb.core.event name="_1O-L0O8TEd-cCPmubL_L3Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_1O-L0e8TEd-cCPmubL_L3Q" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hYgLwuAtEd-pAbDae3T1Gg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
-<org.eventb.core.refinesEvent name="_hYgLw-AtEd-pAbDae3T1Gg" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
+<org.eventb.core.event name="_1O-L0u8TEd-cCPmubL_L3Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_1O-L0-8TEd-cCPmubL_L3Q" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hYgLxOAtEd-pAbDae3T1Gg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
-<org.eventb.core.refinesEvent name="_hYgy0OAtEd-pAbDae3T1Gg" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
+<org.eventb.core.event name="_1O-L1O8TEd-cCPmubL_L3Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_1O-L1e8TEd-cCPmubL_L3Q" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hYgy0eAtEd-pAbDae3T1Gg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
-<org.eventb.core.refinesEvent name="_hYgy0uAtEd-pAbDae3T1Gg" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
+<org.eventb.core.event name="_1O-L1u8TEd-cCPmubL_L3Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_1O-y4O8TEd-cCPmubL_L3Q" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_aG13ENq-Ed-L_e8_V4iXIg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="STOP_CABLE_ENGINE">
-<org.eventb.core.refinesEvent name="_hYgy0-AtEd-pAbDae3T1Gg" org.eventb.core.target="STOP_CABLE_ENGINE"/>
+<org.eventb.core.event name="_aG13ENq-Ed-L_e8_V4iXIg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="STOP_CABLE_ENGINE">
+<org.eventb.core.refinesEvent name="_1O-y4e8TEd-cCPmubL_L3Q" org.eventb.core.target="STOP_CABLE_ENGINE"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_door">
-<org.eventb.core.refinesEvent name="_hYhZ4OAtEd-pAbDae3T1Gg" org.eventb.core.target="open_door"/>
+<org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="open_door">
+<org.eventb.core.refinesEvent name="_1O-y4u8TEd-cCPmubL_L3Q" org.eventb.core.target="open_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_door">
-<org.eventb.core.refinesEvent name="_hYhZ4eAtEd-pAbDae3T1Gg" org.eventb.core.target="stop_door"/>
+<org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="stop_door">
+<org.eventb.core.refinesEvent name="_1O-y4-8TEd-cCPmubL_L3Q" org.eventb.core.target="stop_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_HKjNMtqzEd-7IuFxCL4SWw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_door">
-<org.eventb.core.refinesEvent name="_hYhZ4uAtEd-pAbDae3T1Gg" org.eventb.core.target="close_door"/>
+<org.eventb.core.event name="_HKjNMtqzEd-7IuFxCL4SWw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="close_door">
+<org.eventb.core.refinesEvent name="_1O_Z8O8TEd-cCPmubL_L3Q" org.eventb.core.target="close_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
-<org.eventb.core.refinesEvent name="_hYiA8OAtEd-pAbDae3T1Gg" org.eventb.core.target="start_move_up"/>
+<org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
+<org.eventb.core.refinesEvent name="_1O_Z8e8TEd-cCPmubL_L3Q" org.eventb.core.target="start_move_up"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uFS0Nd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_up">
-<org.eventb.core.refinesEvent name="_hYiA8eAtEd-pAbDae3T1Gg" org.eventb.core.target="move_up"/>
+<org.eventb.core.refinesEvent name="_1O_Z8u8TEd-cCPmubL_L3Q" org.eventb.core.target="move_up"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
-<org.eventb.core.refinesEvent name="_hYioAOAtEd-pAbDae3T1Gg" org.eventb.core.target="start_move_down"/>
+<org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
+<org.eventb.core.refinesEvent name="_1O_Z8-8TEd-cCPmubL_L3Q" org.eventb.core.target="start_move_down"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uF54dd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_down">
-<org.eventb.core.refinesEvent name="_hYioAeAtEd-pAbDae3T1Gg" org.eventb.core.target="move_down"/>
+<org.eventb.core.refinesEvent name="_1O_Z9O8TEd-cCPmubL_L3Q" org.eventb.core.target="move_down"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop">
-<org.eventb.core.refinesEvent name="_hYioAuAtEd-pAbDae3T1Gg" org.eventb.core.target="stop"/>
+<org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="stop">
+<org.eventb.core.refinesEvent name="_1PABAO8TEd-cCPmubL_L3Q" org.eventb.core.target="stop"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
