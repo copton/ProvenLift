@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1289677302741" org.eventb.texttools.text_representation="machine lift24_final refines lift23_scheduler  sees ctx5_scheduler&#10;&#10;variables floor moved opened PhyCableEngine PhyElevatorFloor PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor PhyDoorEngine PhyDoorPosition ctrlDoorCommand snsrDoorEngine snsrDoorPosition last_schedule schedule PhyFloorButtons snsrFloorButtons PhyFloorButtonLights ctrlFloorButtonLights PhyUpButtons snsrUpButtons PhyUpButtonLights ctrlUpButtonLights PhyDownButtons snsrDownButtons PhyDownButtonLights ctrlDownButtonLights&#10;&#10;invariants&#10;  @inv24_1 PhyFloorButtons ∈ 0‥LAST_FLOOR → BOOL&#10;  @inv24_2 snsrFloorButtons ∈ 0‥LAST_FLOOR → BOOL&#10;  @inv24_3 PhyFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL&#10;  @inv24_4 ctrlFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL&#10;  @inv24_5 PhyUpButtons ∈ 0‥LAST_FLOOR−1 → BOOL&#10;  @inv24_6 snsrUpButtons ∈ 0‥LAST_FLOOR−1 → BOOL&#10;  @inv24_7 PhyUpButtonLights ∈ 0‥LAST_FLOOR−1 → BOOL&#10;  @inv24_8 ctrlUpButtonLights ∈ 0‥LAST_FLOOR−1 → BOOL&#10;  @inv24_9 PhyDownButtons ∈ 1‥LAST_FLOOR → BOOL&#10;  @inv24_10 snsrDownButtons ∈ 1‥LAST_FLOOR → BOOL&#10;  @inv24_11 PhyDownButtonLights ∈ 1‥LAST_FLOOR → BOOL&#10;  @inv24_12 ctrlDownButtonLights ∈ 1‥LAST_FLOOR → BOOL&#10;  @inv24_13 ∀x·(x∈0‥LAST_FLOOR ∧ PhyFloorButtons(x)=TRUE) ⇔ x∈PhyFloorButtonsSet&#10;  @inv24_14 ∀x·(x∈0‥LAST_FLOOR ∧ snsrFloorButtons(x)=TRUE) ⇔ x∈snsrFloorButtonsSet&#10;  @inv24_15 ∀x·(x∈0‥LAST_FLOOR ∧ PhyFloorButtonLights(x)=TRUE) ⇔ x∈PhyFloorButtonLightsSet&#10;  @inv24_16 ∀x·(x∈0‥LAST_FLOOR ∧ ctrlFloorButtonLights(x)=TRUE) ⇔ x∈ctrlFloorButtonLightsSet&#10;  @inv24_17 PhyFloorButtons = snsrFloorButtons&#10;  @inv24_18 ∀x·(x∈0‥LAST_FLOOR−1 ∧ PhyUpButtons(x)=TRUE) ⇔ x∈PhyUpButtonsSet&#10;  @inv24_19 ∀x·(x∈0‥LAST_FLOOR−1 ∧ snsrUpButtons(x)=TRUE) ⇔ x∈snsrUpButtonsSet&#10;  @inv24_20 ∀x·(x∈0‥LAST_FLOOR−1 ∧ PhyUpButtonLights(x)=TRUE) ⇔ x∈PhyUpButtonLightsSet&#10;  @inv24_21 ∀x·(x∈0‥LAST_FLOOR−1 ∧ ctrlUpButtonLights(x)=TRUE) ⇔ x∈ctrlUpButtonLightsSet&#10;  @inv24_22 PhyUpButtons = snsrUpButtons&#10;  @inv24_23 ∀x·(x∈1‥LAST_FLOOR ∧ PhyDownButtons(x)=TRUE) ⇔ x∈PhyDownButtonsSet&#10;  @inv24_24 ∀x·(x∈1‥LAST_FLOOR ∧ snsrDownButtons(x)=TRUE) ⇔ x∈snsrDownButtonsSet&#10;  @inv24_25 ∀x·(x∈1‥LAST_FLOOR ∧ PhyDownButtonLights(x)=TRUE) ⇔ x∈PhyDownButtonLightsSet&#10;  @inv24_26 ∀x·(x∈1‥LAST_FLOOR ∧ ctrlDownButtonLights(x)=TRUE) ⇔ x∈ctrlDownButtonLightsSet&#10;  @inv24_27 PhyDownButtons = snsrDownButtons&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1_1 floor ≔ 0&#10;      @act2_2 moved ≔ FALSE&#10;      @act2_1 ctrlCableCommand ≔ CABLE_STOP&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_STOP&#10;      @act3_2 opened ≔ TRUE&#10;      @act4_1 PhyCableEngine ≔ CABLE_STOP&#10;      @act4_2 PhyElevatorFloor ≔ 0&#10;      @act4_3 PhyElevatorBetweenTwoFloors ≔ FALSE&#10;      @act4_4 snsrCableEngine ≔ CABLE_STOP&#10;      @act4_5 snsrElevatorFloor ≔ 0&#10;      @act7_1 PhyDoorEngine ≔ DOOR_STOP&#10;      @act7_2 PhyDoorPosition ≔ DOOR_OPENED&#10;      @act7_3 snsrDoorEngine ≔ DOOR_STOP&#10;      @act7_4 snsrDoorPosition ≔ DOOR_OPENED&#10;      @act23_1 schedule ≔ SCHEDULER_WAIT&#10;      @act23_2 last_schedule ≔ SCHEDULER_UP&#10;      @act24_1 PhyFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}&#10;      @act24_2 snsrFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}&#10;      @act24_3 PhyFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}&#10;      @act24_4 ctrlFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}&#10;      @act24_5 PhyUpButtons ≔ 0‥LAST_FLOOR−1 × {FALSE}&#10;      @act24_6 snsrUpButtons ≔ 0‥LAST_FLOOR−1 × {FALSE}&#10;      @act24_7 PhyUpButtonLights ≔ 0‥LAST_FLOOR−1 × {FALSE}&#10;      @act24_8 ctrlUpButtonLights ≔ 0‥LAST_FLOOR−1 × {FALSE}&#10;      @act24_9 PhyDownButtons ≔ 1‥LAST_FLOOR × {FALSE}&#10;      @act24_10 snsrDownButtons ≔ 1‥LAST_FLOOR × {FALSE}&#10;      @act24_11 PhyDownButtonLights ≔ 1‥LAST_FLOOR × {FALSE}&#10;      @act24_12 ctrlDownButtonLights ≔ 1‥LAST_FLOOR × {FALSE}&#10;  end&#10;&#10;  event USER_PRESSES_DOWN_BUTTON refines USER_PRESSES_DOWN_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈1‥LAST_FLOOR&#10;      @grd24_2 PhyDownButtons(x) = FALSE&#10;    then&#10;      @act24_1 PhyDownButtons(x) ≔ TRUE&#10;      @act24_2 snsrDownButtons(x) ≔ TRUE&#10;  end&#10;&#10;  event USER_RELEASES_DOWN_BUTTON refines USER_RELEASES_DOWN_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈1‥LAST_FLOOR&#10;      @grd24_2 PhyDownButtons(x) = TRUE&#10;    then&#10;      @act24_1 PhyDownButtons(x) ≔ FALSE&#10;      @act24_2 snsrDownButtons(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event TURNS_ON_DOWN_BUTTON_LIGHT refines TURNS_ON_DOWN_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈1‥LAST_FLOOR&#10;      @grd24_2 ctrlDownButtonLights(x) = TRUE&#10;      @grd24_3 PhyDownButtonLights(x) = FALSE&#10;    then&#10;      @act24_1 PhyDownButtonLights(x) ≔ TRUE&#10;  end&#10;&#10;  convergent event TURNS_OFF_DOWN_BUTTON_LIGHT refines TURNS_OFF_DOWN_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈1‥LAST_FLOOR&#10;      @grd24_2 ctrlDownButtonLights(x) = FALSE&#10;      @grd24_3 PhyDownButtonLights(x) = TRUE&#10;    then&#10;      @act24_1 PhyDownButtonLights(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event turn_down_button_light_on refines turn_down_button_light_on&#10;    any x&#10;    where&#10;      @grd24_1 x∈1‥LAST_FLOOR&#10;      @grd24_2 snsrDownButtons(x) = TRUE&#10;      @grd24_3 ctrlDownButtonLights(x) = FALSE&#10;      @grd24_4 floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED&#10;    then&#10;      @act24_1 ctrlDownButtonLights(x)  ≔ TRUE&#10;  end&#10;&#10;  convergent event turn_down_button_light_off refines turn_down_button_light_off&#10;    where&#10;      @grd24_1 0&lt;floor&#10;      @grd24_2 snsrDoorPosition = DOOR_OPENED&#10;      @grd24_3 ctrlDownButtonLights(floor) = TRUE&#10;      @grd24_4 schedule = SCHEDULER_DOWN&#10;    then&#10;      @act24_1 ctrlDownButtonLights(floor) ≔ FALSE&#10;  end&#10;&#10;  event USER_PRESSES_UP_BUTTON refines USER_PRESSES_UP_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR−1&#10;      @grd24_2 PhyUpButtons(x) = FALSE&#10;    then&#10;      @act24_1 PhyUpButtons(x) ≔ TRUE&#10;      @act24_2 snsrUpButtons(x) ≔ TRUE&#10;  end&#10;&#10;  event USER_RELEASES_UP_BUTTON refines USER_RELEASES_UP_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR−1&#10;      @grd24_2 PhyUpButtons(x) = TRUE&#10;    then&#10;      @act24_1 PhyUpButtons(x) ≔ FALSE&#10;      @act24_2 snsrUpButtons(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event TURNS_ON_UP_BUTTON_LIGHT refines TURNS_ON_UP_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR−1&#10;      @grd24_2 ctrlUpButtonLights(x) = TRUE&#10;      @grd24_3 PhyUpButtonLights(x) = FALSE&#10;    then&#10;      @act24_1 PhyUpButtonLights(x) ≔ TRUE&#10;  end&#10;&#10;  convergent event TURNS_OFF_UP_BUTTON_LIGHT refines TURNS_OFF_UP_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR−1&#10;      @grd24_2 ctrlUpButtonLights(x) = FALSE&#10;      @grd24_3 PhyUpButtonLights(x) = TRUE&#10;    then&#10;      @act24_1 PhyUpButtonLights(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event turn_up_button_light_on refines turn_up_button_light_on&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR−1&#10;      @grd24_2 snsrUpButtons(x) = TRUE&#10;      @grd24_3 ctrlUpButtonLights(x) = FALSE&#10;      @grd24_4 floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED&#10;    then&#10;      @act24_1 ctrlUpButtonLights(x)  ≔ TRUE&#10;  end&#10;&#10;  convergent event turn_up_button_light_off refines turn_up_button_light_off&#10;    where&#10;      @grd24_1 floor&lt;LAST_FLOOR&#10;      @grd24_2 snsrDoorPosition = DOOR_OPENED&#10;      @grd24_3 ctrlUpButtonLights(floor) = TRUE&#10;      @grd24_4 schedule = SCHEDULER_UP&#10;    then&#10;      @act24_1 ctrlUpButtonLights(floor) ≔ FALSE&#10;  end&#10;&#10;  event USER_PRESSES_FLOOR_BUTTON refines USER_PRESSES_FLOOR_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR&#10;      @grd24_2 PhyFloorButtons(x) = FALSE&#10;    then&#10;      @act24_1 PhyFloorButtons(x) ≔ TRUE&#10;      @act24_2 snsrFloorButtons(x) ≔ TRUE&#10;  end&#10;&#10;  event USER_RELEASES_FLOOR_BUTTON refines USER_RELEASES_FLOOR_BUTTON&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR&#10;      @grd24_2 PhyFloorButtons(x) = TRUE&#10;    then&#10;      @act24_1 PhyFloorButtons(x) ≔ FALSE&#10;      @act24_2 snsrFloorButtons(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event TURNS_ON_FLOOR_BUTTON_LIGHT refines TURNS_ON_FLOOR_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR&#10;      @grd24_2 ctrlFloorButtonLights(x) = TRUE&#10;      @grd24_3 PhyFloorButtonLights(x) = FALSE&#10;    then&#10;      @act24_1 PhyFloorButtonLights(x) ≔ TRUE&#10;  end&#10;&#10;  convergent event TURNS_OFF_FLOOR_BUTTON_LIGHT refines TURNS_OFF_FLOOR_BUTTON_LIGHT&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR&#10;      @grd24_2 ctrlFloorButtonLights(x) = FALSE&#10;      @grd24_3 PhyFloorButtonLights(x) = TRUE&#10;    then&#10;      @act24_1 PhyFloorButtonLights(x) ≔ FALSE&#10;  end&#10;&#10;  convergent event turn_floor_button_light_on refines turn_floor_button_light_on&#10;    any x&#10;    where&#10;      @grd24_1 x∈0‥LAST_FLOOR&#10;      @grd24_2 snsrFloorButtons(x) = TRUE&#10;      @grd24_3 ctrlFloorButtonLights(x) = FALSE&#10;      @grd24_4 floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED&#10;    then&#10;      @act24_1 ctrlFloorButtonLights(x)  ≔ TRUE&#10;  end&#10;&#10;  convergent event turn_floor_button_light_off refines turn_floor_button_light_off&#10;    where&#10;      @grd24_2 ctrlFloorButtonLights(floor) = TRUE&#10;      @grd24_1 snsrDoorPosition = DOOR_OPENED&#10;    then&#10;      @act24_1 ctrlFloorButtonLights(floor) ≔ FALSE&#10;  end&#10;&#10;  convergent event DOOR_OPENS_WHEN_CLOSED extends DOOR_OPENS_WHEN_CLOSED&#10;  end&#10;&#10;  convergent event DOOR_OPENS_WHEN_HALF extends DOOR_OPENS_WHEN_HALF&#10;  end&#10;&#10;  convergent event DOOR_CLOSES_WHEN_OPENED extends DOOR_CLOSES_WHEN_OPENED&#10;  end&#10;&#10;  convergent event DOOR_CLOSES_WHEN_HALF extends DOOR_CLOSES_WHEN_HALF&#10;  end&#10;&#10;  convergent event DOOR_CLOSES_WHEN_CLOSED extends DOOR_CLOSES_WHEN_CLOSED&#10;  end&#10;&#10;  convergent event STOP_DOOR_ENGINE extends STOP_DOOR_ENGINE&#10;  end&#10;&#10;  convergent event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  convergent event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  convergent event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  convergent event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  convergent event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  convergent event open_door extends open_door&#10;  end&#10;&#10;  convergent event stop_door extends stop_door&#10;  end&#10;&#10;  convergent event close_door refines close_door&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_STOP&#10;      @grd7_1 snsrDoorEngine = DOOR_STOP&#10;      @grd23_1 schedule ≠ SCHEDULER_WAIT&#10;      @grd24_1 ctrlFloorButtonLights(floor) = FALSE&#10;      @grd24_2 schedule = SCHEDULER_UP ⇒ (floor = LAST_FLOOR ∨ ctrlUpButtonLights(floor) = FALSE)&#10;      @grd24_3 schedule = SCHEDULER_DOWN ⇒ (floor = 0 ∨ ctrlDownButtonLights(floor) = FALSE)&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_CLOSE&#10;  end&#10;&#10;  convergent event start_move_up extends start_move_up&#10;  end&#10;&#10;  event move_up extends move_up&#10;  end&#10;&#10;  convergent event start_move_down extends start_move_down&#10;  end&#10;&#10;  event move_down extends move_down&#10;  end&#10;&#10;  convergent event stop refines stop&#10;    where&#10;      @grd2_1 ctrlCableCommand ≠ CABLE_STOP&#10;      @grd2_2 moved = TRUE&#10;      @grd4_1 snsrElevatorFloor ≠ −1&#10;      @grd4_2 snsrElevatorFloor = floor&#10;      @grd23_1 (ctrlFloorButtonLights(floor)=TRUE) ∨&#10;               (floor≠LAST_FLOOR ∧ ctrlUpButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_UP) ∨&#10;               (floor≠0 ∧ ctrlDownButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_DOWN) ∨&#10;               (floor≠LAST_FLOOR ∧ ctrlUpButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_DOWN ∧ (∀x·x∈0‥floor−1 ⇒ (ctrlUpButtonLights(x)=FALSE ∧ (x=0 ∨ ctrlDownButtonLights(x)=FALSE) ∧ ctrlFloorButtonLights(x)=FALSE))) ∨&#10;               (floor≠0 ∧ ctrlDownButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_UP ∧ (∀y·y∈floor+1‥LAST_FLOOR ⇒ ((y=LAST_FLOOR ∨ ctrlUpButtonLights(y)=FALSE) ∧ ctrlDownButtonLights(y)=FALSE ∧ ctrlFloorButtonLights(y)=FALSE)))&#10;    then&#10;      @act2_1 ctrlCableCommand ≔ CABLE_STOP&#10;      @act2_2 moved ≔ FALSE&#10;      @act3_1 opened ≔ FALSE&#10;      @act23_2 schedule ≔ SCHEDULER_WAIT&#10;      @act23_1 last_schedule ≔ schedule&#10;  end&#10;&#10;  convergent event switch_schedule_to_up refines switch_schedule_to_up&#10;    any x&#10;    where&#10;      @grd23_0 snsrDoorPosition = DOOR_OPENED&#10;      @grd23_1 schedule = SCHEDULER_WAIT&#10;      @grd23_2 x ∈ floor+1‥LAST_FLOOR&#10;      @grd23_3 (x≠LAST_FLOOR ∧ ctrlUpButtonLights(x)=TRUE) ∨ ctrlFloorButtonLights(x)=TRUE ∨ ctrlDownButtonLights(x)=TRUE&#10;      @grd23_4 ∀y·y∈0‥floor−1 ⇒ (ctrlUpButtonLights(y)=FALSE ∧ ctrlFloorButtonLights(y)=FALSE ∧ (y=0 ∨ ctrlDownButtonLights(y)=FALSE))&#10;      @grd23_5 last_schedule = SCHEDULER_DOWN&#10;    then&#10;      @act23_1 schedule ≔ SCHEDULER_UP&#10;  end&#10;&#10;  convergent event resume_schedule_up refines resume_schedule_up&#10;    any x&#10;    where&#10;      @grd23_0 snsrDoorPosition = DOOR_OPENED&#10;      @grd23_1 schedule = SCHEDULER_WAIT&#10;      @grd23_2 x ∈ floor+1‥LAST_FLOOR&#10;      @grd23_3 (x≠LAST_FLOOR ∧ ctrlUpButtonLights(x)=TRUE) ∨ ctrlFloorButtonLights(x)=TRUE ∨ ctrlDownButtonLights(x)=TRUE&#10;      @grd23_4 last_schedule = SCHEDULER_UP&#10;    then&#10;      @act23_1 schedule ≔ SCHEDULER_UP&#10;  end&#10;&#10;  convergent event switch_schedule_to_down refines switch_schedule_to_down&#10;    any x&#10;    where&#10;      @grd23_0 snsrDoorPosition = DOOR_OPENED&#10;      @grd23_1 schedule = SCHEDULER_WAIT&#10;      @grd23_2 x ∈ 0‥floor−1&#10;      @grd23_3 ctrlUpButtonLights(x)=TRUE ∨ ctrlFloorButtonLights(x)=TRUE ∨ (x≠0 ∧ ctrlDownButtonLights(x)=TRUE)&#10;      @grd23_4 ∀y·y∈floor+1‥LAST_FLOOR ⇒ ((y=LAST_FLOOR ∨ ctrlUpButtonLights(y)=FALSE) ∧ ctrlFloorButtonLights(y)=FALSE ∧ ctrlDownButtonLights(y)=FALSE)&#10;      @grd23_5 last_schedule = SCHEDULER_UP&#10;    then&#10;      @act23_1 schedule ≔ SCHEDULER_DOWN&#10;  end&#10;&#10;  convergent event resume_schedule_down refines resume_schedule_down&#10;    any x&#10;    where&#10;      @grd23_0 snsrDoorPosition = DOOR_OPENED&#10;      @grd23_1 schedule = SCHEDULER_WAIT&#10;      @grd23_2 x ∈ 0‥floor−1&#10;      @grd23_3 ctrlUpButtonLights(x)=TRUE ∨ ctrlFloorButtonLights(x)=TRUE ∨ (x≠0 ∧ ctrlDownButtonLights(x)=TRUE)&#10;      @grd23_4 last_schedule = SCHEDULER_DOWN&#10;    then&#10;      @act23_1 schedule ≔ SCHEDULER_DOWN&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_DRiIAO9eEd--uv2H-WHbGA" org.eventb.core.target="lift23_scheduler"/>
+<org.eventb.core.seesContext name="_DRiIAe9eEd--uv2H-WHbGA" org.eventb.core.target="ctx5_scheduler"/>
+<org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
+<org.eventb.core.variable name="_BGiegNrCEd-L_e8_V4iXIg" org.eventb.core.identifier="moved"/>
+<org.eventb.core.variable name="_84_BUNqzEd-IzpmRUY7GDg" org.eventb.core.identifier="opened"/>
+<org.eventb.core.variable name="_aGvwctq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyCableEngine"/>
+<org.eventb.core.variable name="_aGvwc9q-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyElevatorFloor"/>
+<org.eventb.core.variable name="_aGwXgNq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyElevatorBetweenTwoFloors"/>
+<org.eventb.core.variable name="_1cMDMtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ctrlCableCommand"/>
+<org.eventb.core.variable name="_aGwXgtq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="snsrCableEngine"/>
+<org.eventb.core.variable name="_aGwXg9q-Ed-L_e8_V4iXIg" org.eventb.core.identifier="snsrElevatorFloor"/>
+<org.eventb.core.variable name="_KgYVwOAzEd-73py7lbE8bg" org.eventb.core.identifier="PhyDoorEngine"/>
+<org.eventb.core.variable name="_KgYVweAzEd-73py7lbE8bg" org.eventb.core.identifier="PhyDoorPosition"/>
+<org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
+<org.eventb.core.variable name="_KgY80OAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorEngine"/>
+<org.eventb.core.variable name="_KgY80eAzEd-73py7lbE8bg" org.eventb.core.identifier="snsrDoorPosition"/>
+<org.eventb.core.variable name="_UtggcO5-Ed-dEtybZVK09Q" org.eventb.core.identifier="last_schedule"/>
+<org.eventb.core.variable name="_Utggce5-Ed-dEtybZVK09Q" org.eventb.core.identifier="schedule"/>
+<org.eventb.core.variable name="_tIzE0OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4OA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="snsrFloorButtons"/>
+<org.eventb.core.variable name="_tIzr4eA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="PhyFloorButtonLights"/>
+<org.eventb.core.variable name="_tIzr4uA_Ed-78bCl9yYd-Q" org.eventb.core.identifier="ctrlFloorButtonLights"/>
+<org.eventb.core.variable name="_pvTcwOEsEd-bh-7nDQnLgQ" org.eventb.core.identifier="PhyUpButtons"/>
+<org.eventb.core.variable name="_pvTcweEsEd-bh-7nDQnLgQ" org.eventb.core.identifier="snsrUpButtons"/>
+<org.eventb.core.variable name="_pvTcwuEsEd-bh-7nDQnLgQ" org.eventb.core.identifier="PhyUpButtonLights"/>
+<org.eventb.core.variable name="_pvUD0OEsEd-bh-7nDQnLgQ" org.eventb.core.identifier="ctrlUpButtonLights"/>
+<org.eventb.core.variable name="_3IjaoOWyEd-64JNDK1TKiQ" org.eventb.core.identifier="PhyDownButtons"/>
+<org.eventb.core.variable name="_3IjaoeWyEd-64JNDK1TKiQ" org.eventb.core.identifier="snsrDownButtons"/>
+<org.eventb.core.variable name="_3IjaouWyEd-64JNDK1TKiQ" org.eventb.core.identifier="PhyDownButtonLights"/>
+<org.eventb.core.variable name="_3Ijao-WyEd-64JNDK1TKiQ" org.eventb.core.identifier="ctrlDownButtonLights"/>
+<org.eventb.core.invariant name="_I9wU8O6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_1" org.eventb.core.predicate="PhyFloorButtons ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9wU8e6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_2" org.eventb.core.predicate="snsrFloorButtons ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9wU8u6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_3" org.eventb.core.predicate="PhyFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9w8AO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_4" org.eventb.core.predicate="ctrlFloorButtonLights ∈ 0‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9w8Ae6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_5" org.eventb.core.predicate="PhyUpButtons ∈ 0‥LAST_FLOOR−1 → BOOL"/>
+<org.eventb.core.invariant name="_I9w8Au6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_6" org.eventb.core.predicate="snsrUpButtons ∈ 0‥LAST_FLOOR−1 → BOOL"/>
+<org.eventb.core.invariant name="_I9w8A-6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_7" org.eventb.core.predicate="PhyUpButtonLights ∈ 0‥LAST_FLOOR−1 → BOOL"/>
+<org.eventb.core.invariant name="_I9w8BO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_8" org.eventb.core.predicate="ctrlUpButtonLights ∈ 0‥LAST_FLOOR−1 → BOOL"/>
+<org.eventb.core.invariant name="_I9xjEO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_9" org.eventb.core.predicate="PhyDownButtons ∈ 1‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9xjEe6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_10" org.eventb.core.predicate="snsrDownButtons ∈ 1‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9xjEu6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_11" org.eventb.core.predicate="PhyDownButtonLights ∈ 1‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9xjE-6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_12" org.eventb.core.predicate="ctrlDownButtonLights ∈ 1‥LAST_FLOOR → BOOL"/>
+<org.eventb.core.invariant name="_I9xjFO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_13" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR ∧ PhyFloorButtons(x)=TRUE) ⇔ x∈PhyFloorButtonsSet"/>
+<org.eventb.core.invariant name="_I9yKIO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_14" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR ∧ snsrFloorButtons(x)=TRUE) ⇔ x∈snsrFloorButtonsSet"/>
+<org.eventb.core.invariant name="_I9yKIe6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_15" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR ∧ PhyFloorButtonLights(x)=TRUE) ⇔ x∈PhyFloorButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9yKIu6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_16" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR ∧ ctrlFloorButtonLights(x)=TRUE) ⇔ x∈ctrlFloorButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9yKI-6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_17" org.eventb.core.predicate="PhyFloorButtons = snsrFloorButtons"/>
+<org.eventb.core.invariant name="_I9yxMO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_18" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR−1 ∧ PhyUpButtons(x)=TRUE) ⇔ x∈PhyUpButtonsSet"/>
+<org.eventb.core.invariant name="_I9yxMe6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_19" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR−1 ∧ snsrUpButtons(x)=TRUE) ⇔ x∈snsrUpButtonsSet"/>
+<org.eventb.core.invariant name="_I9yxMu6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_20" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR−1 ∧ PhyUpButtonLights(x)=TRUE) ⇔ x∈PhyUpButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9yxM-6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_21" org.eventb.core.predicate="∀x·(x∈0‥LAST_FLOOR−1 ∧ ctrlUpButtonLights(x)=TRUE) ⇔ x∈ctrlUpButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9yxNO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_22" org.eventb.core.predicate="PhyUpButtons = snsrUpButtons"/>
+<org.eventb.core.invariant name="_I9zYQO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_23" org.eventb.core.predicate="∀x·(x∈1‥LAST_FLOOR ∧ PhyDownButtons(x)=TRUE) ⇔ x∈PhyDownButtonsSet"/>
+<org.eventb.core.invariant name="_I9zYQe6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_24" org.eventb.core.predicate="∀x·(x∈1‥LAST_FLOOR ∧ snsrDownButtons(x)=TRUE) ⇔ x∈snsrDownButtonsSet"/>
+<org.eventb.core.invariant name="_I9zYQu6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_25" org.eventb.core.predicate="∀x·(x∈1‥LAST_FLOOR ∧ PhyDownButtonLights(x)=TRUE) ⇔ x∈PhyDownButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9zYQ-6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_26" org.eventb.core.predicate="∀x·(x∈1‥LAST_FLOOR ∧ ctrlDownButtonLights(x)=TRUE) ⇔ x∈ctrlDownButtonLightsSet"/>
+<org.eventb.core.invariant name="_I9z_UO6jEd-AmKUrnT9Ziw" org.eventb.core.label="inv24_27" org.eventb.core.predicate="PhyDownButtons = snsrDownButtons"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_I9z_Ue6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="floor ≔ 0" org.eventb.core.label="act1_1"/>
+<org.eventb.core.action name="_I9z_Uu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="moved ≔ FALSE" org.eventb.core.label="act2_2"/>
+<org.eventb.core.action name="_I9z_U-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlCableCommand ≔ CABLE_STOP" org.eventb.core.label="act2_1"/>
+<org.eventb.core.action name="_I9z_VO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlDoorCommand ≔ DOOR_STOP" org.eventb.core.label="act3_1"/>
+<org.eventb.core.action name="_I9z_Ve6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="opened ≔ TRUE" org.eventb.core.label="act3_2"/>
+<org.eventb.core.action name="_I90mYO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyCableEngine ≔ CABLE_STOP" org.eventb.core.label="act4_1"/>
+<org.eventb.core.action name="_I90mYe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyElevatorFloor ≔ 0" org.eventb.core.label="act4_2"/>
+<org.eventb.core.action name="_I90mYu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyElevatorBetweenTwoFloors ≔ FALSE" org.eventb.core.label="act4_3"/>
+<org.eventb.core.action name="_I90mY-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrCableEngine ≔ CABLE_STOP" org.eventb.core.label="act4_4"/>
+<org.eventb.core.action name="_I90mZO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrElevatorFloor ≔ 0" org.eventb.core.label="act4_5"/>
+<org.eventb.core.action name="_I90mZe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act7_1"/>
+<org.eventb.core.action name="_I90mZu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_OPENED" org.eventb.core.label="act7_2"/>
+<org.eventb.core.action name="_I90mZ-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act7_3"/>
+<org.eventb.core.action name="_I91NcO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_OPENED" org.eventb.core.label="act7_4"/>
+<org.eventb.core.action name="_I91Nce6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="schedule ≔ SCHEDULER_WAIT" org.eventb.core.label="act23_1"/>
+<org.eventb.core.action name="_I91Ncu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="last_schedule ≔ SCHEDULER_UP" org.eventb.core.label="act23_2"/>
+<org.eventb.core.action name="_I91Nc-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I91NdO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrFloorButtons ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_2"/>
+<org.eventb.core.action name="_I91Nde6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_3"/>
+<org.eventb.core.action name="_I91Ndu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlFloorButtonLights ≔ 0‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_4"/>
+<org.eventb.core.action name="_I91Nd-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtons ≔ 0‥LAST_FLOOR−1 × {FALSE}" org.eventb.core.label="act24_5"/>
+<org.eventb.core.action name="_I910gO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrUpButtons ≔ 0‥LAST_FLOOR−1 × {FALSE}" org.eventb.core.label="act24_6"/>
+<org.eventb.core.action name="_I910ge6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtonLights ≔ 0‥LAST_FLOOR−1 × {FALSE}" org.eventb.core.label="act24_7"/>
+<org.eventb.core.action name="_I910gu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlUpButtonLights ≔ 0‥LAST_FLOOR−1 × {FALSE}" org.eventb.core.label="act24_8"/>
+<org.eventb.core.action name="_I910g-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtons ≔ 1‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_9"/>
+<org.eventb.core.action name="_I910hO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrDownButtons ≔ 1‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_10"/>
+<org.eventb.core.action name="_I910he6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtonLights ≔ 1‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_11"/>
+<org.eventb.core.action name="_I92bkO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlDownButtonLights ≔ 1‥LAST_FLOOR × {FALSE}" org.eventb.core.label="act24_12"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3IkoxOWyEd-64JNDK1TKiQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_PRESSES_DOWN_BUTTON">
+<org.eventb.core.refinesEvent name="_DRqq4O9eEd--uv2H-WHbGA" org.eventb.core.target="USER_PRESSES_DOWN_BUTTON"/>
+<org.eventb.core.parameter name="_I92bku6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I92bk-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I92blO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyDownButtons(x) = FALSE"/>
+<org.eventb.core.action name="_I92ble6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtons(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I93CoO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrDownButtons(x) ≔ TRUE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DRqq4e9eEd--uv2H-WHbGA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_RELEASES_DOWN_BUTTON">
+<org.eventb.core.refinesEvent name="_DRrR8O9eEd--uv2H-WHbGA" org.eventb.core.target="USER_RELEASES_DOWN_BUTTON"/>
+<org.eventb.core.parameter name="_I93Co-6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I93CpO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I93Cpe6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyDownButtons(x) = TRUE"/>
+<org.eventb.core.action name="_I93Cpu6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtons(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I93Cp-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrDownButtons(x) ≔ FALSE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3Il25eWyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_ON_DOWN_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRr5AO9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_ON_DOWN_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I93pse6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I93psu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I93ps-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlDownButtonLights(x) = TRUE"/>
+<org.eventb.core.guard name="_I93ptO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyDownButtonLights(x) = FALSE"/>
+<org.eventb.core.action name="_I93pte6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtonLights(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3Imd9eWyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_OFF_DOWN_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRsgEO9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_OFF_DOWN_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I94Qwe6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I94Qwu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I94Qw-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlDownButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="_I94QxO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyDownButtonLights(x) = TRUE"/>
+<org.eventb.core.action name="_I94Qxe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyDownButtonLights(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3InsEuWyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_down_button_light_on">
+<org.eventb.core.refinesEvent name="_DRtHIO9eEd--uv2H-WHbGA" org.eventb.core.target="turn_down_button_light_on"/>
+<org.eventb.core.parameter name="__0Yt8u6oEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="__0ZVAO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="__0ZVAe6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="snsrDownButtons(x) = TRUE"/>
+<org.eventb.core.guard name="__0ZVAu6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="ctrlDownButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="__0ZVA-6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_4" org.eventb.core.predicate="floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED"/>
+<org.eventb.core.action name="__0ZVBO6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlDownButtonLights(x)  ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3IoTI-WyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_down_button_light_off">
+<org.eventb.core.refinesEvent name="_DRtuMO9eEd--uv2H-WHbGA" org.eventb.core.target="turn_down_button_light_off"/>
+<org.eventb.core.guard name="__0ZVBu6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="0&lt;floor"/>
+<org.eventb.core.guard name="__0Z8EO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="__0Z8Ee6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="ctrlDownButtonLights(floor) = TRUE"/>
+<org.eventb.core.guard name="__0Z8Eu6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_4" org.eventb.core.predicate="schedule = SCHEDULER_DOWN"/>
+<org.eventb.core.action name="__0Z8E-6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlDownButtonLights(floor) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvVR8eEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_PRESSES_UP_BUTTON">
+<org.eventb.core.refinesEvent name="_DRuVQO9eEd--uv2H-WHbGA" org.eventb.core.target="USER_PRESSES_UP_BUTTON"/>
+<org.eventb.core.parameter name="_I9430-6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I95e4O6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR−1"/>
+<org.eventb.core.guard name="_I95e4e6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyUpButtons(x) = FALSE"/>
+<org.eventb.core.action name="_I95e4u6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtons(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I95e4-6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrUpButtons(x) ≔ TRUE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_3Io6M-WyEd-64JNDK1TKiQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_RELEASES_UP_BUTTON">
+<org.eventb.core.refinesEvent name="_DRu8UO9eEd--uv2H-WHbGA" org.eventb.core.target="USER_RELEASES_UP_BUTTON"/>
+<org.eventb.core.parameter name="_I95e5e6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I95e5u6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR−1"/>
+<org.eventb.core.guard name="_I96F8O6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyUpButtons(x) = TRUE"/>
+<org.eventb.core.action name="_I96F8e6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtons(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I96F8u6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrUpButtons(x) ≔ FALSE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvV5BuEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_ON_UP_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRvjYO9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_ON_UP_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I96F9O6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I96F9e6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR−1"/>
+<org.eventb.core.guard name="_I96F9u6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlUpButtonLights(x) = TRUE"/>
+<org.eventb.core.guard name="_I96tAO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyUpButtonLights(x) = FALSE"/>
+<org.eventb.core.action name="_I96tAe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtonLights(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvWgFeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_OFF_UP_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRvjYe9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_OFF_UP_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I96tA-6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I96tBO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR−1"/>
+<org.eventb.core.guard name="_I96tBe6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlUpButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="_I97UEO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyUpButtonLights(x) = TRUE"/>
+<org.eventb.core.action name="_I97UEe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyUpButtonLights(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvXHJeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_up_button_light_on">
+<org.eventb.core.refinesEvent name="_DRwKcO9eEd--uv2H-WHbGA" org.eventb.core.target="turn_up_button_light_on"/>
+<org.eventb.core.parameter name="__0cYUe6oEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="__0cYUu6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR−1"/>
+<org.eventb.core.guard name="__0cYU-6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="snsrUpButtons(x) = TRUE"/>
+<org.eventb.core.guard name="__0cYVO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="ctrlUpButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="__0cYVe6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_4" org.eventb.core.predicate="floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED"/>
+<org.eventb.core.action name="__0cYVu6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlUpButtonLights(x)  ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvXuNeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_up_button_light_off">
+<org.eventb.core.refinesEvent name="_DRxYkO9eEd--uv2H-WHbGA" org.eventb.core.target="turn_up_button_light_off"/>
+<org.eventb.core.guard name="__0c_ZO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
+<org.eventb.core.guard name="__0c_Y-6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="__0c_Ye6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="ctrlUpButtonLights(floor) = TRUE"/>
+<org.eventb.core.guard name="__0c_Yu6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_4" org.eventb.core.predicate="schedule = SCHEDULER_UP"/>
+<org.eventb.core.action name="__0c_Ze6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlUpButtonLights(floor) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_PRESSES_FLOOR_BUTTON">
+<org.eventb.core.refinesEvent name="_DRx_oO9eEd--uv2H-WHbGA" org.eventb.core.target="USER_PRESSES_FLOOR_BUTTON"/>
+<org.eventb.core.parameter name="_I977Ie6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I977Iu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I977I-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyFloorButtons(x) = FALSE"/>
+<org.eventb.core.action name="_I977JO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtons(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I977Je6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrFloorButtons(x) ≔ TRUE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DRx_oe9eEd--uv2H-WHbGA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_RELEASES_FLOOR_BUTTON">
+<org.eventb.core.refinesEvent name="_DRymsO9eEd--uv2H-WHbGA" org.eventb.core.target="USER_RELEASES_FLOOR_BUTTON"/>
+<org.eventb.core.parameter name="_I98iMe6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I98iMu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I98iM-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="PhyFloorButtons(x) = TRUE"/>
+<org.eventb.core.action name="_I98iNO6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtons(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+<org.eventb.core.action name="_I98iNe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="snsrFloorButtons(x) ≔ FALSE" org.eventb.core.label="act24_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_ON_FLOOR_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRzNwO9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_ON_FLOOR_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I99JQe6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I99JQu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I99JQ-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlFloorButtonLights(x) = TRUE"/>
+<org.eventb.core.guard name="_I99JRO6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyFloorButtonLights(x) = FALSE"/>
+<org.eventb.core.action name="_I99JRe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtonLights(x) ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pvY8UuEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="TURNS_OFF_FLOOR_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_DRz00O9eEd--uv2H-WHbGA" org.eventb.core.target="TURNS_OFF_FLOOR_BUTTON_LIGHT"/>
+<org.eventb.core.parameter name="_I99wUe6jEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_I99wVe6jEd-AmKUrnT9Zix" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_I99wUu6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlFloorButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="_I99wU-6jEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="PhyFloorButtonLights(x) = TRUE"/>
+<org.eventb.core.action name="_I99wVe6jEd-AmKUrnT9Ziw" org.eventb.core.assignment="PhyFloorButtonLights(x) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_floor_button_light_on">
+<org.eventb.core.refinesEvent name="_DRz00e9eEd--uv2H-WHbGA" org.eventb.core.target="turn_floor_button_light_on"/>
+<org.eventb.core.parameter name="__0fboe6oEd-AmKUrnT9Ziw" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="__0fbou6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="x∈0‥LAST_FLOOR"/>
+<org.eventb.core.guard name="__0fbo-6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="snsrFloorButtons(x) = TRUE"/>
+<org.eventb.core.guard name="__0fbpO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_3" org.eventb.core.predicate="ctrlFloorButtonLights(x) = FALSE"/>
+<org.eventb.core.guard name="__0gCsO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_4" org.eventb.core.predicate="floor ≠ x ∨ snsrDoorPosition ≠  DOOR_OPENED"/>
+<org.eventb.core.action name="__0gCse6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlFloorButtonLights(x)  ≔ TRUE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="turn_floor_button_light_off">
+<org.eventb.core.refinesEvent name="_DR1C8O9eEd--uv2H-WHbGA" org.eventb.core.target="turn_floor_button_light_off"/>
+<org.eventb.core.guard name="__0gCs-6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_2" org.eventb.core.predicate="ctrlFloorButtonLights(floor) = TRUE"/>
+<org.eventb.core.guard name="__0gCtO6oEd-AmKUrnT9Ziw" org.eventb.core.label="grd24_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.action name="__0gCte6oEd-AmKUrnT9Ziw" org.eventb.core.assignment="ctrlFloorButtonLights(floor) ≔ FALSE" org.eventb.core.label="act24_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgayBOAzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_CLOSED">
+<org.eventb.core.refinesEvent name="_DR1C8e9eEd--uv2H-WHbGA" org.eventb.core.target="DOOR_OPENS_WHEN_CLOSED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgcAIOAzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_HALF">
+<org.eventb.core.refinesEvent name="_DR1qAO9eEd--uv2H-WHbGA" org.eventb.core.target="DOOR_OPENS_WHEN_HALF"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgcnM-AzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_OPENED">
+<org.eventb.core.refinesEvent name="_DR1qAe9eEd--uv2H-WHbGA" org.eventb.core.target="DOOR_CLOSES_WHEN_OPENED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgdOReAzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_HALF">
+<org.eventb.core.refinesEvent name="_DR1qAu9eEd--uv2H-WHbGA" org.eventb.core.target="DOOR_CLOSES_WHEN_HALF"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgecYeAzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_CLOSED">
+<org.eventb.core.refinesEvent name="_DR2REO9eEd--uv2H-WHbGA" org.eventb.core.target="DOOR_CLOSES_WHEN_CLOSED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KgfDcuAzEd-73py7lbE8bg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="STOP_DOOR_ENGINE">
+<org.eventb.core.refinesEvent name="_DR2REe9eEd--uv2H-WHbGA" org.eventb.core.target="STOP_DOOR_ENGINE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DR2REu9eEd--uv2H-WHbGA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_DR24IO9eEd--uv2H-WHbGA" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DR24Ie9eEd--uv2H-WHbGA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_DR24Iu9eEd--uv2H-WHbGA" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DR24I-9eEd--uv2H-WHbGA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_DR24JO9eEd--uv2H-WHbGA" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DR3fMO9eEd--uv2H-WHbGA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_DR3fMe9eEd--uv2H-WHbGA" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_aG13ENq-Ed-L_e8_V4iXIg" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="STOP_CABLE_ENGINE">
+<org.eventb.core.refinesEvent name="_DR3fMu9eEd--uv2H-WHbGA" org.eventb.core.target="STOP_CABLE_ENGINE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="open_door">
+<org.eventb.core.refinesEvent name="_DR4GQO9eEd--uv2H-WHbGA" org.eventb.core.target="open_door"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="stop_door">
+<org.eventb.core.refinesEvent name="_DR4GQe9eEd--uv2H-WHbGA" org.eventb.core.target="stop_door"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_HKjNMtqzEd-7IuFxCL4SWw" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="close_door">
+<org.eventb.core.refinesEvent name="_DR4GQu9eEd--uv2H-WHbGA" org.eventb.core.target="close_door"/>
+<org.eventb.core.guard name="_JCJwgO8WEd-cCPmubL_L3Q" org.eventb.core.label="grd3_1" org.eventb.core.predicate="ctrlDoorCommand = DOOR_STOP"/>
+<org.eventb.core.guard name="_JCJwge8WEd-cCPmubL_L3Q" org.eventb.core.label="grd7_1" org.eventb.core.predicate="snsrDoorEngine = DOOR_STOP"/>
+<org.eventb.core.guard name="_JCJwgu8WEd-cCPmubL_L3Q" org.eventb.core.label="grd23_1" org.eventb.core.predicate="schedule ≠ SCHEDULER_WAIT"/>
+<org.eventb.core.guard name="_JCJwg-8WEd-cCPmubL_L3Q" org.eventb.core.label="grd24_1" org.eventb.core.predicate="ctrlFloorButtonLights(floor) = FALSE"/>
+<org.eventb.core.guard name="_JCJwhO8WEd-cCPmubL_L3Q" org.eventb.core.label="grd24_2" org.eventb.core.predicate="schedule = SCHEDULER_UP ⇒ (floor = LAST_FLOOR ∨ ctrlUpButtonLights(floor) = FALSE)"/>
+<org.eventb.core.guard name="_JCJwhe8WEd-cCPmubL_L3Q" org.eventb.core.label="grd24_3" org.eventb.core.predicate="schedule = SCHEDULER_DOWN ⇒ (floor = 0 ∨ ctrlDownButtonLights(floor) = FALSE)"/>
+<org.eventb.core.action name="_JCJwhu8WEd-cCPmubL_L3Q" org.eventb.core.assignment="ctrlDoorCommand ≔ DOOR_CLOSE" org.eventb.core.label="act3_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
+<org.eventb.core.refinesEvent name="_DR5UYO9eEd--uv2H-WHbGA" org.eventb.core.target="start_move_up"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9uFS0Nd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_up">
+<org.eventb.core.refinesEvent name="_DR5UYe9eEd--uv2H-WHbGA" org.eventb.core.target="move_up"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
+<org.eventb.core.refinesEvent name="_DR57cO9eEd--uv2H-WHbGA" org.eventb.core.target="start_move_down"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9uF54dd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_down">
+<org.eventb.core.refinesEvent name="_DR57ce9eEd--uv2H-WHbGA" org.eventb.core.target="move_down"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="stop">
+<org.eventb.core.refinesEvent name="_DR57cu9eEd--uv2H-WHbGA" org.eventb.core.target="stop"/>
+<org.eventb.core.guard name="_JCK-o-8WEd-cCPmubL_L3Q" org.eventb.core.label="grd2_1" org.eventb.core.predicate="ctrlCableCommand ≠ CABLE_STOP"/>
+<org.eventb.core.guard name="_JCK-pO8WEd-cCPmubL_L3Q" org.eventb.core.label="grd2_2" org.eventb.core.predicate="moved = TRUE"/>
+<org.eventb.core.guard name="_JCLlsO8WEd-cCPmubL_L3Q" org.eventb.core.label="grd4_1" org.eventb.core.predicate="snsrElevatorFloor ≠ −1"/>
+<org.eventb.core.guard name="_JCLlse8WEd-cCPmubL_L3Q" org.eventb.core.label="grd4_2" org.eventb.core.predicate="snsrElevatorFloor = floor"/>
+<org.eventb.core.guard name="_JCLlsu8WEd-cCPmubL_L3Q" org.eventb.core.label="grd23_1" org.eventb.core.predicate="(ctrlFloorButtonLights(floor)=TRUE) ∨&#10;               (floor≠LAST_FLOOR ∧ ctrlUpButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_UP) ∨&#10;               (floor≠0 ∧ ctrlDownButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_DOWN) ∨&#10;               (floor≠LAST_FLOOR ∧ ctrlUpButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_DOWN ∧ (∀x·x∈0‥floor−1 ⇒ (ctrlUpButtonLights(x)=FALSE ∧ (x=0 ∨ ctrlDownButtonLights(x)=FALSE) ∧ ctrlFloorButtonLights(x)=FALSE))) ∨&#10;               (floor≠0 ∧ ctrlDownButtonLights(floor)=TRUE ∧ schedule = SCHEDULER_UP ∧ (∀y·y∈floor+1‥LAST_FLOOR ⇒ ((y=LAST_FLOOR ∨ ctrlUpButtonLights(y)=FALSE) ∧ ctrlDownButtonLights(y)=FALSE ∧ ctrlFloorButtonLights(y)=FALSE)))"/>
+<org.eventb.core.action name="_JCLls-8WEd-cCPmubL_L3Q" org.eventb.core.assignment="ctrlCableCommand ≔ CABLE_STOP" org.eventb.core.label="act2_1"/>
+<org.eventb.core.action name="_JCLltO8WEd-cCPmubL_L3Q" org.eventb.core.assignment="moved ≔ FALSE" org.eventb.core.label="act2_2"/>
+<org.eventb.core.action name="_JCLlte8WEd-cCPmubL_L3Q" org.eventb.core.assignment="opened ≔ FALSE" org.eventb.core.label="act3_1"/>
+<org.eventb.core.action name="_JCLltu8WEd-cCPmubL_L3Q" org.eventb.core.assignment="schedule ≔ SCHEDULER_WAIT" org.eventb.core.label="act23_2"/>
+<org.eventb.core.action name="_JCLlt-8WEd-cCPmubL_L3Q" org.eventb.core.assignment="last_schedule ≔ schedule" org.eventb.core.label="act23_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Utq4gO5-Ed-dEtybZVK09Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="switch_schedule_to_up">
+<org.eventb.core.refinesEvent name="_DR7JkO9eEd--uv2H-WHbGA" org.eventb.core.target="switch_schedule_to_up"/>
+<org.eventb.core.parameter name="_pRAQQe9bEd--uv2H-WHbGA" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_pRAQQu9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_0" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="_pRAQQ-9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_1" org.eventb.core.predicate="schedule = SCHEDULER_WAIT"/>
+<org.eventb.core.guard name="_pRAQRO9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_2" org.eventb.core.predicate="x ∈ floor+1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_pRAQRe9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_3" org.eventb.core.predicate="(x≠LAST_FLOOR ∧ ctrlUpButtonLights(x)=TRUE) ∨ ctrlFloorButtonLights(x)=TRUE ∨ ctrlDownButtonLights(x)=TRUE"/>
+<org.eventb.core.guard name="_pRAQRu9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_4" org.eventb.core.predicate="∀y·y∈0‥floor−1 ⇒ (ctrlUpButtonLights(y)=FALSE ∧ ctrlFloorButtonLights(y)=FALSE ∧ (y=0 ∨ ctrlDownButtonLights(y)=FALSE))"/>
+<org.eventb.core.guard name="_pRA3UO9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_5" org.eventb.core.predicate="last_schedule = SCHEDULER_DOWN"/>
+<org.eventb.core.action name="_pRA3Ue9bEd--uv2H-WHbGA" org.eventb.core.assignment="schedule ≔ SCHEDULER_UP" org.eventb.core.label="act23_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Utrfle5-Ed-dEtybZVK09Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="resume_schedule_up">
+<org.eventb.core.refinesEvent name="_DR8XsO9eEd--uv2H-WHbGA" org.eventb.core.target="resume_schedule_up"/>
+<org.eventb.core.parameter name="_DR8Xse9eEd--uv2H-WHbGA" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_DR8Xsu9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_0" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="_DR8Xs-9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_2" org.eventb.core.predicate="x ∈ floor+1‥LAST_FLOOR"/>
+<org.eventb.core.guard name="_DR8XtO9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_3" org.eventb.core.predicate="(x≠LAST_FLOOR ∧ ctrlUpButtonLights(x)=TRUE) ∨ ctrlFloorButtonLights(x)=TRUE ∨ ctrlDownButtonLights(x)=TRUE"/>
+<org.eventb.core.guard name="_DR8Xte9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_1" org.eventb.core.predicate="schedule = SCHEDULER_WAIT"/>
+<org.eventb.core.guard name="_DR8Xtu9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_4" org.eventb.core.predicate="last_schedule = SCHEDULER_UP"/>
+<org.eventb.core.action name="_DR8-wO9eEd--uv2H-WHbGA" org.eventb.core.assignment="schedule ≔ SCHEDULER_UP" org.eventb.core.label="act23_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Utstsu5-Ed-dEtybZVK09Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="switch_schedule_to_down">
+<org.eventb.core.refinesEvent name="_DR8-we9eEd--uv2H-WHbGA" org.eventb.core.target="switch_schedule_to_down"/>
+<org.eventb.core.parameter name="_pRBeYe9bEd--uv2H-WHbGA" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_pRBeYu9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_0" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="_pRCFcO9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_1" org.eventb.core.predicate="schedule = SCHEDULER_WAIT"/>
+<org.eventb.core.guard name="_pRCFce9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_2" org.eventb.core.predicate="x ∈ 0‥floor−1"/>
+<org.eventb.core.guard name="_pRBeZO9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_3" org.eventb.core.predicate="ctrlUpButtonLights(x)=TRUE ∨ ctrlFloorButtonLights(x)=TRUE ∨ (x≠0 ∧ ctrlDownButtonLights(x)=TRUE)"/>
+<org.eventb.core.guard name="_pRBeY-9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_4" org.eventb.core.predicate="∀y·y∈floor+1‥LAST_FLOOR ⇒ ((y=LAST_FLOOR ∨ ctrlUpButtonLights(y)=FALSE) ∧ ctrlFloorButtonLights(y)=FALSE ∧ ctrlDownButtonLights(y)=FALSE)"/>
+<org.eventb.core.guard name="_pRBeZe9bEd--uv2H-WHbGA" org.eventb.core.label="grd23_5" org.eventb.core.predicate="last_schedule = SCHEDULER_UP"/>
+<org.eventb.core.action name="_pRCFcu9bEd--uv2H-WHbGA" org.eventb.core.assignment="schedule ≔ SCHEDULER_DOWN" org.eventb.core.label="act23_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Utt70e5-Ed-dEtybZVK09Q" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="resume_schedule_down">
+<org.eventb.core.refinesEvent name="_DR-M4O9eEd--uv2H-WHbGA" org.eventb.core.target="resume_schedule_down"/>
+<org.eventb.core.parameter name="_DR-M4e9eEd--uv2H-WHbGA" org.eventb.core.identifier="x"/>
+<org.eventb.core.guard name="_DR-M4u9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_1" org.eventb.core.predicate="schedule = SCHEDULER_WAIT"/>
+<org.eventb.core.guard name="_DR-M4-9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_0" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="_DR-M5O9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_2" org.eventb.core.predicate="x ∈ 0‥floor−1"/>
+<org.eventb.core.guard name="_DR-M5e9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_3" org.eventb.core.predicate="ctrlUpButtonLights(x)=TRUE ∨ ctrlFloorButtonLights(x)=TRUE ∨ (x≠0 ∧ ctrlDownButtonLights(x)=TRUE)"/>
+<org.eventb.core.guard name="_DR-M5u9eEd--uv2H-WHbGA" org.eventb.core.label="grd23_4" org.eventb.core.predicate="last_schedule = SCHEDULER_DOWN"/>
+<org.eventb.core.action name="_DR-z8O9eEd--uv2H-WHbGA" org.eventb.core.assignment="schedule ≔ SCHEDULER_DOWN" org.eventb.core.label="act23_1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
