@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.psFile>
-<org.eventb.core.psStatus name="VWD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/NAT" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_DOWN/NAT" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-</org.eventb.core.psFile>

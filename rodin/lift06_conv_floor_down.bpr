@@ -299,4 +299,22 @@
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/NAT"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/NAT"/>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/VAR"/>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/NAT"/>
+<org.eventb.core.prProof name="open_door/VAR"/>
+<org.eventb.core.prProof name="open_door/NAT"/>
+<org.eventb.core.prProof name="stop_door/VAR"/>
+<org.eventb.core.prProof name="stop_door/NAT"/>
+<org.eventb.core.prProof name="close_door/VAR"/>
+<org.eventb.core.prProof name="close_door/NAT"/>
+<org.eventb.core.prProof name="start_move_up/VAR"/>
+<org.eventb.core.prProof name="start_move_up/NAT"/>
+<org.eventb.core.prProof name="start_move_down/VAR"/>
+<org.eventb.core.prProof name="start_move_down/NAT"/>
+<org.eventb.core.prProof name="stop/VAR"/>
+<org.eventb.core.prProof name="stop/NAT"/>
 </org.eventb.core.prFile>

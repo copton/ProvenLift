@@ -413,4 +413,26 @@
 <org.eventb.core.prPred name="p63" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="turn_up_button_light_off/VAR"/>
+<org.eventb.core.prProof name="TURNS_ON_FLOOR_BUTTON_LIGHT/VAR"/>
+<org.eventb.core.prProof name="TURNS_OFF_FLOOR_BUTTON_LIGHT/VAR"/>
+<org.eventb.core.prProof name="turn_floor_button_light_on/VAR"/>
+<org.eventb.core.prProof name="turn_floor_button_light_off/VAR"/>
+<org.eventb.core.prProof name="DOOR_OPENS_WHEN_CLOSED/VAR"/>
+<org.eventb.core.prProof name="DOOR_OPENS_WHEN_HALF/VAR"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_OPENED/VAR"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_HALF/VAR"/>
+<org.eventb.core.prProof name="DOOR_CLOSES_WHEN_CLOSED/VAR"/>
+<org.eventb.core.prProof name="STOP_DOOR_ENGINE/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_UP/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_UP/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR"/>
+<org.eventb.core.prProof name="ELEVATOR_REACHES_FLOOR_DOWN/VAR"/>
+<org.eventb.core.prProof name="STOP_CABLE_ENGINE/VAR"/>
+<org.eventb.core.prProof name="open_door/VAR"/>
+<org.eventb.core.prProof name="stop_door/VAR"/>
+<org.eventb.core.prProof name="close_door/VAR"/>
+<org.eventb.core.prProof name="start_move_up/VAR"/>
+<org.eventb.core.prProof name="start_move_down/VAR"/>
+<org.eventb.core.prProof name="stop/VAR"/>
 </org.eventb.core.prFile>
