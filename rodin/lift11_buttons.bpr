@@ -161,8 +161,8 @@
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p27,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p26">
+<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p26,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p25">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -188,7 +188,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -204,48 +203,47 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonsSet∪{x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p27,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p26">
+<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p26,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p25">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -271,7 +269,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -287,48 +284,47 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="snsrFloorButtonsSet∪{x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p27,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p26">
+<org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p26,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p25">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -354,7 +350,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -370,45 +365,44 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="x∉PhyFloorButtonsSet"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="snsrFloorButtonsSet∪{x}=PhyFloorButtonsSet∪{x}"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="USER_RELEASES_BUTTON/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p33,p5,p21,p4,p14,p27,p37,p18,p17,p29,p2,p44,p31,p41,p36,p39,p15,p9,p16,p26,p38,p12,p23,p11,p45,p6,p8,p40,p35,p28,p22,p19,p25,p7,p10,p20,p42,p32,p24,p46,p30,p1,p43,p13,p3,p34">
@@ -490,8 +484,8 @@
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p26,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p27">
+<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p25,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p26">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -517,7 +511,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -533,48 +526,47 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonsSet ∖ {x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p26,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p27">
+<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p25,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p26">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -600,7 +592,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -616,48 +607,47 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="snsrFloorButtonsSet ∖ {x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p42,p38,p15,p10,p16,p40,p13,p24,p12,p46,p7,p9,p41,p37,p29,p23,p19,p26,p8,p11,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p27">
+<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/inv11_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p34,p5,p20,p4,p13,p27,p38,p17,p16,p29,p2,p44,p32,p40,p37,p14,p15,p39,p12,p23,p11,p45,p7,p9,p41,p36,p28,p22,p18,p25,p8,p10,p19,p42,p33,p24,p46,p31,p1,p30,p6,p43,p21,p3,p35,p26">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -683,7 +673,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -699,45 +688,44 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∈PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="snsrFloorButtonsSet ∖ {x}=PhyFloorButtonsSet ∖ {x}"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p9,p7,p2,p3,p1,p6,p5,p4">
@@ -964,8 +952,8 @@
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="TURNS_OFF_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p36,p6,p22,p5,p15,p29,p40,p19,p18,p31,p3,p46,p34,p43,p39,p16,p11,p17,p41,p14,p25,p13,p47,p8,p10,p42,p38,p30,p24,p20,p28,p9,p12,p21,p44,p35,p26,p48,p33,p2,p32,p7,p45,p23,p4,p37,p1,p27">
+<org.eventb.core.prProof name="TURNS_OFF_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p6,p21,p5,p14,p28,p39,p18,p17,p30,p3,p45,p33,p41,p38,p15,p16,p40,p13,p24,p12,p46,p8,p10,p42,p37,p29,p23,p19,p27,p9,p11,p20,p43,p34,p25,p47,p32,p2,p31,p7,p44,p22,p4,p36,p1,p26">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -991,62 +979,60 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="snsrFloorButtonsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x∉ctrlFloorButtonLightsSet"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorPosition=DOOR_CLOSED"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈ℕ"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonLightsSet ∖ {x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x∉ctrlFloorButtonLightsSet"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="x∈PhyFloorButtonLightsSet"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="x∈PhyFloorButtonLightsSet"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonLightsSet ∖ {x}⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="TURNS_ON_BUTTON_LIGHT/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p29,p39,p18,p17,p31,p2,p46,p33,p43,p38,p41,p15,p9,p16,p28,p40,p12,p24,p11,p47,p6,p8,p42,p37,p30,p23,p19,p27,p7,p10,p20,p44,p34,p25,p48,p32,p1,p45,p13,p3,p26,p22,p36">
@@ -1219,8 +1205,8 @@
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="TURNS_ON_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p36,p5,p22,p4,p15,p29,p40,p19,p18,p31,p2,p46,p34,p43,p39,p16,p10,p17,p41,p14,p25,p12,p47,p7,p9,p42,p38,p30,p24,p20,p27,p8,p11,p21,p44,p35,p26,p48,p33,p1,p32,p6,p45,p23,p3,p37,p13,p28">
+<org.eventb.core.prProof name="TURNS_ON_FLOOR_BUTTON_LIGHT/inv11_4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p5,p21,p4,p14,p28,p39,p18,p17,p30,p2,p45,p33,p41,p38,p15,p16,p40,p13,p24,p11,p46,p7,p9,p42,p37,p29,p23,p19,p26,p8,p10,p20,p43,p34,p25,p47,p32,p1,p31,p6,p44,p22,p3,p36,p12,p27">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -1246,7 +1232,6 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -1256,52 +1241,51 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorPosition=DOOR_CLOSED"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonLightsSet∪{x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="x∈ctrlFloorButtonLightsSet"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="x∉PhyFloorButtonLightsSet"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="x∈ctrlFloorButtonLightsSet"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyFloorButtonLightsSet∪{x}⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="x∉PhyFloorButtonLightsSet"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="USER_PRESSES_FLOOR_BUTTON/grd11_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
@@ -2022,8 +2006,8 @@
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="PhyFloorButtonLights∈0 ‥ LAST_FLOOR → BOOL"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="turn_floor_button_light_on/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p3,p34,p27,p32,p37,p22,p33,p11,p38,p2,p23,p17,p44,p42,p10,p6,p9,p43,p31,p14,p7,p47,p29,p30,p45,p20,p39,p36,p12,p16,p5,p8,p13,p46,p41,p15,p49,p18,p1,p40,p4,p48,p35,p28,p21,p24,p25,p26">
+<org.eventb.core.prProof name="turn_floor_button_light_on/inv11_5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p35,p7,p22,p6,p15,p28,p39,p19,p18,p30,p4,p45,p33,p41,p38,p16,p17,p40,p14,p25,p13,p46,p9,p11,p42,p37,p29,p24,p20,p27,p10,p12,p21,p43,p34,p26,p48,p32,p3,p31,p8,p44,p23,p5,p36,p47,p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
@@ -2049,63 +2033,61 @@
 <org.eventb.core.prIdent name="ctrlFloorButtonLightsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="moved" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="opened" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="snsrCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.prIdent name="snsrElevatorFloor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="snsrFloorButtonsSet" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorPosition=DOOR_CLOSED"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="opened∈BOOL"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorPosition=DOOR_CLOSED"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="snsrFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒PhyElevatorFloor≠LAST_FLOOR"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlDoorCommand∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(DOOR_COMMAND,{DOOR_STOP},{DOOR_OPEN},{DOOR_CLOSE})"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="snsrCableEngine≠CABLE_STOP⇒ctrlDoorCommand=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="PhyDoorPosition∈DOOR_POSITION"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="ctrlFloorButtonLightsSet∪{x}⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="x∈snsrFloorButtonsSet"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="x∉ctrlFloorButtonLightsSet"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="floor≠x∨snsrDoorPosition≠DOOR_OPENED"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="b2n(TRUE)=1"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="b2n(FALSE)=0"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="moved∈BOOL"/>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors∈BOOL"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="snsrDoorPosition∈DOOR_POSITION"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒floor=snsrElevatorFloor"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒snsrDoorEngine=DOOR_CLOSE"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE⇒snsrElevatorFloor=PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="x∈snsrFloorButtonsSet"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x∉ctrlFloorButtonLightsSet"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor≠x∨snsrDoorPosition≠DOOR_OPENED"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ctrlFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="snsrCableEngine=PhyCableEngine"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="snsrElevatorFloor∈−1 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="PhyFloorButtonLightsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="snsrElevatorFloor=−1⇒snsrCableEngine≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="snsrElevatorFloor=−1⇒ctrlCableCommand≠CABLE_STOP"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="partition(DOOR_POSITION,{DOOR_OPENED},{DOOR_HALF},{DOOR_CLOSED})"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="PhyFloorButtonsSet⊆0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="snsrDoorEngine=PhyDoorEngine"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="moved∈BOOL"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="PhyCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE⇒snsrElevatorFloor=−1"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="snsrDoorEngine∈DOOR_COMMAND"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="turn_floor_button_light_on/grd11_3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51" org.eventb.core.prSets="CABLE_COMMAND,DOOR_COMMAND,DOOR_POSITION">
 <org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p19,p3,p32,p26,p30,p36,p22,p31,p10,p37,p2,p24,p17,p45,p42,p44,p9,p5,p8,p35,p43,p29,p14,p6,p48,p27,p28,p46,p20,p38,p34,p11,p16,p4,p7,p12,p47,p41,p15,p49,p18,p1,p13,p25,p40,p50,p23,p21,p51,p33,p39">

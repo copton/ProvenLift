@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1290095506729" org.eventb.texttools.text_representation="machine lift03_door_engine refines lift02_main_engine  sees ctx3_door_engine&#10;&#10;variables floor ctrlCableCommand moved ctrlDoorCommand opened&#10;&#10;invariants&#10;  @inv3_1 ctrlDoorCommand ∈ DOOR_COMMAND&#10;  @inv3_2 opened ∈ BOOL&#10;  @inv3_3 ctrlCableCommand ≠ CABLE_STOP ⇒ ctrlDoorCommand = DOOR_CLOSE&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_STOP&#10;      @act3_2 opened ≔ TRUE&#10;  end&#10;&#10;  anticipated event open_door&#10;    where&#10;      @grd3_1 ctrlCableCommand = CABLE_STOP&#10;      @grd3_2 opened = FALSE&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_OPEN&#10;      @act3_2 opened ≔ TRUE&#10;  end&#10;&#10;  anticipated event stop_door&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_OPEN&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_STOP&#10;  end&#10;&#10;  anticipated event close_door&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_STOP&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event start_move_up extends start_move_up&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event move_up extends move_up&#10;  end&#10;&#10;  anticipated event start_move_down extends start_move_down&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event move_down extends move_down&#10;  end&#10;&#10;  anticipated event stop extends stop&#10;    then&#10;      @act3_1 opened ≔ FALSE&#10;  end&#10;end&#10;" version="5">
-<org.eventb.core.refinesMachine name="_v6zLQPMrEd-CfdFlXM8tVw" org.eventb.core.target="lift02_main_engine"/>
-<org.eventb.core.seesContext name="_v6zyUPMrEd-CfdFlXM8tVw" org.eventb.core.target="ctx3_door_engine"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1290097252658" org.eventb.texttools.text_representation="machine lift03_door_engine refines lift02_main_engine  sees ctx3_door_engine&#10;&#10;variables floor ctrlCableCommand moved ctrlDoorCommand&#10;&#10;invariants&#10;  @inv3_1 ctrlDoorCommand ∈ DOOR_COMMAND&#10;  @inv3_3 ctrlCableCommand ≠ CABLE_STOP ⇒ ctrlDoorCommand = DOOR_CLOSE&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_STOP&#10;  end&#10;&#10;  anticipated event open_door&#10;    where&#10;      @grd3_1 ctrlCableCommand = CABLE_STOP&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_OPEN&#10;  end&#10;&#10;  anticipated event stop_door&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_OPEN&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_STOP&#10;  end&#10;&#10;  anticipated event close_door&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_STOP&#10;    then&#10;      @act3_1 ctrlDoorCommand ≔ DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event start_move_up extends start_move_up&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event move_up extends move_up&#10;  end&#10;&#10;  anticipated event start_move_down extends start_move_down&#10;    where&#10;      @grd3_1 ctrlDoorCommand = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event move_down extends move_down&#10;  end&#10;&#10;  anticipated event stop extends stop&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_0F-1cPMvEd-IqfVXadHBVg" org.eventb.core.target="lift02_main_engine"/>
+<org.eventb.core.seesContext name="_0F-1cfMvEd-IqfVXadHBVg" org.eventb.core.target="ctx3_door_engine"/>
 <org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="floor"/>
 <org.eventb.core.variable name="_1cMDMtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ctrlCableCommand"/>
 <org.eventb.core.variable name="_yC03ctqwEd-O4vbSPlarTw" org.eventb.core.identifier="moved"/>
 <org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
-<org.eventb.core.variable name="_84_BUNqzEd-IzpmRUY7GDg" org.eventb.core.identifier="opened"/>
 <org.eventb.core.invariant name="_HKimINqzEd-7IuFxCL4SWw" org.eventb.core.label="inv3_1" org.eventb.core.predicate="ctrlDoorCommand ∈ DOOR_COMMAND"/>
-<org.eventb.core.invariant name="_84_oYNqzEd-IzpmRUY7GDg" org.eventb.core.label="inv3_2" org.eventb.core.predicate="opened ∈ BOOL"/>
 <org.eventb.core.invariant name="_Sjk-INq3Ed-AAt710HomgA" org.eventb.core.label="inv3_3" org.eventb.core.predicate="ctrlCableCommand ≠ CABLE_STOP ⇒ ctrlDoorCommand = DOOR_CLOSE"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="_HKimIdqzEd-7IuFxCL4SWw" org.eventb.core.assignment="ctrlDoorCommand ≔ DOOR_STOP" org.eventb.core.label="act3_1"/>
-<org.eventb.core.action name="_85A2gNqzEd-IzpmRUY7GDg" org.eventb.core.assignment="opened ≔ TRUE" org.eventb.core.label="act3_2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="open_door">
 <org.eventb.core.guard name="_HKjNMNqzEd-7IuFxCL4SWw" org.eventb.core.label="grd3_1" org.eventb.core.predicate="ctrlCableCommand = CABLE_STOP"/>
-<org.eventb.core.guard name="_85BdkNqzEd-IzpmRUY7GDg" org.eventb.core.label="grd3_2" org.eventb.core.predicate="opened = FALSE"/>
 <org.eventb.core.action name="_HKjNMdqzEd-7IuFxCL4SWw" org.eventb.core.assignment="ctrlDoorCommand ≔ DOOR_OPEN" org.eventb.core.label="act3_1"/>
-<org.eventb.core.action name="_85CEoNqzEd-IzpmRUY7GDg" org.eventb.core.assignment="opened ≔ TRUE" org.eventb.core.label="act3_2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="stop_door">
 <org.eventb.core.guard name="_SjmzUNq3Ed-AAt710HomgA" org.eventb.core.label="grd3_1" org.eventb.core.predicate="ctrlDoorCommand = DOOR_OPEN"/>
@@ -29,21 +24,20 @@
 <org.eventb.core.action name="_HKj0QdqzEd-7IuFxCL4SWw" org.eventb.core.assignment="ctrlDoorCommand ≔ DOOR_CLOSE" org.eventb.core.label="act3_1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
-<org.eventb.core.refinesEvent name="_v62OkPMrEd-CfdFlXM8tVw" org.eventb.core.target="start_move_up"/>
+<org.eventb.core.refinesEvent name="_0GAqoPMvEd-IqfVXadHBVg" org.eventb.core.target="start_move_up"/>
 <org.eventb.core.guard name="_SjnaYdq3Ed-AAt710HomgA" org.eventb.core.label="grd3_1" org.eventb.core.predicate="ctrlDoorCommand = DOOR_CLOSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uFS0Nd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="move_up">
-<org.eventb.core.refinesEvent name="_v621oPMrEd-CfdFlXM8tVw" org.eventb.core.target="move_up"/>
+<org.eventb.core.refinesEvent name="_0GBRsPMvEd-IqfVXadHBVg" org.eventb.core.target="move_up"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
-<org.eventb.core.refinesEvent name="_v621ofMrEd-CfdFlXM8tVw" org.eventb.core.target="start_move_down"/>
+<org.eventb.core.refinesEvent name="_0GBRsfMvEd-IqfVXadHBVg" org.eventb.core.target="start_move_down"/>
 <org.eventb.core.guard name="_SjoBcdq3Ed-AAt710HomgA" org.eventb.core.label="grd3_1" org.eventb.core.predicate="ctrlDoorCommand = DOOR_CLOSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_9uF54dd9Ed-Dle0at0Xgqg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="move_down">
-<org.eventb.core.refinesEvent name="_v621ovMrEd-CfdFlXM8tVw" org.eventb.core.target="move_down"/>
+<org.eventb.core.refinesEvent name="_0GB4wPMvEd-IqfVXadHBVg" org.eventb.core.target="move_down"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="stop">
-<org.eventb.core.refinesEvent name="_v63csPMrEd-CfdFlXM8tVw" org.eventb.core.target="stop"/>
-<org.eventb.core.action name="_85FH8NqzEd-IzpmRUY7GDg" org.eventb.core.assignment="opened ≔ FALSE" org.eventb.core.label="act3_1"/>
+<org.eventb.core.refinesEvent name="_0GB4wfMvEd-IqfVXadHBVg" org.eventb.core.target="stop"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
