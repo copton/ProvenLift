@@ -748,4 +748,127 @@
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv2_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p5,p7,p6,p1,p3,p2,p9,p10,p11,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="start_move_down/inv2_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p15,p16,p17,p18"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p15,p16,p17,p18"/>
+<org.eventb.core.prRule name="org.eventb.core.seqprover.typeRewrites:0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p11,p3,p6,p1,p7,p4,p10,p12,p9,p13,p14,p15,p16,p17,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="last_stop" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="last_stop∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PhyElevatorFloor&gt;0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="start_move_up/inv2_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="CABLE_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.partitionRewrites" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p15,p16,p17,p18"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p15,p16,p17,p18"/>
+<org.eventb.core.prRule name="org.eventb.core.seqprover.typeRewrites:0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p12,p3,p6,p1,p7,p4,p11,p13,p9,p14,p10,p15,p16,p17,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_UNWIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="CABLE_WIND" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+<org.eventb.core.prIdent name="ctrlCableCommand" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.prIdent name="last_stop" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="b2n(FALSE)=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="b2n∈BOOL ⤖ {0,1}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TRUE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CABLE_WIND=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="b2n∈BOOL ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="FALSE∈dom(b2n)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(CABLE_COMMAND,{CABLE_STOP},{CABLE_WIND},{CABLE_UNWIND})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="last_stop∈0 ‥ LAST_FLOOR"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="b2n(TRUE)=1"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬CABLE_STOP=CABLE_UNWIND"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬CABLE_STOP=CABLE_WIND"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="CABLE_COMMAND={CABLE_STOP,CABLE_WIND,CABLE_UNWIND}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

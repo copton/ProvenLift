@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1290269369857" org.eventb.texttools.text_representation="machine lift05_phys_door refines lift04_phys_main_engine  sees ctx4_door_position&#10;&#10;variables last_stop PhyCableEngine PhyElevatorFloor PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor PhyDoorEngine PhyDoorPosition ctrlDoorCommand snsrDoorEngine snsrDoorPosition&#10;&#10;invariants&#10;  @inv5_1 PhyDoorEngine ∈ DOOR_COMMAND&#10;  @inv5_2 PhyDoorPosition ∈ DOOR_POSITION&#10;  @inv5_3 snsrDoorEngine ∈ DOOR_COMMAND&#10;  @inv5_4 snsrDoorEngine = PhyDoorEngine&#10;  @inv5_5 snsrDoorPosition ∈ DOOR_POSITION&#10;  @inv5_6 snsrDoorPosition = PhyDoorPosition&#10;  @inv5_7 ctrlCableCommand ≠  CABLE_STOP ⇒ snsrDoorEngine = DOOR_CLOSE&#10;  @inv5_8 ctrlCableCommand ≠  CABLE_STOP ⇒ snsrDoorPosition = DOOR_CLOSED&#10;  @inv5_9 PhyCableEngine ≠ CABLE_STOP ⇒ PhyDoorEngine = DOOR_CLOSE // FUN28&#10;  @inv5_10 PhyCableEngine ≠ CABLE_STOP ⇒ PhyDoorPosition = DOOR_CLOSED // FUN29&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  then&#10;    @act5_1 PhyDoorEngine ≔ DOOR_STOP&#10;    @act5_2 PhyDoorPosition ≔ DOOR_CLOSED&#10;    @act5_3 snsrDoorEngine ≔ DOOR_STOP&#10;    @act5_4 snsrDoorPosition ≔ DOOR_CLOSED&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_CLOSED&#10;  when&#10;    @grd1 PhyDoorPosition = DOOR_CLOSED&#10;    @grd2 ctrlDoorCommand = DOOR_OPEN&#10;  then&#10;    @act1 PhyDoorPosition ≔ DOOR_HALF&#10;    @act2 PhyDoorEngine ≔ DOOR_OPEN&#10;    @act3 snsrDoorPosition ≔ DOOR_HALF&#10;    @act4 snsrDoorEngine ≔ DOOR_OPEN&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_HALF&#10;  when&#10;    @grd1 PhyDoorPosition = DOOR_HALF&#10;    @grd2 ctrlDoorCommand = DOOR_OPEN&#10;  then&#10;    @act1 PhyDoorPosition ≔ DOOR_OPENED&#10;    @act2 PhyDoorEngine ≔ DOOR_OPEN&#10;    @act3 snsrDoorPosition ≔ DOOR_OPENED&#10;    @act4 snsrDoorEngine ≔ DOOR_OPEN&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_OPENED&#10;  when&#10;    @grd1 PhyDoorPosition = DOOR_OPENED&#10;    @grd2 ctrlDoorCommand = DOOR_CLOSE&#10;  then&#10;    @act1 PhyDoorPosition ≔ DOOR_HALF&#10;    @act2 PhyDoorEngine ≔ DOOR_CLOSE&#10;    @act3 snsrDoorPosition ≔ DOOR_HALF&#10;    @act4 snsrDoorEngine ≔ DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_HALF&#10;  when&#10;    @grd1 PhyDoorPosition = DOOR_HALF&#10;    @grd2 ctrlDoorCommand = DOOR_CLOSE&#10;  then&#10;    @act1 PhyDoorPosition ≔ DOOR_CLOSED&#10;    @act2 PhyDoorEngine ≔ DOOR_CLOSE&#10;    @act3 snsrDoorPosition ≔ DOOR_CLOSED&#10;    @act4 snsrDoorEngine ≔ DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_CLOSED&#10;  when&#10;    @grd1 PhyDoorPosition = DOOR_CLOSED&#10;    @grd2 ctrlDoorCommand = DOOR_CLOSE&#10;    @grd3 PhyDoorEngine ≠ DOOR_CLOSE&#10;  then&#10;    @act1 PhyDoorEngine ≔ DOOR_CLOSE&#10;    @act2 snsrDoorEngine ≔ DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event STOP_DOOR_ENGINE&#10;  when&#10;    @grd1 PhyDoorEngine ≠ DOOR_STOP&#10;    @grd2 ctrlDoorCommand = DOOR_STOP&#10;  then&#10;    @act1 PhyDoorEngine ≔ DOOR_STOP&#10;    @act2 snsrDoorEngine ≔ DOOR_STOP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  anticipated event open_door extends open_door&#10;  when&#10;    @grd5_1 snsrDoorPosition = DOOR_CLOSED&#10;  end&#10;&#10;  anticipated event stop_door extends stop_door&#10;  when&#10;    @grd5_1 snsrDoorPosition = DOOR_OPENED&#10;  end&#10;&#10;  anticipated event close_door extends close_door&#10;  when&#10;    @grd5_1 snsrDoorEngine = DOOR_STOP&#10;  end&#10;&#10;  anticipated event start_move_up extends start_move_up&#10;  when&#10;    @grd5_1 snsrDoorPosition = DOOR_CLOSED&#10;    @grd5_2 snsrDoorEngine = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event start_move_down extends start_move_down&#10;  when&#10;    @grd5_1 snsrDoorPosition = DOOR_CLOSED&#10;    @grd5_2 snsrDoorEngine = DOOR_CLOSE&#10;  end&#10;&#10;  anticipated event stop extends stop&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_jju04PTAEd-43_jmKUh78g" org.eventb.core.target="lift04_phys_main_engine"/>
+<org.eventb.core.seesContext name="_jju04fTAEd-43_jmKUh78g" org.eventb.core.target="ctx4_door_position"/>
+<org.eventb.core.variable name="_qq-rwvS9Ed-43_jmKUh78g" org.eventb.core.identifier="last_stop"/>
+<org.eventb.core.variable name="_aGvwctq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyCableEngine"/>
+<org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="PhyElevatorFloor"/>
+<org.eventb.core.variable name="_aGwXgNq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyElevatorBetweenTwoFloors"/>
+<org.eventb.core.variable name="_1cMDMtd_Ed-Dle0at0Xgqg" org.eventb.core.identifier="ctrlCableCommand"/>
+<org.eventb.core.variable name="_aGwXgtq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="snsrCableEngine"/>
+<org.eventb.core.variable name="_aGwXg9q-Ed-L_e8_V4iXIg" org.eventb.core.identifier="snsrElevatorFloor"/>
+<org.eventb.core.variable name="_F6UpQOA2Ed-73py7lbE8bg" org.eventb.core.identifier="PhyDoorEngine"/>
+<org.eventb.core.variable name="_F6UpQeA2Ed-73py7lbE8bg" org.eventb.core.identifier="PhyDoorPosition"/>
+<org.eventb.core.variable name="_HKh_EtqzEd-7IuFxCL4SWw" org.eventb.core.identifier="ctrlDoorCommand"/>
+<org.eventb.core.variable name="_F6UpQuA2Ed-73py7lbE8bg" org.eventb.core.identifier="snsrDoorEngine"/>
+<org.eventb.core.variable name="_F6UpQ-A2Ed-73py7lbE8bg" org.eventb.core.identifier="snsrDoorPosition"/>
+<org.eventb.core.invariant name="_F6UpROA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_1" org.eventb.core.predicate="PhyDoorEngine ∈ DOOR_COMMAND"/>
+<org.eventb.core.invariant name="_F6VQUOA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_2" org.eventb.core.predicate="PhyDoorPosition ∈ DOOR_POSITION"/>
+<org.eventb.core.invariant name="_F6VQUeA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_3" org.eventb.core.predicate="snsrDoorEngine ∈ DOOR_COMMAND"/>
+<org.eventb.core.invariant name="_F6VQUuA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_4" org.eventb.core.predicate="snsrDoorEngine = PhyDoorEngine"/>
+<org.eventb.core.invariant name="_F6VQU-A2Ed-73py7lbE8bg" org.eventb.core.label="inv5_5" org.eventb.core.predicate="snsrDoorPosition ∈ DOOR_POSITION"/>
+<org.eventb.core.invariant name="_F6VQVOA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_6" org.eventb.core.predicate="snsrDoorPosition = PhyDoorPosition"/>
+<org.eventb.core.invariant name="_F6V3YOA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_7" org.eventb.core.predicate="ctrlCableCommand ≠  CABLE_STOP ⇒ snsrDoorEngine = DOOR_CLOSE"/>
+<org.eventb.core.invariant name="_F6V3YeA2Ed-73py7lbE8bg" org.eventb.core.label="inv5_8" org.eventb.core.predicate="ctrlCableCommand ≠  CABLE_STOP ⇒ snsrDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.invariant name="_jjwDAPTAEd-43_jmKUh78g" org.eventb.core.comment="FUN28" org.eventb.core.label="inv5_9" org.eventb.core.predicate="PhyCableEngine ≠ CABLE_STOP ⇒ PhyDoorEngine = DOOR_CLOSE"/>
+<org.eventb.core.invariant name="_jjwqEPTAEd-43_jmKUh78g" org.eventb.core.comment="FUN29" org.eventb.core.label="inv5_10" org.eventb.core.predicate="PhyCableEngine ≠ CABLE_STOP ⇒ PhyDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_F6WecOA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act5_1"/>
+<org.eventb.core.action name="_F6WeceA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_CLOSED" org.eventb.core.label="act5_2"/>
+<org.eventb.core.action name="_F6WecuA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act5_3"/>
+<org.eventb.core.action name="_F6Wec-A2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_CLOSED" org.eventb.core.label="act5_4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6WedOA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="DOOR_OPENS_WHEN_CLOSED">
+<org.eventb.core.guard name="_F6XFgOA2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.guard name="_F6XFgeA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_OPEN"/>
+<org.eventb.core.action name="_F6XFguA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_HALF" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6XFg-A2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_OPEN" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_F6XFhOA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_HALF" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_F6XFheA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_OPEN" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6XskOA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="DOOR_OPENS_WHEN_HALF">
+<org.eventb.core.guard name="_F6XskeA2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorPosition = DOOR_HALF"/>
+<org.eventb.core.guard name="_F6XskuA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_OPEN"/>
+<org.eventb.core.action name="_F6Xsk-A2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_OPENED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6XslOA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_OPEN" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_F6YToOA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_OPENED" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_F6YToeA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_OPEN" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6YTouA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="DOOR_CLOSES_WHEN_OPENED">
+<org.eventb.core.guard name="_F6YTo-A2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorPosition = DOOR_OPENED"/>
+<org.eventb.core.guard name="_F6YTpOA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_CLOSE"/>
+<org.eventb.core.action name="_F6Y6sOA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_HALF" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6Y6seA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_F6Y6suA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_HALF" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_F6Y6s-A2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6Y6tOA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="DOOR_CLOSES_WHEN_HALF">
+<org.eventb.core.guard name="_F6Y6teA2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorPosition = DOOR_HALF"/>
+<org.eventb.core.guard name="_F6ZhwOA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_CLOSE"/>
+<org.eventb.core.action name="_F6ZhweA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorPosition ≔ DOOR_CLOSED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6ZhwuA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_F6Zhw-A2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorPosition ≔ DOOR_CLOSED" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_F6ZhxOA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6ZhxeA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="DOOR_CLOSES_WHEN_CLOSED">
+<org.eventb.core.guard name="_F6aI0OA2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.guard name="_F6aI0eA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_CLOSE"/>
+<org.eventb.core.guard name="_F6aI0uA2Ed-73py7lbE8bg" org.eventb.core.label="grd3" org.eventb.core.predicate="PhyDoorEngine ≠ DOOR_CLOSE"/>
+<org.eventb.core.action name="_F6aI0-A2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6aI1OA2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_CLOSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_F6aI1eA2Ed-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="STOP_DOOR_ENGINE">
+<org.eventb.core.guard name="_F6av4OA2Ed-73py7lbE8bg" org.eventb.core.label="grd1" org.eventb.core.predicate="PhyDoorEngine ≠ DOOR_STOP"/>
+<org.eventb.core.guard name="_F6av4eA2Ed-73py7lbE8bg" org.eventb.core.label="grd2" org.eventb.core.predicate="ctrlDoorCommand = DOOR_STOP"/>
+<org.eventb.core.action name="_F6av4uA2Ed-73py7lbE8bg" org.eventb.core.assignment="PhyDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_F6av4-A2Ed-73py7lbE8bg" org.eventb.core.assignment="snsrDoorEngine ≔ DOOR_STOP" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_jjztYPTAEd-43_jmKUh78g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_jjztYfTAEd-43_jmKUh78g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_jjztYvTAEd-43_jmKUh78g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_jjztY_TAEd-43_jmKUh78g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_jjztZPTAEd-43_jmKUh78g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_jj0UcPTAEd-43_jmKUh78g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_jj0UcfTAEd-43_jmKUh78g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_jj0UcvTAEd-43_jmKUh78g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_aG13ENq-Ed-L_e8_V4iXIg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="STOP_CABLE_ENGINE">
+<org.eventb.core.refinesEvent name="_jj0Uc_TAEd-43_jmKUh78g" org.eventb.core.target="STOP_CABLE_ENGINE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="open_door">
+<org.eventb.core.refinesEvent name="_jj0UdPTAEd-43_jmKUh78g" org.eventb.core.target="open_door"/>
+<org.eventb.core.guard name="_qrELU_S9Ed-43_jmKUh78g" org.eventb.core.label="grd5_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_CLOSED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="stop_door">
+<org.eventb.core.refinesEvent name="_jj07gPTAEd-43_jmKUh78g" org.eventb.core.target="stop_door"/>
+<org.eventb.core.guard name="_F6clEuA2Ed-73py7lbE8bg" org.eventb.core.label="grd5_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_OPENED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_HKjNMtqzEd-7IuFxCL4SWw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="close_door">
+<org.eventb.core.refinesEvent name="_jj07gfTAEd-43_jmKUh78g" org.eventb.core.target="close_door"/>
+<org.eventb.core.guard name="_F6dMIeA2Ed-73py7lbE8bg" org.eventb.core.label="grd5_1" org.eventb.core.predicate="snsrDoorEngine = DOOR_STOP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
+<org.eventb.core.refinesEvent name="_jj1ikPTAEd-43_jmKUh78g" org.eventb.core.target="start_move_up"/>
+<org.eventb.core.guard name="_F6dMI-A2Ed-73py7lbE8bg" org.eventb.core.label="grd5_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.guard name="_F6dMJOA2Ed-73py7lbE8bg" org.eventb.core.label="grd5_2" org.eventb.core.predicate="snsrDoorEngine = DOOR_CLOSE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
+<org.eventb.core.refinesEvent name="_jj1ikfTAEd-43_jmKUh78g" org.eventb.core.target="start_move_down"/>
+<org.eventb.core.guard name="_F6dzMuA2Ed-73py7lbE8bg" org.eventb.core.label="grd5_1" org.eventb.core.predicate="snsrDoorPosition = DOOR_CLOSED"/>
+<org.eventb.core.guard name="_F6dzM-A2Ed-73py7lbE8bg" org.eventb.core.label="grd5_2" org.eventb.core.predicate="snsrDoorEngine = DOOR_CLOSE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_qrFZcfS9Ed-43_jmKUh78g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="stop">
+<org.eventb.core.refinesEvent name="_jj2JoPTAEd-43_jmKUh78g" org.eventb.core.target="stop"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

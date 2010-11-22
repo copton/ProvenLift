@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_UP/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_UP/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_up/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_up/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_up/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_down/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_down/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_move_down/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="stop/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="stop/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="stop/inv9_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="stop/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="switch_schedule_to_up/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="switch_schedule_to_up/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="switch_schedule_to_up/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="resume_schedule_up/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="resume_schedule_up/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="resume_schedule_up/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="switch_schedule_to_down/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="switch_schedule_to_down/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="switch_schedule_to_down/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="resume_schedule_down/inv9_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="resume_schedule_down/inv9_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="resume_schedule_down/inv9_5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

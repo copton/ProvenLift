@@ -14,47 +14,56 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤LAST_FLOOR"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_up/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor+1∈ℕ"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_up/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p3,p4,p2">
+<org.eventb.core.prProof name="move_up/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p2,p3,p1">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor+1≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor+1∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_down/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="0&lt;floor"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor − 1∈ℕ"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="move_down/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p3,p4,p1">
+<org.eventb.core.prProof name="move_up/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p2,p3,p1">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="0&lt;floor"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor − 1≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor+1≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="move_down/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p1,p3,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor − 1∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="move_down/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p1,p3,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor − 1≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/dlf1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
@@ -66,29 +75,29 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0&lt;LAST_FLOOR∨0&lt;0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="move_up/dlf1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p3,p4,p2">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p2,p3,p1">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor+1&lt;LAST_FLOOR∨0&lt;floor+1"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor&lt;LAST_FLOOR"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor+1&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor+1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="move_down/dlf1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
-<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p3,p4,p1">
+<org.eventb.core.prRule name="com.clearsy.atelierb.provers.core.externalML" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p4,p1,p3,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="0&lt;floor"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor − 1&lt;LAST_FLOOR∨0&lt;floor − 1"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor≤LAST_FLOOR"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor&lt;LAST_FLOOR∨0&lt;floor"/>
+<org.eventb.core.prIdent name="PhyElevatorFloor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PhyElevatorFloor − 1&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor − 1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="PhyElevatorFloor≤LAST_FLOOR"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PhyElevatorFloor∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="LAST_FLOOR∈ℕ1"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
