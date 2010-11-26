@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1290783891615" org.eventb.texttools.text_representation="machine lift15_conv_lights refines lift14_conv_lights  sees ctx5_scheduler&#10;&#10;variables PhyElevatorFloor PhyCableEngine PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor PhyDoorEngine PhyDoorPosition ctrlDoorCommand snsrDoorEngine snsrDoorPosition PhyFloorButtonsSet snsrFloorButtonsSet PhyFloorButtonLightsSet ctrlFloorButtonLightsSet PhyUpButtonsSet snsrUpButtonsSet PhyUpButtonLightsSet ctrlUpButtonLightsSet PhyDownButtonsSet snsrDownButtonsSet PhyDownButtonLightsSet ctrlDownButtonLightsSet last_schedule schedule last_stop requests request_served&#10;&#10;variant (0‥LAST_FLOOR∖PhyUpButtonLightsSet) ∩ ctrlUpButtonLightsSet&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event USER_PRESSES_DOWN_BUTTON extends USER_PRESSES_DOWN_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_DOWN_BUTTON extends USER_RELEASES_DOWN_BUTTON&#10;  end&#10;&#10;  convergent event TURNS_ON_DOWN_BUTTON_LIGHT extends TURNS_ON_DOWN_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_DOWN_BUTTON_LIGHT extends TURNS_OFF_DOWN_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_down_button_light_on extends turn_down_button_light_on&#10;  end&#10;&#10;  convergent event turn_down_button_light_off extends turn_down_button_light_off&#10;  end&#10;&#10;  event USER_PRESSES_UP_BUTTON extends USER_PRESSES_UP_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_UP_BUTTON extends USER_RELEASES_UP_BUTTON&#10;  end&#10;&#10;  convergent event TURNS_ON_UP_BUTTON_LIGHT extends TURNS_ON_UP_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_UP_BUTTON_LIGHT extends TURNS_OFF_UP_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_up_button_light_on extends turn_up_button_light_on&#10;  end&#10;&#10;  convergent event turn_up_button_light_off extends turn_up_button_light_off&#10;  end&#10;&#10;  event USER_PRESSES_FLOOR_BUTTON extends USER_PRESSES_FLOOR_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_FLOOR_BUTTON extends USER_RELEASES_FLOOR_BUTTON&#10;  end&#10;&#10;  anticipated event TURNS_ON_FLOOR_BUTTON_LIGHT extends TURNS_ON_FLOOR_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_FLOOR_BUTTON_LIGHT extends TURNS_OFF_FLOOR_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_floor_button_light_on extends turn_floor_button_light_on&#10;  end&#10;&#10;  convergent event turn_floor_button_light_off extends turn_floor_button_light_off&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_CLOSED extends DOOR_OPENS_WHEN_CLOSED&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_HALF extends DOOR_OPENS_WHEN_HALF&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_OPENED extends DOOR_CLOSES_WHEN_OPENED&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_HALF extends DOOR_CLOSES_WHEN_HALF&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_CLOSED extends DOOR_CLOSES_WHEN_CLOSED&#10;  end&#10;&#10;  anticipated event STOP_DOOR_ENGINE extends STOP_DOOR_ENGINE&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  anticipated event open_door extends open_door&#10;  end&#10;&#10;  anticipated event stop_door extends stop_door&#10;  end&#10;&#10;  anticipated event close_door extends close_door&#10;  end&#10;&#10;  anticipated event start_move_up extends start_move_up&#10;  end&#10;&#10;  anticipated event start_move_down extends start_move_down&#10;  end&#10;&#10;  anticipated event stop extends stop&#10;  end&#10;&#10;  anticipated event switch_schedule_to_up extends switch_schedule_to_up&#10;  end&#10;&#10;  anticipated event resume_schedule_up extends resume_schedule_up&#10;  end&#10;&#10;  anticipated event switch_schedule_to_down extends switch_schedule_to_down&#10;  end&#10;&#10;  anticipated event resume_schedule_down extends resume_schedule_down&#10;  end&#10;end&#10;" version="5">
-<org.eventb.core.refinesMachine name="_hSjaEPluEd-1httaBm5m2g" org.eventb.core.target="lift14_conv_lights"/>
-<org.eventb.core.seesContext name="_hSjaEfluEd-1httaBm5m2g" org.eventb.core.target="ctx5_scheduler"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1290783909366" org.eventb.texttools.text_representation="machine lift13_conv_lights refines lift12_conv_lights  sees ctx5_scheduler&#10;&#10;variables PhyElevatorFloor PhyCableEngine PhyElevatorBetweenTwoFloors ctrlCableCommand snsrCableEngine snsrElevatorFloor PhyDoorEngine PhyDoorPosition ctrlDoorCommand snsrDoorEngine snsrDoorPosition PhyFloorButtonsSet snsrFloorButtonsSet PhyFloorButtonLightsSet ctrlFloorButtonLightsSet PhyUpButtonsSet snsrUpButtonsSet PhyUpButtonLightsSet ctrlUpButtonLightsSet PhyDownButtonsSet snsrDownButtonsSet PhyDownButtonLightsSet ctrlDownButtonLightsSet last_schedule schedule last_stop requests request_served&#10;&#10;variant card(ctrlDownButtonLightsSet) + card(ctrlUpButtonLightsSet) + card(ctrlFloorButtonLightsSet)&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event USER_PRESSES_DOWN_BUTTON extends USER_PRESSES_DOWN_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_DOWN_BUTTON extends USER_RELEASES_DOWN_BUTTON&#10;  end&#10;&#10;  anticipated event TURNS_ON_DOWN_BUTTON_LIGHT extends TURNS_ON_DOWN_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_DOWN_BUTTON_LIGHT extends TURNS_OFF_DOWN_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_down_button_light_on extends turn_down_button_light_on&#10;  end&#10;&#10;  convergent event turn_down_button_light_off extends turn_down_button_light_off&#10;  end&#10;&#10;  event USER_PRESSES_UP_BUTTON extends USER_PRESSES_UP_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_UP_BUTTON extends USER_RELEASES_UP_BUTTON&#10;  end&#10;&#10;  anticipated event TURNS_ON_UP_BUTTON_LIGHT extends TURNS_ON_UP_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_UP_BUTTON_LIGHT extends TURNS_OFF_UP_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_up_button_light_on extends turn_up_button_light_on&#10;  end&#10;&#10;  convergent event turn_up_button_light_off extends turn_up_button_light_off&#10;  end&#10;&#10;  event USER_PRESSES_FLOOR_BUTTON extends USER_PRESSES_FLOOR_BUTTON&#10;  end&#10;&#10;  event USER_RELEASES_FLOOR_BUTTON extends USER_RELEASES_FLOOR_BUTTON&#10;  end&#10;&#10;  anticipated event TURNS_ON_FLOOR_BUTTON_LIGHT extends TURNS_ON_FLOOR_BUTTON_LIGHT&#10;  end&#10;&#10;  anticipated event TURNS_OFF_FLOOR_BUTTON_LIGHT extends TURNS_OFF_FLOOR_BUTTON_LIGHT&#10;  end&#10;&#10;  convergent event turn_floor_button_light_on extends turn_floor_button_light_on&#10;  end&#10;&#10;  convergent event turn_floor_button_light_off extends turn_floor_button_light_off&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_CLOSED extends DOOR_OPENS_WHEN_CLOSED&#10;  end&#10;&#10;  anticipated event DOOR_OPENS_WHEN_HALF extends DOOR_OPENS_WHEN_HALF&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_OPENED extends DOOR_CLOSES_WHEN_OPENED&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_HALF extends DOOR_CLOSES_WHEN_HALF&#10;  end&#10;&#10;  anticipated event DOOR_CLOSES_WHEN_CLOSED extends DOOR_CLOSES_WHEN_CLOSED&#10;  end&#10;&#10;  anticipated event STOP_DOOR_ENGINE extends STOP_DOOR_ENGINE&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_UP extends ELEVATOR_LEAVES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_UP extends ELEVATOR_REACHES_FLOOR_UP&#10;  end&#10;&#10;  anticipated event ELEVATOR_LEAVES_FLOOR_DOWN extends ELEVATOR_LEAVES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event ELEVATOR_REACHES_FLOOR_DOWN extends ELEVATOR_REACHES_FLOOR_DOWN&#10;  end&#10;&#10;  anticipated event STOP_CABLE_ENGINE extends STOP_CABLE_ENGINE&#10;  end&#10;&#10;  anticipated event open_door extends open_door&#10;  end&#10;&#10;  anticipated event stop_door extends stop_door&#10;  end&#10;&#10;  anticipated event close_door extends close_door&#10;  end&#10;&#10;  anticipated event start_move_up extends start_move_up&#10;  end&#10;&#10;  anticipated event start_move_down extends start_move_down&#10;  end&#10;&#10;  anticipated event stop extends stop&#10;  end&#10;&#10;  anticipated event switch_schedule_to_up extends switch_schedule_to_up&#10;  end&#10;&#10;  anticipated event resume_schedule_up extends resume_schedule_up&#10;  end&#10;&#10;  anticipated event switch_schedule_to_down extends switch_schedule_to_down&#10;  end&#10;&#10;  anticipated event resume_schedule_down extends resume_schedule_down&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_j78eMPluEd-1httaBm5m2g" org.eventb.core.target="lift14_conv_lights"/>
+<org.eventb.core.seesContext name="_j78eMfluEd-1httaBm5m2g" org.eventb.core.target="ctx5_scheduler"/>
 <org.eventb.core.variable name="_9uEEsNd9Ed-Dle0at0Xgqg" org.eventb.core.identifier="PhyElevatorFloor"/>
 <org.eventb.core.variable name="_aGvwctq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyCableEngine"/>
 <org.eventb.core.variable name="_aGwXgNq-Ed-L_e8_V4iXIg" org.eventb.core.identifier="PhyElevatorBetweenTwoFloors"/>
@@ -28,125 +28,125 @@
 <org.eventb.core.variable name="_UtggcO5-Ed-dEtybZVK09Q" org.eventb.core.identifier="last_schedule"/>
 <org.eventb.core.variable name="_Utggce5-Ed-dEtybZVK09Q" org.eventb.core.identifier="schedule"/>
 <org.eventb.core.variable name="_-7fiIPS-Ed-43_jmKUh78g" org.eventb.core.identifier="last_stop"/>
-<org.eventb.core.variable name="_DcBsgPk9Ed-hoNTGCqdYog" org.eventb.core.identifier="requests"/>
-<org.eventb.core.variable name="_hSlPQPluEd-1httaBm5m2g" org.eventb.core.identifier="request_served"/>
-<org.eventb.core.variant name="_RR0ycPfvEd-vgams47i3xA" org.eventb.core.expression="(0‥LAST_FLOOR∖PhyUpButtonLightsSet) ∩ ctrlUpButtonLightsSet"/>
+<org.eventb.core.variable name="_Ai_C0Pk9Ed-hoNTGCqdYog" org.eventb.core.identifier="requests"/>
+<org.eventb.core.variable name="_j7-TYPluEd-1httaBm5m2g" org.eventb.core.identifier="request_served"/>
+<org.eventb.core.variant name="_-INkoPfrEd-vgams47i3xA" org.eventb.core.expression="card(ctrlDownButtonLightsSet) + card(ctrlUpButtonLightsSet) + card(ctrlFloorButtonLightsSet)"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
 <org.eventb.core.event name="_3IkoxOWyEd-64JNDK1TKiQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_PRESSES_DOWN_BUTTON">
-<org.eventb.core.refinesEvent name="_hSlPQfluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_DOWN_BUTTON"/>
+<org.eventb.core.refinesEvent name="_j7-6cPluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_DOWN_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSl2UPluEd-1httaBm5m2g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_DOWN_BUTTON">
-<org.eventb.core.refinesEvent name="_hSl2UfluEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_DOWN_BUTTON"/>
+<org.eventb.core.event name="_j7-6cfluEd-1httaBm5m2g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_DOWN_BUTTON">
+<org.eventb.core.refinesEvent name="_j7-6cvluEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_DOWN_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_3Il25eWyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_DOWN_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSl2UvluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_DOWN_BUTTON_LIGHT"/>
+<org.eventb.core.event name="_3Il25eWyEd-64JNDK1TKiQ" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_DOWN_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_j7_hgPluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_DOWN_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_3Imd9eWyEd-64JNDK1TKiQ" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_OFF_DOWN_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSl2U_luEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_DOWN_BUTTON_LIGHT"/>
+<org.eventb.core.refinesEvent name="_j7_hgfluEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_DOWN_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_3InsEuWyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_down_button_light_on">
-<org.eventb.core.refinesEvent name="_hSmdYPluEd-1httaBm5m2g" org.eventb.core.target="turn_down_button_light_on"/>
+<org.eventb.core.refinesEvent name="_j7_hgvluEd-1httaBm5m2g" org.eventb.core.target="turn_down_button_light_on"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_3IoTI-WyEd-64JNDK1TKiQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_down_button_light_off">
-<org.eventb.core.refinesEvent name="_hSmdYfluEd-1httaBm5m2g" org.eventb.core.target="turn_down_button_light_off"/>
+<org.eventb.core.refinesEvent name="_j7_hg_luEd-1httaBm5m2g" org.eventb.core.target="turn_down_button_light_off"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_pvVR8eEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_PRESSES_UP_BUTTON">
-<org.eventb.core.refinesEvent name="_hSmdYvluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_UP_BUTTON"/>
+<org.eventb.core.refinesEvent name="_j8AIkPluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_UP_BUTTON"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_3Io6M-WyEd-64JNDK1TKiQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_UP_BUTTON">
-<org.eventb.core.refinesEvent name="_hSmdY_luEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_UP_BUTTON"/>
+<org.eventb.core.refinesEvent name="_j8AvoPluEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_UP_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_pvV5BuEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_UP_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSnEcPluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_UP_BUTTON_LIGHT"/>
+<org.eventb.core.event name="_pvV5BuEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_UP_BUTTON_LIGHT">
+<org.eventb.core.refinesEvent name="_j8AvofluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_UP_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_pvWgFeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_OFF_UP_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSnEcfluEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_UP_BUTTON_LIGHT"/>
+<org.eventb.core.refinesEvent name="_j8BWsPluEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_UP_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_pvXHJeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_up_button_light_on">
-<org.eventb.core.refinesEvent name="_hSnEcvluEd-1httaBm5m2g" org.eventb.core.target="turn_up_button_light_on"/>
+<org.eventb.core.refinesEvent name="_j8BWsfluEd-1httaBm5m2g" org.eventb.core.target="turn_up_button_light_on"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_pvXuNeEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_up_button_light_off">
-<org.eventb.core.refinesEvent name="_hSnrgPluEd-1httaBm5m2g" org.eventb.core.target="turn_up_button_light_off"/>
+<org.eventb.core.refinesEvent name="_j8B9wPluEd-1httaBm5m2g" org.eventb.core.target="turn_up_button_light_off"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_tI1hE-A_Ed-78bCl9yYd-Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_PRESSES_FLOOR_BUTTON">
-<org.eventb.core.refinesEvent name="_hSnrgfluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_FLOOR_BUTTON"/>
+<org.eventb.core.refinesEvent name="_j8B9wfluEd-1httaBm5m2g" org.eventb.core.target="USER_PRESSES_FLOOR_BUTTON"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSnrgvluEd-1httaBm5m2g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_FLOOR_BUTTON">
-<org.eventb.core.refinesEvent name="_hSnrg_luEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_FLOOR_BUTTON"/>
+<org.eventb.core.event name="_j8Ck0PluEd-1httaBm5m2g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_RELEASES_FLOOR_BUTTON">
+<org.eventb.core.refinesEvent name="_j8Ck0fluEd-1httaBm5m2g" org.eventb.core.target="USER_RELEASES_FLOOR_BUTTON"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_tI2vNeA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_ON_FLOOR_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSnrhPluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_FLOOR_BUTTON_LIGHT"/>
+<org.eventb.core.refinesEvent name="_j8DL4PluEd-1httaBm5m2g" org.eventb.core.target="TURNS_ON_FLOOR_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_pvY8UuEsEd-bh-7nDQnLgQ" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="TURNS_OFF_FLOOR_BUTTON_LIGHT">
-<org.eventb.core.refinesEvent name="_hSoSkPluEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_FLOOR_BUTTON_LIGHT"/>
+<org.eventb.core.refinesEvent name="_j8DL4fluEd-1httaBm5m2g" org.eventb.core.target="TURNS_OFF_FLOOR_BUTTON_LIGHT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_tI4kYuA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_floor_button_light_on">
-<org.eventb.core.refinesEvent name="_hSoSkfluEd-1httaBm5m2g" org.eventb.core.target="turn_floor_button_light_on"/>
+<org.eventb.core.refinesEvent name="_j8Dy8PluEd-1httaBm5m2g" org.eventb.core.target="turn_floor_button_light_on"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_tI5ygOA_Ed-78bCl9yYd-Q" org.eventb.core.convergence="1" org.eventb.core.extended="true" org.eventb.core.label="turn_floor_button_light_off">
-<org.eventb.core.refinesEvent name="_hSoSkvluEd-1httaBm5m2g" org.eventb.core.target="turn_floor_button_light_off"/>
+<org.eventb.core.refinesEvent name="_j8Dy8fluEd-1httaBm5m2g" org.eventb.core.target="turn_floor_button_light_off"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgayBOAzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_CLOSED">
-<org.eventb.core.refinesEvent name="_hSo5oPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_OPENS_WHEN_CLOSED"/>
+<org.eventb.core.refinesEvent name="_j8EaAPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_OPENS_WHEN_CLOSED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgcAIOAzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="DOOR_OPENS_WHEN_HALF">
-<org.eventb.core.refinesEvent name="_hSo5ofluEd-1httaBm5m2g" org.eventb.core.target="DOOR_OPENS_WHEN_HALF"/>
+<org.eventb.core.refinesEvent name="_j8FBEPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_OPENS_WHEN_HALF"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgcnM-AzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_OPENED">
-<org.eventb.core.refinesEvent name="_hSo5ovluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_OPENED"/>
+<org.eventb.core.refinesEvent name="_j8FBEfluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_OPENED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgdOReAzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_HALF">
-<org.eventb.core.refinesEvent name="_hSpgsPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_HALF"/>
+<org.eventb.core.refinesEvent name="_j8FoIPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_HALF"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgecYeAzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="DOOR_CLOSES_WHEN_CLOSED">
-<org.eventb.core.refinesEvent name="_hSpgsfluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_CLOSED"/>
+<org.eventb.core.refinesEvent name="_j8GPMPluEd-1httaBm5m2g" org.eventb.core.target="DOOR_CLOSES_WHEN_CLOSED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_KgfDcuAzEd-73py7lbE8bg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="STOP_DOOR_ENGINE">
-<org.eventb.core.refinesEvent name="_hSpgsvluEd-1httaBm5m2g" org.eventb.core.target="STOP_DOOR_ENGINE"/>
+<org.eventb.core.refinesEvent name="_j8GPMfluEd-1httaBm5m2g" org.eventb.core.target="STOP_DOOR_ENGINE"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSpgs_luEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
-<org.eventb.core.refinesEvent name="_hSqHwPluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
+<org.eventb.core.event name="_j8GPMvluEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_j8GPM_luEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_UP"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSqHwfluEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
-<org.eventb.core.refinesEvent name="_hSqHwvluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
+<org.eventb.core.event name="_j8GPNPluEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_UP">
+<org.eventb.core.refinesEvent name="_j8G2QPluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_UP"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSqHw_luEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
-<org.eventb.core.refinesEvent name="_hSqHxPluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
+<org.eventb.core.event name="_j8G2QfluEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_LEAVES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_j8G2QvluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_LEAVES_FLOOR_DOWN"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_hSqHxfluEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
-<org.eventb.core.refinesEvent name="_hSqu0PluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
+<org.eventb.core.event name="_j8G2Q_luEd-1httaBm5m2g" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="ELEVATOR_REACHES_FLOOR_DOWN">
+<org.eventb.core.refinesEvent name="_j8G2RPluEd-1httaBm5m2g" org.eventb.core.target="ELEVATOR_REACHES_FLOOR_DOWN"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_aG13ENq-Ed-L_e8_V4iXIg" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="STOP_CABLE_ENGINE">
-<org.eventb.core.refinesEvent name="_hSqu0fluEd-1httaBm5m2g" org.eventb.core.target="STOP_CABLE_ENGINE"/>
+<org.eventb.core.refinesEvent name="_j8HdUPluEd-1httaBm5m2g" org.eventb.core.target="STOP_CABLE_ENGINE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_HKimItqzEd-7IuFxCL4SWw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="open_door">
-<org.eventb.core.refinesEvent name="_hSqu0vluEd-1httaBm5m2g" org.eventb.core.target="open_door"/>
+<org.eventb.core.refinesEvent name="_j8HdUfluEd-1httaBm5m2g" org.eventb.core.target="open_door"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_SjmMQNq3Ed-AAt710HomgA" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="stop_door">
-<org.eventb.core.refinesEvent name="_hSrV4PluEd-1httaBm5m2g" org.eventb.core.target="stop_door"/>
+<org.eventb.core.refinesEvent name="_j8HdUvluEd-1httaBm5m2g" org.eventb.core.target="stop_door"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_HKjNMtqzEd-7IuFxCL4SWw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="close_door">
-<org.eventb.core.refinesEvent name="_hSrV4fluEd-1httaBm5m2g" org.eventb.core.target="close_door"/>
+<org.eventb.core.refinesEvent name="_j8IEYPluEd-1httaBm5m2g" org.eventb.core.target="close_door"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC2soNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_up">
-<org.eventb.core.refinesEvent name="_hSrV4vluEd-1httaBm5m2g" org.eventb.core.target="start_move_up"/>
+<org.eventb.core.refinesEvent name="_j8IEYfluEd-1httaBm5m2g" org.eventb.core.target="start_move_up"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC36wNqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="start_move_down">
-<org.eventb.core.refinesEvent name="_hSr88PluEd-1httaBm5m2g" org.eventb.core.target="start_move_down"/>
+<org.eventb.core.refinesEvent name="_j8IEYvluEd-1httaBm5m2g" org.eventb.core.target="start_move_down"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_yC5I4dqwEd-O4vbSPlarTw" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="stop">
-<org.eventb.core.refinesEvent name="_hSr88fluEd-1httaBm5m2g" org.eventb.core.target="stop"/>
+<org.eventb.core.refinesEvent name="_j8IrcPluEd-1httaBm5m2g" org.eventb.core.target="stop"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_Utq4gO5-Ed-dEtybZVK09Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="switch_schedule_to_up">
-<org.eventb.core.refinesEvent name="_hSr88vluEd-1httaBm5m2g" org.eventb.core.target="switch_schedule_to_up"/>
+<org.eventb.core.refinesEvent name="_j8IrcfluEd-1httaBm5m2g" org.eventb.core.target="switch_schedule_to_up"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_Utrfle5-Ed-dEtybZVK09Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="resume_schedule_up">
-<org.eventb.core.refinesEvent name="_hSskAPluEd-1httaBm5m2g" org.eventb.core.target="resume_schedule_up"/>
+<org.eventb.core.refinesEvent name="_j8IrcvluEd-1httaBm5m2g" org.eventb.core.target="resume_schedule_up"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_Utstsu5-Ed-dEtybZVK09Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="switch_schedule_to_down">
-<org.eventb.core.refinesEvent name="_hSskAfluEd-1httaBm5m2g" org.eventb.core.target="switch_schedule_to_down"/>
+<org.eventb.core.refinesEvent name="_j8JSgPluEd-1httaBm5m2g" org.eventb.core.target="switch_schedule_to_down"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_Utt70e5-Ed-dEtybZVK09Q" org.eventb.core.convergence="2" org.eventb.core.extended="true" org.eventb.core.label="resume_schedule_down">
-<org.eventb.core.refinesEvent name="_hSskAvluEd-1httaBm5m2g" org.eventb.core.target="resume_schedule_down"/>
+<org.eventb.core.refinesEvent name="_j8JSgfluEd-1httaBm5m2g" org.eventb.core.target="resume_schedule_down"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
