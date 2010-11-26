@@ -12,7 +12,7 @@
 <org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="STOP_CABLE_ENGINE/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="stop_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="close_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

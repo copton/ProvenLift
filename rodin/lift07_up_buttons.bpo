@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -448,7 +448,7 @@
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT24" org.eventb.core.parentSet="/ProvenLift/lift07_up_buttons.bpo|org.eventb.core.poFile#lift07_up_buttons|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlDoorCommand'" org.eventb.core.type="DOOR_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT24" org.eventb.core.parentSet="/ProvenLift/lift07_up_buttons.bpo|org.eventb.core.poFile#lift07_up_buttons|org.eventb.core.poPredicateSet#EVTIDENTEVT24" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT24" org.eventb.core.parentSet="/ProvenLift/lift07_up_buttons.bpo|org.eventb.core.poFile#lift07_up_buttons|org.eventb.core.poPredicateSet#EVTIDENTEVT24" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift03_door_engine.bum|org.eventb.core.machineFile#lift03_door_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_HKjNMNqzEd-7IuFxCL4SWw"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand≠DOOR_OPEN" org.eventb.core.source="/ProvenLift/lift03_door_engine.bum|org.eventb.core.machineFile#lift03_door_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pVt4EPS0Ed-43_jmKUh78g"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_-PriIdrtEd-yLuKmXl8XEA"/>
