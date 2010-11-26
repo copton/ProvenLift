@@ -22331,9 +22331,9 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
-<org.eventb.core.prIdent name="schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prIdent name="last_schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="SCHEDULER_WAIT≠SCHEDULER_WAIT⇒SCHEDULER_WAIT=schedule"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="SCHEDULER_WAIT≠SCHEDULER_WAIT⇒SCHEDULER_WAIT=last_schedule"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="switch_schedule_to_up/inv9_12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -23183,9 +23183,9 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="CABLE_STOP" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.prIdent name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
-<org.eventb.core.prIdent name="schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prIdent name="last_schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒SCHEDULER_WAIT=schedule"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CABLE_STOP≠CABLE_STOP⇒SCHEDULER_WAIT=last_schedule"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="switch_schedule_to_up/inv9_13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
