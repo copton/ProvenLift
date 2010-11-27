@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="FIN" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_DOWN_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_UP_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_RELEASES_FLOOR_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="DOOR_OPENS_WHEN_CLOSED/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="DOOR_OPENS_WHEN_HALF/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="DOOR_CLOSES_WHEN_OPENED/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="DOOR_CLOSES_WHEN_HALF/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="DOOR_CLOSES_WHEN_CLOSED/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="STOP_DOOR_ENGINE/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_UP/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_LEAVES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ELEVATOR_REACHES_FLOOR_DOWN/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="STOP_CABLE_ENGINE/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="stop_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="close_door/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="start_move_up/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>

@@ -2853,4 +2853,43 @@
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="snsrFloorButtonsSet=PhyFloorButtonsSet"/>
 <org.eventb.core.prPred name="p67" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_DOWN_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPENED" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}⊆{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_UP_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPENED" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}⊆{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DOOR_COMMAND">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="DOOR_CLOSE" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="DOOR_OPENED" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prIdent name="ctrlDoorCommand" org.eventb.core.type="DOOR_COMMAND"/>
+<org.eventb.core.prIdent name="snsrDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}⊆{x⦂DOOR_COMMAND·x∈DOOR_COMMAND∧ctrlDoorCommand=DOOR_CLOSE∧snsrDoorPosition=DOOR_OPENED ∣ x}"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

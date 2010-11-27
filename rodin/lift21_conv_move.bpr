@@ -416,4 +416,37 @@
 <org.eventb.core.prPred name="p93" org.eventb.core.predicate="snsrCableEngine∈CABLE_COMMAND"/>
 <org.eventb.core.prPred name="p69" org.eventb.core.predicate="snsrDoorPosition=PhyDoorPosition"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_DOWN_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prIdent name="schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{schedule,SCHEDULER_WAIT}⊆{schedule,SCHEDULER_WAIT}"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_UP_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prIdent name="schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{schedule,SCHEDULER_WAIT}⊆{schedule,SCHEDULER_WAIT}"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="USER_RELEASES_FLOOR_BUTTON/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.autoRewrites:1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="org.eventb.core.seqprover.trueGoal" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prIdent name="schedule" org.eventb.core.type="SCHEDULER_STRATEGY"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{schedule,SCHEDULER_WAIT}⊆{schedule,SCHEDULER_WAIT}"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -28,7 +28,7 @@
 <org.eventb.core.poIdentifier name="SCHEDULER_WAIT" org.eventb.core.type="SCHEDULER_STRATEGY"/>
 <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="partition(SCHEDULER_STRATEGY,{SCHEDULER_UP},{SCHEDULER_DOWN},{SCHEDULER_WAIT})" org.eventb.core.source="/ProvenLift/ctx5_scheduler.buc|org.eventb.core.contextFile#ctx5_scheduler|org.eventb.core.axiom#_G6XslOW-Ed-64JNDK1TKiQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="PhyCableEngine" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorPosition" org.eventb.core.type="DOOR_POSITION"/>
@@ -129,198 +129,198 @@
 <org.eventb.core.poPredicate name="PRD66" org.eventb.core.predicate="schedule≠SCHEDULER_WAIT⇒schedule=last_schedule" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.invariant#_6H4dEPk7Ed-WtNZH8d5nSA"/>
 <org.eventb.core.poPredicate name="PRD67" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP⇒schedule=last_schedule" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.invariant#_6H4dEfk7Ed-WtNZH8d5nSA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv10_4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV62"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ LAST_FLOOR⇒x∈dom(PhyFloorButtons)∧PhyFloorButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzEvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzEvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV62"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV63"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ LAST_FLOOR⇒x∈dom(snsrFloorButtons)∧snsrFloorButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzE_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzE_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV63"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV67"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)⇒x∈dom(PhyUpButtons)∧PhyUpButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaIvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaIvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV67"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV68"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)⇒x∈dom(snsrUpButtons)∧snsrUpButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaI_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaI_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV68"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV72"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈1 ‥ LAST_FLOOR⇒x∈dom(PhyDownButtons)∧PhyDownButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBMvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBMvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV72"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV73"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈1 ‥ LAST_FLOOR⇒x∈dom(snsrDownButtons)∧snsrDownButtons∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBM_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBM_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV73"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV77"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ LAST_FLOOR⇒x∈dom(PhyFloorButtonLights)∧PhyFloorButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV77"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV78"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ LAST_FLOOR⇒x∈dom(ctrlFloorButtonLights)∧ctrlFloorButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQ_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQ_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV78"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_24/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_24/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV82"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)⇒x∈dom(PhyUpButtonLights)∧PhyUpButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPU_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPU_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV82"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV83"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)⇒x∈dom(ctrlUpButtonLights)∧ctrlUpButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2YPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2YPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV83"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_29/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_29/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV87"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈1 ‥ LAST_FLOOR⇒x∈dom(PhyDownButtonLights)∧PhyDownButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV87"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv10_30/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="inv10_30/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV88"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="∀x⦂ℤ·x∈1 ‥ LAST_FLOOR⇒x∈dom(ctrlDownButtonLights)∧ctrlDownButtonLights∈ℤ ⇸ BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcfl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcfl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV88"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT0" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT0" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.poIdentifier name="snsrDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT0" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT0" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT0" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT0" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorPosition=DOOR_CLOSED" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6WedOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6XFgOA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_OPEN" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6WedOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6XFgeA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT1" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT1" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.poIdentifier name="snsrDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT1" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT1" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT1" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT1" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorPosition=DOOR_HALF" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6XskOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6XskeA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_OPEN" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6XskOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6XskuA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT2" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT2" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.poIdentifier name="snsrDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT2" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT2" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT2" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT2" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorPosition=DOOR_OPENED" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6YTouA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6YTo-A2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_CLOSE" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6YTouA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6YTpOA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT3" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT3" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 <org.eventb.core.poIdentifier name="snsrDoorPosition'" org.eventb.core.type="DOOR_POSITION"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT3" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT3" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT3" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT3" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorPosition=DOOR_HALF" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6Y6tOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6Y6teA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_CLOSE" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6Y6tOA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6ZhwOA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT4" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT4" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT4" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT4" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT4" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT4" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorPosition=DOOR_CLOSED" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6ZhxeA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6aI0OA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_CLOSE" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6ZhxeA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6aI0eA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="PhyDoorEngine≠DOOR_CLOSE" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6ZhxeA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6aI0uA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT5" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT5" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyDoorEngine'" org.eventb.core.type="DOOR_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT5" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT5" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT5" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT5" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyDoorEngine≠DOOR_STOP" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6aI1eA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6av4OA2Ed-73py7lbE8bg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand=DOOR_STOP" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_F6aI1eA2Ed-73py7lbE8bg|org.eventb.core.guard#_F6av4eA2Ed-73py7lbE8bg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT6" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT6" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="PhyElevatorBetweenTwoFloors'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT6" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT6" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT6" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT6" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMx7cPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aGyMttq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMx7cPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aGyzwNq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMx7cPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aGyzwdq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT7" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT7" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="PhyElevatorBetweenTwoFloors'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyElevatorFloor'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT7" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT7" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT7" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT7" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMyigPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aGza0dq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMyigPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aGza0tq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT8" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT8" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="PhyElevatorBetweenTwoFloors'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyElevatorFloor'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT8" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT8" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT8" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT8" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMzJkPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aG0B49q-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠0" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMzJkPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aG0B5Nq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMzJkPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aG0B5dq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT9" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT9" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="PhyElevatorBetweenTwoFloors'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT9" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT9" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT9" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT9" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=TRUE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMzwoPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aG1QANq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_wMzwoPeyEd-p8t79IbuE0Q|org.eventb.core.guard#_aG1QAdq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT10" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT10" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT10" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT10" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT10" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT10" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyCableEngine≠CABLE_STOP" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_aG13ENq-Ed-L_e8_V4iXIg|org.eventb.core.guard#_aG13Edq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_aG13ENq-Ed-L_e8_V4iXIg|org.eventb.core.guard#_aG13Etq-Ed-L_e8_V4iXIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTEVT11" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="EVTIDENTEVT11" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlDoorCommand'" org.eventb.core.type="DOOR_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT11" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT11" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT11" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#EVTIDENTEVT11" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift03_door_engine.bum|org.eventb.core.machineFile#lift03_door_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_HKjNMNqzEd-7IuFxCL4SWw"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ctrlDoorCommand≠DOOR_OPEN" org.eventb.core.source="/ProvenLift/lift03_door_engine.bum|org.eventb.core.machineFile#lift03_door_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pVt4EPS0Ed-43_jmKUh78g"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="snsrCableEngine=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_-PriIdrtEd-yLuKmXl8XEA"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="snsrDoorPosition=DOOR_CLOSED" org.eventb.core.source="/ProvenLift/lift05_phys_door.bum|org.eventb.core.machineFile#lift05_phys_door|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_qrELU_S9Ed-43_jmKUh78g"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="snsrElevatorFloor∈requests" org.eventb.core.source="/ProvenLift/lift08_down_buttons.bum|org.eventb.core.machineFile#lift08_down_buttons|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_4s15IfYfEd-UnYOzyke7oQ"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="schedule=SCHEDULER_UP⇒snsrElevatorFloor∈ctrlFloorButtonLightsSet∪ctrlUpButtonLightsSet" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pM6QcPmNEd-4S-prP9DsJw"/>
-<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="schedule=SCHEDULER_DOWN⇒snsrElevatorFloor∈ctrlFloorButtonLightsSet∪ctrlDownButtonLightsSet" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pM6QcfmNEd-4S-prP9DsJw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="schedule=SCHEDULER_DOWN⇒snsrElevatorFloor∈ctrlFloorButtonLightsSet∪ctrlDownButtonLightsSet" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pM6QcfmNEd-4S-prP9DsJw"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="schedule=SCHEDULER_UP⇒snsrElevatorFloor∈ctrlFloorButtonLightsSet∪ctrlUpButtonLightsSet" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_HKimItqzEd-7IuFxCL4SWw|org.eventb.core.guard#_pM6QcPmNEd-4S-prP9DsJw"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT12" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlDoorCommand'" org.eventb.core.type="DOOR_COMMAND"/>
@@ -418,60 +418,60 @@
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="snsrElevatorFloor∉ctrlFloorButtonLightsSet∪ctrlDownButtonLightsSet" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_Utt70e5-Ed-dEtybZVK09Q|org.eventb.core.guard#_0iwW8PiTEd-5bJQIzgxuHg"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="last_schedule=SCHEDULER_DOWN" org.eventb.core.source="/ProvenLift/lift09_scheduler.bum|org.eventb.core.machineFile#lift09_scheduler|org.eventb.core.event#_Utt70e5-Ed-dEtybZVK09Q|org.eventb.core.guard#_Utui4e5-Ed-dEtybZVK09Q"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV62" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV62" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyFloorButtons∈0 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkMA_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="snsrFloorButtons∈0 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzEPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="snsrFloorButtons=PhyFloorButtons" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzEfl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV63" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV62" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV63" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV62" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="PhyFloorButtonsSet={x⦂ℤ·x∈0 ‥ LAST_FLOOR∧PhyFloorButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzEvl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV67" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV63" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV67" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV63" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="snsrFloorButtonsSet={x⦂ℤ·x∈0 ‥ LAST_FLOOR∧snsrFloorButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzE_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="PhyUpButtons∈0 ‥ (LAST_FLOOR − 1) → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shkzFPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="snsrUpButtons∈0 ‥ (LAST_FLOOR − 1) → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaIPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="snsrUpButtons=PhyUpButtons" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaIfl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV68" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV67" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV68" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV67" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="PhyUpButtonsSet={x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)∧PhyUpButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaIvl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV72" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV68" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV72" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV68" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="snsrUpButtonsSet={x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)∧snsrUpButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaI_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="PhyDownButtons∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shlaJPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="snsrDownButtons∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBMPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="snsrDownButtons=PhyDownButtons" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBMfl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV73" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV72" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV73" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV72" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="PhyDownButtonsSet={x⦂ℤ·x∈1 ‥ LAST_FLOOR∧PhyDownButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBMvl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV77" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV73" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV77" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV73" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="snsrDownButtonsSet={x⦂ℤ·x∈1 ‥ LAST_FLOOR∧snsrDownButtons(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBM_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="PhyFloorButtonLights∈0 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmBNPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="ctrlFloorButtonLights∈0 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD17" org.eventb.core.predicate="ctrlFloorButtonLights=PhyFloorButtonLights" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQfl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV78" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV77" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV78" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV77" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="PhyFloorButtonLightsSet={x⦂ℤ·x∈0 ‥ LAST_FLOOR∧PhyFloorButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQvl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV82" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV78" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV82" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV78" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD19" org.eventb.core.predicate="ctrlFloorButtonLightsSet={x⦂ℤ·x∈0 ‥ LAST_FLOOR∧ctrlFloorButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shmoQ_l1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD20" org.eventb.core.predicate="PhyUpButtonLights∈0 ‥ (LAST_FLOOR − 1) → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPUPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="ctrlUpButtonLights∈0 ‥ (LAST_FLOOR − 1) → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPUfl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD22" org.eventb.core.predicate="ctrlUpButtonLights=PhyUpButtonLights" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPUvl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV83" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV82" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV83" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV82" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD23" org.eventb.core.predicate="PhyUpButtonLightsSet={x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)∧PhyUpButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shnPU_l1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV87" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV83" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV87" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV83" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD24" org.eventb.core.predicate="ctrlUpButtonLightsSet={x⦂ℤ·x∈0 ‥ (LAST_FLOOR − 1)∧ctrlUpButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2YPl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD25" org.eventb.core.predicate="PhyDownButtonLights∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2Yfl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD26" org.eventb.core.predicate="ctrlDownButtonLights∈1 ‥ LAST_FLOOR → BOOL" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2Yvl1Ed-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD27" org.eventb.core.predicate="ctrlDownButtonLights=PhyDownButtonLights" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shn2Y_l1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPINV88" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV87" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="HYPINV88" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV87" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD28" org.eventb.core.predicate="PhyDownButtonLightsSet={x⦂ℤ·x∈1 ‥ LAST_FLOOR∧PhyDownButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcPl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV88" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ProvenLift/lift10_final.bpo|org.eventb.core.poFile#lift10_final|org.eventb.core.poPredicateSet#HYPINV88" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD29" org.eventb.core.predicate="ctrlDownButtonLightsSet={x⦂ℤ·x∈1 ‥ LAST_FLOOR∧ctrlDownButtonLights(x)=TRUE ∣ x}" org.eventb.core.source="/ProvenLift/lift10_final.bum|org.eventb.core.machineFile#lift10_final|org.eventb.core.invariant#_shodcfl1Ed-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
