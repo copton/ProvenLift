@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -125,7 +125,7 @@
 <org.eventb.core.poPredicate name="PRD72" org.eventb.core.predicate="request_served∈BOOL" org.eventb.core.source="/ProvenLift/lift11_conv_add_req.bum|org.eventb.core.machineFile#lift11_conv_add_req|org.eventb.core.invariant#_EdQF4PlyEd-F0OvBKAXwJQ"/>
 <org.eventb.core.poPredicate name="PRD73" org.eventb.core.predicate="finite(DOOR_COMMAND)" org.eventb.core.source="/ProvenLift/lift27_conv_door.bum|org.eventb.core.machineFile#lift27_conv_door|org.eventb.core.invariant#_5TZ5QPmVEd-4S-prP9DsJw"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="VWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of variant" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="VWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of variant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#ALLHYP"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="finite(PhyFloorButtonsSet)∧finite(PhyUpButtonsSet)∧finite(PhyDownButtonsSet)" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
@@ -170,14 +170,14 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="x∈1 ‥ LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift08_down_buttons.bum|org.eventb.core.machineFile#lift08_down_buttons|org.eventb.core.event#_3IkoxOWyEd-64JNDK1TKiQ|org.eventb.core.guard#_3IlP0eWyEd-64JNDK1TKiQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="x∉PhyDownButtonsSet" org.eventb.core.source="/ProvenLift/lift08_down_buttons.bum|org.eventb.core.machineFile#lift08_down_buttons|org.eventb.core.event#_3IkoxOWyEd-64JNDK1TKiQ|org.eventb.core.guard#_3IlP0uWyEd-64JNDK1TKiQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="USER_RELEASES_DOWN_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_DOWN_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT2"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet ∖ {x})&lt;card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.event#_AVb5gfoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poSequent#USER_RELEASES_DOWN_BUTTON\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="USER_RELEASES_DOWN_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_DOWN_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT2"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)∈ℕ" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
@@ -242,14 +242,14 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="x∈0 ‥ (LAST_FLOOR − 1)" org.eventb.core.source="/ProvenLift/lift07_up_buttons.bum|org.eventb.core.machineFile#lift07_up_buttons|org.eventb.core.event#_pvVR8eEsEd-bh-7nDQnLgQ|org.eventb.core.guard#_pvVR8-EsEd-bh-7nDQnLgQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="x∉PhyUpButtonsSet" org.eventb.core.source="/ProvenLift/lift07_up_buttons.bum|org.eventb.core.machineFile#lift07_up_buttons|org.eventb.core.event#_pvVR8eEsEd-bh-7nDQnLgQ|org.eventb.core.guard#_pvVR9OEsEd-bh-7nDQnLgQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="USER_RELEASES_UP_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_UP_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT8"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet)+card(PhyUpButtonsSet ∖ {x})+card(PhyDownButtonsSet)&lt;card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.event#_3Io6M-WyEd-64JNDK1TKiQ"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poSequent#USER_RELEASES_UP_BUTTON\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="USER_RELEASES_UP_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_UP_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT8"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)∈ℕ" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
@@ -314,14 +314,14 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="x∈0 ‥ LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift06_buttons.bum|org.eventb.core.machineFile#lift06_buttons|org.eventb.core.event#_tI1hE-A_Ed-78bCl9yYd-Q|org.eventb.core.guard#_tI1hFeA_Ed-78bCl9yYd-Q"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="x∉PhyFloorButtonsSet" org.eventb.core.source="/ProvenLift/lift06_buttons.bum|org.eventb.core.machineFile#lift06_buttons|org.eventb.core.event#_tI1hE-A_Ed-78bCl9yYd-Q|org.eventb.core.guard#_tI2IIOA_Ed-78bCl9yYd-Q"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="USER_RELEASES_FLOOR_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_FLOOR_BUTTON/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT14"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet ∖ {x})+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)&lt;card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC1" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.event#_AVdusvoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSelHint name="HINT0" org.eventb.core.poSelHintFst="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poSequent#USER_RELEASES_FLOOR_BUTTON\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="USER_RELEASES_FLOOR_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="USER_RELEASES_FLOOR_BUTTON/NAT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Natural number variant of event" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift36_conv_buttons.bpo|org.eventb.core.poFile#lift36_conv_buttons|org.eventb.core.poPredicateSet#EVTALLHYPEVT14"/>
 <org.eventb.core.poPredicate name="GOAL" org.eventb.core.predicate="card(PhyFloorButtonsSet)+card(PhyUpButtonsSet)+card(PhyDownButtonsSet)∈ℕ" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
 <org.eventb.core.poSource name="SRC0" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ProvenLift/lift36_conv_buttons.bum|org.eventb.core.machineFile#lift36_conv_buttons|org.eventb.core.variant#_AVbScPoCEd-Ch-yEUQ-68g"/>
