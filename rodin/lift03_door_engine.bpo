@@ -28,6 +28,7 @@
 <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="PhyElevatorFloor&lt;LAST_FLOOR∨0&lt;PhyElevatorFloor" org.eventb.core.source="/ProvenLift/lift01_floors.bum|org.eventb.core.machineFile#lift01_floors|org.eventb.core.invariant#_VO9DcNqwEd-O4vbSPlarTw"/>
 <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="ctrlCableCommand∈CABLE_COMMAND" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.invariant#_1cMqQNd_Ed-Dle0at0Xgqg"/>
 <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="last_stop∈0 ‥ LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.invariant#_yC1egNqwEd-O4vbSPlarTw"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP⇒last_stop=PhyElevatorFloor" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.invariant#_SGJXwvvTEd-J48UG_gxxdg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="INITIALISATION/inv3_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#EVTALLHYPEVT0"/>
@@ -99,7 +100,6 @@
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT4" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlCableCommand'" org.eventb.core.type="CABLE_COMMAND"/>
-<org.eventb.core.poIdentifier name="last_stop'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPEVT4" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#EVTIDENTEVT4" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.event#_yC2soNqwEd-O4vbSPlarTw|org.eventb.core.guard#_yC2sodqwEd-O4vbSPlarTw"/>
@@ -124,7 +124,6 @@
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT6" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlCableCommand'" org.eventb.core.type="CABLE_COMMAND"/>
-<org.eventb.core.poIdentifier name="last_stop'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPEVT6" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#EVTIDENTEVT6" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ctrlCableCommand=CABLE_STOP" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.event#_yC36wNqwEd-O4vbSPlarTw|org.eventb.core.guard#_yC36wdqwEd-O4vbSPlarTw"/>
@@ -149,6 +148,7 @@
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT8" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ctrlCableCommand'" org.eventb.core.type="CABLE_COMMAND"/>
+<org.eventb.core.poIdentifier name="last_stop'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPEVT8" org.eventb.core.parentSet="/ProvenLift/lift03_door_engine.bpo|org.eventb.core.poFile#lift03_door_engine|org.eventb.core.poPredicateSet#EVTIDENTEVT8" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ctrlCableCommand≠CABLE_STOP" org.eventb.core.source="/ProvenLift/lift02_main_engine.bum|org.eventb.core.machineFile#lift02_main_engine|org.eventb.core.event#_yC5I4dqwEd-O4vbSPlarTw|org.eventb.core.guard#_yC5I4tqwEd-O4vbSPlarTw"/>

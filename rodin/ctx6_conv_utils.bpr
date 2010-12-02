@@ -369,4 +369,5 @@
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬DOOR_OPENED=DOOR_HALF"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀pos⦂ℤ·pos∈0 ‥ LAST_FLOOR⇒reachable(SCHEDULER_UP ↦ pos)=pos ‥ LAST_FLOOR"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="f/THM"/>
 </org.eventb.core.prFile>
