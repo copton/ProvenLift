@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="2">
 <org.eventb.core.poIdentifier name="LAST_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LAST_FLOOR∈ℕ1" org.eventb.core.source="/ProvenLift/ctx1_floors.buc|org.eventb.core.contextFile#ctx1_floors|org.eventb.core.axiom#_lTa6wdd9Ed-Dle0at0Xgqg"/>
@@ -447,11 +447,11 @@
 <org.eventb.core.poIdentifier name="PhyCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT25" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#EVTIDENTEVT25" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT25" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#EVTIDENTEVT25" org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CamPcPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aGyMttq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠LAST_FLOOR" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CamPcPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aGyzwNq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_WIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CamPcPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aGyzwdq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="snsrElevatorFloor=last_stop∨snsrElevatorFloor∉ctrlFloorButtonLightsSet∪ctrlUpButtonLightsSet" org.eventb.core.source="/ProvenLift/lift11_conv_add_req.bum|org.eventb.core.machineFile#lift11_conv_add_req|org.eventb.core.event#_VpaFUv5TEd-RbO_JCG3Adw|org.eventb.core.guard#_EdU-YflyEd-F0OvBKAXwJQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="snsrElevatorFloor=last_stop∨(snsrElevatorFloor∉ctrlFloorButtonLightsSet∪ctrlUpButtonLightsSet∧(snsrElevatorFloor∉ctrlDownButtonLightsSet∨snsrElevatorFloor+1 ‥ LAST_FLOOR∩requests≠(∅ ⦂ ℙ(ℤ))))" org.eventb.core.source="/ProvenLift/lift11_conv_add_req.bum|org.eventb.core.machineFile#lift11_conv_add_req|org.eventb.core.event#_tKu5Qf5hEd-RbO_JCG3Adw|org.eventb.core.guard#_EdU-YflyEd-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT26" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
@@ -471,11 +471,11 @@
 <org.eventb.core.poIdentifier name="snsrCableEngine'" org.eventb.core.type="CABLE_COMMAND"/>
 <org.eventb.core.poIdentifier name="PhyElevatorFloor'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPEVT27" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#EVTIDENTEVT27" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="EVTALLHYPEVT27" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#EVTIDENTEVT27" org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PhyElevatorBetweenTwoFloors=FALSE" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CandkPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aG0B49q-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PhyElevatorFloor≠0" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CandkPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aG0B5Nq-Ed-L_e8_V4iXIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ctrlCableCommand=CABLE_UNWIND" org.eventb.core.source="/ProvenLift/lift04_phys_main_engine.bum|org.eventb.core.machineFile#lift04_phys_main_engine|org.eventb.core.event#_CandkPvUEd-J48UG_gxxdg|org.eventb.core.guard#_aG0B5dq-Ed-L_e8_V4iXIg"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="snsrElevatorFloor=last_stop∨snsrElevatorFloor∉ctrlFloorButtonLightsSet∪ctrlDownButtonLightsSet" org.eventb.core.source="/ProvenLift/lift11_conv_add_req.bum|org.eventb.core.machineFile#lift11_conv_add_req|org.eventb.core.event#_VpasYf5TEd-RbO_JCG3Adw|org.eventb.core.guard#_EdU-ZvlyEd-F0OvBKAXwJQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="snsrElevatorFloor=last_stop∨(snsrElevatorFloor∉ctrlFloorButtonLightsSet∪ctrlDownButtonLightsSet∧(snsrElevatorFloor∉ctrlUpButtonLightsSet∨0 ‥ (snsrElevatorFloor − 1)∩requests≠(∅ ⦂ ℙ(ℤ))))" org.eventb.core.source="/ProvenLift/lift11_conv_add_req.bum|org.eventb.core.machineFile#lift11_conv_add_req|org.eventb.core.event#_tKvgUP5hEd-RbO_JCG3Adw|org.eventb.core.guard#_EdU-ZvlyEd-F0OvBKAXwJQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTEVT28" org.eventb.core.parentSet="/ProvenLift/lift30_conv_door.bpo|org.eventb.core.poFile#lift30_conv_door|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
 <org.eventb.core.poIdentifier name="snsrElevatorFloor'" org.eventb.core.type="ℤ"/>
