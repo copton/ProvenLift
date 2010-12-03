@@ -8,7 +8,7 @@
 
 \usepackage[dvips]{hyperref}
 
-\input{eventB.sty}
+\usepackage{eventB}
 
 \title{Requirements Document\\ProvenLift}
 \author{Adrian Friedli\\Alexander Bernauer}
@@ -25,7 +25,7 @@ First, we enumerate all entities which are relevant to the system.
 \env{There is a controller which executes the system.}
 \env{There is a sequence of N+1 floor which are indexed from 0 to N. The floor with index 0 is at the bottom and the floor with index N is at the top.}
 \env{On every floor except the one with index N there is a up-button. On every floor except the one with index 0 there is a down-button.}
-\env{In the elevator there are N+1 so called elevator buttons indexed from 0 to N.}
+\env{In the elevator there are N+1 so called floor buttons indexed from 0 to N.}
 \env{For every botton there is a light.}
 
 All the entities have different possible states.
@@ -52,7 +52,7 @@ This interconnects the whole system.
 \section{Functional Requirements}
 This is the basic functionality of the system.
 \fun{Users signal requests for a floor by pressing the corresponding buttons of that floor. Every request is eventually served as the elevator goes to the corresponding floor and opens the door.}
-\fun{If all requests are served the elevator waits at the current floor for new requests with the door open.}
+\fun{If all requests are served the elevator waits at the current floor for new requests.}
 
 Now we describe the schedule which is used by the elevator to serve requests.
 \fun{There is an elevator schedule which can be either waiting, up or down.}
@@ -65,7 +65,7 @@ Once the elevator decided to schedule upwards it serves all upper floors until i
 
 These requirements handle the user interface.
 \fun{If a button is pressed the corresponding light goes on.}
-\fun{If the light corresponding to an elevator button is on and the elevator is at the floor which corresponds to the button and the door is open, the light goes off.}
+\fun{If the light corresponding to a floor button is on and the elevator is at the floor which corresponds to the button and the door is open, the light goes off.}
 \fun{If the light corresponding to a down button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is down and the door is open, the light goes off.}
 \fun{If the light corresponding to a up button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is up and the door is open, the light goes off.}
 
@@ -73,8 +73,8 @@ Finally, some security requirements.
 \fun{When the cable engine is winding or unwinding then the door engine is closing.}
 \fun{When the cable engine is winding or unwinding then the door is closed.}
 \fun{If the elevator is between two floors the cable engine is not stopped.}
-\fun{If the elevator is at the floor with index 0 the cable engine is not unwinding.}
-\fun{If the elevator is at the floor with index N the cable engine is not winding.}
+\fun{If the elevator is at the floor with index 0 the elevator will not move further down.}
+\fun{If the elevator is at the floor with index N the elevator will not move further up.}
 
 And of course, nobody want's to reboot the elevator ;-)
 \fun{Once the system is started it never stops.}
