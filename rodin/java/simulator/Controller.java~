@@ -1,0 +1,323 @@
+package simulator;
+
+import static simulator.CableEngine.CABLE_COMMAND.*;
+import static simulator.DoorEngine.DOOR_COMMAND.*;
+import static simulator.Operations.*;
+import static simulator.Controller.DOOR_POSITION.*;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+import simulator.CableEngine.CABLE_COMMAND;
+import simulator.DoorEngine.DOOR_COMMAND;
+
+import static simulator.Controller.SCHEDULER_STRATEGY.*;
+
+/**
+ * @author lvoisin modified afuerst
+ * 
+ *         Implements the elevator controller
+ */
+public class Controller {
+
+	// Index of the last floor (the first floor being indexed as zero).
+	public static final int LAST_FLOOR = 3;
+
+	enum DOOR_POSITION {
+		DOOR_OPENED, DOOR_CLOSED, DOOR_HALF;
+	}
+
+	// ----------//
+	// Inputs //
+	// ----------//
+
+	// snsrUpButtons[i] == true iff the Up button for floor i is depressed.
+	// i \in 0 .. LAST_FLOOR-1
+	HashMap<Integer, HashSet<Boolean>> snsrUpButtons = cprod(
+			interval(0, LAST_FLOOR - 1), setext(false));
+
+	// snsrDownButtons[i] == true iff the Down button for floor i is depressed.
+	// i \in 1 .. LAST_FLOOR
+	HashMap<Integer, HashSet<Boolean>> snsrDownButtons = cprod(
+			interval(1, LAST_FLOOR), setext(false));
+
+	// snsrFloorButtons[i] == true iff the elevator button for floor i is
+	// depressed.
+	// i \in 0 .. LAST_FLOOR
+	HashMap<Integer, HashSet<Boolean>> snsrFloorButtons = cprod(
+			interval(0, LAST_FLOOR), setext(false));
+
+	// Status of the cable engine
+	CABLE_COMMAND snsrCableEngine;
+
+	// Status of the door engine
+	DOOR_COMMAND snsrDoorEngine;
+
+	// Current floor the elevator is at or -1 if elevator is between two floors.
+	int snsrElevatorFloor;
+
+	// Position of the elevator door.
+	DOOR_POSITION snsrDoorPosition;
+
+	// -----------//
+	// Outputs //
+	// -----------//
+
+	// ctrlUpButtonLights[i] == true iff the Up button for floor i is to be
+	// turned on.
+	// i \in 0 .. LAST_FLOOR-1
+	HashMap<Integer, HashSet<Boolean>> ctrlUpButtonLights = cprod(
+			interval(0, LAST_FLOOR - 1), setext(false));
+
+	// ctrlDownButtonLights[i] == true iff the Down button for floor i is to be
+	// turned on.
+	// i \in 1 .. LAST_FLOOR
+	HashMap<Integer, HashSet<Boolean>> ctrlDownButtonLights = cprod(
+			interval(1, LAST_FLOOR), setext(false));
+
+	// ctrlFloorButtonLights[i] == true iff the elevator button for floor i is
+	// to be turned on.
+	// i \in 0 .. LAST_FLOOR
+	HashMap<Integer, HashSet<Boolean>> ctrlFloorButtonLights = cprod(
+			interval(0, LAST_FLOOR), setext(false));
+
+	// Command of the cable engine
+	CABLE_COMMAND ctrlCableCommand = CABLE_STOP;
+
+	// Command of the door engine
+	DOOR_COMMAND ctrlDoorCommand = DOOR_STOP;
+
+
+
+    //-------------//
+    //  Internals  //
+    //-------------//
+
+    enum SCHEDULER_STRATEGY {
+    	SCHEDULER_UP, SCHEDULER_DOWN, SCHEDULER_WAIT
+	}
+
+    SCHEDULER_STRATEGY last_schedule = SCHEDULER_UP;
+
+    SCHEDULER_STRATEGY schedule = SCHEDULER_WAIT;
+
+    int last_stop = 0;
+
+    //TODO: Enter typing information for requests.
+
+    boolean request_served = true;
+
+    //TODO: Enter typing information for ctrlFloorButtonLightsSet.
+
+    //TODO: Enter typing information for ctrlUpButtonLightsSet.
+
+    //TODO: Enter typing information for ctrlDownButtonLightsSet.
+
+    //----------------//
+    //  Main control  //
+    //----------------//
+
+    public void control() {
+    // turn_floor_button_light_on
+    for (int x = 0; x <= LAST_FLOOR; ++x) {
+        if (equal(valueOf(x,snsrFloorButtons) , true) && equal(valueOf(x,ctrlFloorButtonLights) , false) && !(equal(snsrElevatorFloor , x) && equal(snsrDoorPosition , DOOR_OPENED))) {
+
+            requests = bunion(requests, setext(x)); 
+            ctrlFloorButtonLights = ovr(ctrlFloorButtonLights, setext(mapsto(x,true))); 
+            ctrlFloorButtonLightsSet = bunion(ctrlFloorButtonLightsSet, setext(x)); 
+
+        }
+    }
+
+    // turn_floor_button_light_off
+        if (equal(snsrDoorPosition , DOOR_OPENED) && isIn(snsrElevatorFloor,ctrlFloorButtonLightsSet) && equal(valueOf(snsrElevatorFloor,snsrFloorButtons) , false)) {
+
+            requests = bunion(bunion(setminus(ctrlFloorButtonLightsSet,setext(snsrElevatorFloor)), ctrlUpButtonLightsSet), ctrlDownButtonLightsSet); 
+            request_served = true; 
+            ctrlFloorButtonLights = ovr(ctrlFloorButtonLights, setext(mapsto(snsrElevatorFloor,false))); 
+            ctrlFloorButtonLightsSet = setminus(ctrlFloorButtonLightsSet,setext(snsrElevatorFloor)); 
+
+        }
+
+    // turn_up_button_light_on
+    for (int x = 0; x <= (LAST_FLOOR - 1); ++x) {
+        if (equal(valueOf(x,snsrUpButtons) , true) && equal(valueOf(x,ctrlUpButtonLights) , false) && !(equal(snsrElevatorFloor , x) && equal(snsrDoorPosition , DOOR_OPENED))) {
+
+            requests = bunion(requests, setext(x)); 
+            ctrlUpButtonLights = ovr(ctrlUpButtonLights, setext(mapsto(x,true))); 
+            ctrlUpButtonLightsSet = bunion(ctrlUpButtonLightsSet, setext(x)); 
+
+        }
+    }
+
+    // turn_up_button_light_off
+        if (equal(snsrDoorPosition , DOOR_OPENED) && isIn(snsrElevatorFloor,ctrlUpButtonLightsSet) && (snsrElevatorFloor < LAST_FLOOR) && equal(valueOf(snsrElevatorFloor,snsrUpButtons) , false)) {
+
+            requests = bunion(bunion(ctrlFloorButtonLightsSet, setminus(ctrlUpButtonLightsSet,setext(snsrElevatorFloor))), ctrlDownButtonLightsSet); 
+            request_served = true; 
+            ctrlUpButtonLights = ovr(ctrlUpButtonLights, setext(mapsto(snsrElevatorFloor,false))); 
+            ctrlUpButtonLightsSet = setminus(ctrlUpButtonLightsSet,setext(snsrElevatorFloor)); 
+
+        }
+
+    // turn_down_button_light_on
+    for (int x = 1; x <= LAST_FLOOR; ++x) {
+        if (equal(valueOf(x,snsrDownButtons) , true) && equal(valueOf(x,ctrlDownButtonLights) , false) && !(equal(snsrElevatorFloor , x) && equal(snsrDoorPosition , DOOR_OPENED))) {
+
+            requests = bunion(requests, setext(x)); 
+            ctrlDownButtonLights = ovr(ctrlDownButtonLights, setext(mapsto(x,true))); 
+            ctrlDownButtonLightsSet = bunion(ctrlDownButtonLightsSet, setext(x)); 
+
+        }
+    }
+
+    // turn_down_button_light_off
+        if (equal(snsrDoorPosition , DOOR_OPENED) && isIn(snsrElevatorFloor,ctrlDownButtonLightsSet) && (snsrElevatorFloor > 0) && equal(valueOf(snsrElevatorFloor,snsrDownButtons) , false)) {
+
+            requests = bunion(bunion(ctrlFloorButtonLightsSet, ctrlUpButtonLightsSet), setminus(ctrlDownButtonLightsSet,setext(snsrElevatorFloor))); 
+            request_served = true; 
+            ctrlDownButtonLights = ovr(ctrlDownButtonLights, setext(mapsto(snsrElevatorFloor,false))); 
+            ctrlDownButtonLightsSet = setminus(ctrlDownButtonLightsSet,setext(snsrElevatorFloor)); 
+
+        }
+
+    // open_door
+        if (equal(ctrlCableCommand , CABLE_STOP) && !equal(ctrlDoorCommand , DOOR_OPEN) && equal(snsrCableEngine , CABLE_STOP) && equal(snsrDoorPosition , DOOR_CLOSED) && isIn(snsrElevatorFloor,requests) && (!equal(schedule , SCHEDULER_DOWN) || isIn(snsrElevatorFloor,bunion(ctrlFloorButtonLightsSet, ctrlDownButtonLightsSet))) && (!equal(schedule , SCHEDULER_UP) || isIn(snsrElevatorFloor,bunion(ctrlFloorButtonLightsSet, ctrlUpButtonLightsSet)))) {
+
+            ctrlDoorCommand = DOOR_OPEN; 
+
+        }
+
+    // stop_door
+        if (equal(ctrlDoorCommand , DOOR_OPEN) && equal(snsrDoorPosition , DOOR_OPENED)) {
+
+            ctrlDoorCommand = DOOR_STOP; 
+
+        }
+
+    // close_door
+        if (equal(ctrlDoorCommand , DOOR_STOP) && equal(snsrDoorEngine , DOOR_STOP) && !equal(schedule , SCHEDULER_WAIT) && !isIn(snsrElevatorFloor,requests)) {
+
+            ctrlDoorCommand = DOOR_CLOSE; 
+
+        }
+
+    // start_move_up
+        if (equal(ctrlCableCommand , CABLE_STOP) && equal(ctrlDoorCommand , DOOR_CLOSE) && equal(snsrCableEngine , CABLE_STOP) && (snsrElevatorFloor < LAST_FLOOR) && equal(snsrDoorPosition , DOOR_CLOSED) && equal(snsrDoorEngine , DOOR_CLOSE) && equal(schedule , SCHEDULER_UP) && !isIn(snsrElevatorFloor,bunion(ctrlFloorButtonLightsSet, ctrlUpButtonLightsSet))) {
+
+            ctrlCableCommand = CABLE_WIND; 
+
+        }
+
+    // start_move_down
+        if (equal(ctrlCableCommand , CABLE_STOP) && equal(ctrlDoorCommand , DOOR_CLOSE) && equal(snsrCableEngine , CABLE_STOP) && (snsrElevatorFloor > 0) && equal(snsrDoorPosition , DOOR_CLOSED) && equal(snsrDoorEngine , DOOR_CLOSE) && equal(schedule , SCHEDULER_DOWN) && !isIn(snsrElevatorFloor,bunion(ctrlFloorButtonLightsSet, ctrlDownButtonLightsSet))) {
+
+            ctrlCableCommand = CABLE_UNWIND; 
+
+        }
+
+    // stop
+        if (!equal(ctrlCableCommand , CABLE_STOP) && !equal(snsrElevatorFloor , -1) && !equal(last_stop , snsrElevatorFloor) && (isIn(snsrElevatorFloor,ctrlFloorButtonLightsSet) || (isIn(snsrElevatorFloor,ctrlUpButtonLightsSet) && equal(schedule , SCHEDULER_UP)) || (isIn(snsrElevatorFloor,ctrlDownButtonLightsSet) && equal(schedule , SCHEDULER_DOWN)) || (isIn(snsrElevatorFloor,ctrlUpButtonLightsSet) && equal(schedule , SCHEDULER_DOWN) && equal(binter(interval(0,(snsrElevatorFloor - 1)), requests) , "EMPTYSET")) || (isIn(snsrElevatorFloor,ctrlDownButtonLightsSet) && equal(schedule , SCHEDULER_UP) && equal(binter(interval((snsrElevatorFloor + 1),LAST_FLOOR), requests) , "EMPTYSET")))) {
+
+            ctrlCableCommand = CABLE_STOP; 
+            last_stop = snsrElevatorFloor; 
+            schedule = SCHEDULER_WAIT; 
+
+        }
+
+    // switch_schedule_to_up
+        if (equal(schedule , SCHEDULER_WAIT) && !equal(binter(interval((snsrElevatorFloor + 1),LAST_FLOOR), requests) , "EMPTYSET") && !isIn(snsrElevatorFloor,requests) && equal(binter(interval(0,(snsrElevatorFloor - 1)), requests) , "EMPTYSET") && equal(last_schedule , SCHEDULER_DOWN)) {
+
+            schedule = SCHEDULER_UP; 
+            last_schedule = SCHEDULER_UP; 
+            request_served = false; 
+
+        }
+
+    // resume_schedule_up
+        if (equal(schedule , SCHEDULER_WAIT) && !equal(binter(interval((snsrElevatorFloor + 1),LAST_FLOOR), requests) , "EMPTYSET") && !isIn(snsrElevatorFloor,requests) && equal(last_schedule , SCHEDULER_UP)) {
+
+            schedule = SCHEDULER_UP; 
+            request_served = false; 
+
+        }
+
+    // switch_schedule_to_down
+        if (equal(schedule , SCHEDULER_WAIT) && !equal(binter(interval(0,(snsrElevatorFloor - 1)), requests) , "EMPTYSET") && !isIn(snsrElevatorFloor,requests) && equal(binter(interval((snsrElevatorFloor + 1),LAST_FLOOR), requests) , "EMPTYSET") && equal(last_schedule , SCHEDULER_UP)) {
+
+            schedule = SCHEDULER_DOWN; 
+            last_schedule = SCHEDULER_DOWN; 
+            request_served = false; 
+
+        }
+
+    // resume_schedule_down
+        if (equal(schedule , SCHEDULER_WAIT) && !equal(binter(interval(0,(snsrElevatorFloor - 1)), requests) , "EMPTYSET") && !isIn(snsrElevatorFloor,requests) && equal(last_schedule , SCHEDULER_DOWN)) {
+
+            schedule = SCHEDULER_DOWN; 
+            request_served = false; 
+
+        }
+
+	}
+
+	// -------------------------------------------------------
+	// The rest of this class contains the link with the animation...
+	//
+	// DO NOT MODIFY
+	//
+
+	private BuildingPanel viewer;
+
+	public void setViewer(BuildingPanel viewer) {
+		this.viewer = viewer;
+	}
+
+	public void react() {
+		HashSet<Boolean> set;
+		// read input from animator
+		// USER_PRESSES_UP_BUTTON, USER_RELEASES_UP_BUTTON
+		for (int i = 0; i < LAST_FLOOR; ++i) {
+			set = new HashSet<Boolean>();
+			set.add(viewer.getUpButtonStatus(i));
+			snsrUpButtons.put(i, set);
+		}
+		// USER_PRESSES_DOWN_BUTTON, USER_RELEASES_DOWN_BUTTON
+		for (int i = 1; i <= LAST_FLOOR; ++i) {
+			set = new HashSet<Boolean>();
+			set.add(viewer.getDownButtonStatus(i));
+			snsrDownButtons.put(i, set);
+		}
+		// USER_PRESSES_FLOOR_BUTTON, USER_RELEASES_FLOOR_BUTTON
+		for (int i = 0; i <= LAST_FLOOR; ++i) {
+			set = new HashSet<Boolean>();
+			set.add(viewer.getFloorButtonStatus(i));
+			snsrFloorButtons.put(i, set);
+		}
+		snsrCableEngine = viewer.getCableEngineStatus();
+		snsrDoorEngine = viewer.getDoorEngineStatus();
+		snsrElevatorFloor = viewer.getCurrentFloor();
+		snsrDoorPosition = viewer.getDoorPosition();
+
+		// run the controller
+		control();
+
+		// send output to animator
+		// TURNS_ON_UP_BUTTON_LIGHT, TURNS_OFF_UP_BUTTON_LIGHT
+		for (int i = 0; i < LAST_FLOOR; ++i) {
+			viewer.turnOnUpButton(i, valueOf(i, ctrlUpButtonLights));
+		}
+		// TURNS_ON_DOWN_BUTTON_LIGHT, TURNS_OFF_DOWN_BUTTON_LIGHT
+		for (int i = 1; i <= LAST_FLOOR; ++i) {
+			viewer.turnOnDownButton(i, valueOf(i, ctrlDownButtonLights));
+		}
+		// TURNS_ON_FLOOR_BUTTON_LIGHT, TURNS_OFF_FLOOR_BUTTON_LIGHT
+		for (int i = 0; i <= LAST_FLOOR; ++i) {
+			viewer.turnOnFloorButton(i, valueOf(i, ctrlFloorButtonLights));
+		}
+		viewer.setCableEngineStatus(ctrlCableCommand);
+		viewer.setDoorEngineStatus(ctrlDoorCommand);
+
+	}
+
+}
