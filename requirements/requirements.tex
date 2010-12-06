@@ -56,8 +56,8 @@ This is the basic functionality of the system.
 
 Now we describe the schedule which is used by the elevator to serve requests.
 \fun{There is an elevator schedule which can be either waiting, up or down.}
-\fun{The elevator schedule is set to waiting iff there is no request.}
-\fun{If the elevator schedule is waiting and then a request for an upper/lower floor is signaled the elevator schedule is set to up/down.}
+\fun{If there is no request then the elevator schedule is waiting.}
+\fun{If there is no request and then a request for an upper/lower floor is signaled the elevator schedule is set to up/down.}
 \fun{The elevator starts to move up/down only if the elevator schedule is up/down.}
 \fun{The elevator stops at a floor iff there is a request for that floor.}
 Once the elevator decided to schedule upwards it serves all upper floors until it starts to schedule downwards and vice versa.
@@ -65,9 +65,7 @@ Once the elevator decided to schedule upwards it serves all upper floors until i
 
 These requirements handle the user interface.
 \fun{If a button is pressed the corresponding light goes on.}
-\fun{If the light corresponding to a floor button is on and the elevator is at the floor which corresponds to the button and the door is open, the light goes off.}
-\fun{If the light corresponding to a down button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is down and the door is open, the light goes off.}
-\fun{If the light corresponding to a up button is on and the elevator is at the floor which corresponds to the button and the elevator schedule is up and the door is open, the light goes off.}
+\fun{If the light corresponding to a button is on and the elevator is at the floor which corresponds to the button and the door is open, the light goes off.}
 
 Finally, some security requirements.
 \fun{When the cable engine is winding or unwinding then the door engine is closing.}

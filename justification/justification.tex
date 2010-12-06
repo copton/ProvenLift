@@ -1,0 +1,37 @@
+\documentclass[a4paper,10pt]{article}
+
+\title{Justification Document\\Proven Lift}
+\author{Adrian Friedli\\Alexander Bernauer}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Refinements}
+All machines are named after the following scheme: {\tt lift{\em NN}\_{\em DESC}} where {\tt {\em NN}} is the zero padded two digit natural number of the machine and {\tt {\em DESC}} is an arbitrary text describing the purpose of the refinement.
+
+A machine with number $n$ is a refinement of the machine with number $n-1$. The only exceptions are the machine 1 and the machine 11. The machine 10 is used for the code generation and is complete except for the proves of convergence of the events and lifeness of the system. These proves are only possible under addidional assumptions which are introduced in machine 11 which refines machine 9. Furthermore, machine 10 adds no additional functionality but only maps the internal representations of the state to the demands of the simulation environment. So the convergence and lifeness proves of machine 11 and its refinements also hold for machine 10, given the additional assumptions hold of course.
+
+The assumptions introduced by machine 11 are that the controler can change its states faster then the environment which means that the controler never "misses" anything. This prerequisite is reflected by the additional guards of {\tt ELEVATOR\_LEAVES\_FLOOR\_UP} and {\tt ELEVATOR\_LEAVES\_FLOOR\_DOWN}. If these guards are disabled then the event {\tt stop} is enabled. This means that the environmental elevator can not leave a floor if the controler wants to stop the cable engine.
+
+\section{Functional Requirements}
+\begin{enumerate}
+\item[FUN20] This requirement reflects the liveness property of the system and is assured by theorem {\tt 37\_life}. It is important to note that this theorem holds only under the assumptions introduced in machine 11 as explained above.
+\item[FUN21] This requirement is assured by invariant {\tt inv9\_8}.
+\item[FUN22] This requirement is assured by invariant {\tt inv9\_1}.
+\item[FUN23] This requirement is assured by invariant {\tt inv9\_6}.
+\item[FUN24] In the machine 9 the events {\tt switch\_schedule\_to\_up} and {\tt resume\_sched\-ule\_up} or {\tt switch\_schedule\_to\-\_down} and {\tt resume\_schedule\_down} respectively set the schedule to up or down if there is a corresponding element in the {\tt requests} set which reflects all pending requests. If a new request is issued the guards of one of these events is enabled.
+\item[FUN25] These requirements are assured by invariants {\tt inv9\_9} and {\tt inv9\_10}.
+\item[FUN26] This requirement is assured by invariant {\tt inv9\_11}.
+\item[FUN27] The schedule is changed from up/down to down/up only by the events {\tt switch\_schedule\_to\_up} and {\tt switch\_schedule\_to\_down}. The guard {\tt grd9\_4} of theses events assures that this requirement is fulfilled.
+\item[FUN28] In the machines 6, 7, and 8 the sets {\tt snsrFloorButtonsSet}, {\tt snsrUpBut\-tonsSet}, and {\tt snsrDownButtonsSet} reflect if a button is pressed. The guards of the only events which turn ligths on, i.e. {\tt turn\_floor\_button\-\_lights\_on}, {\tt turn\_up\_button\_lights\_on}, and {\tt turn\_down\_button\_lights\-\_on} are enabled if the corresponding set is not empty.
+\item[FUN29] This requirement is implemented by the events {\tt turn\_floor\_button\_lights\-\_off}, {\tt turn\_up\_button\_lights\-\_off}, and {\tt turn\_down\_button\_lights\-\_off}.
+\item[FUN30] This requirement is assured by invariant {\tt inv5\_9}.
+\item[FUN31] This requirement is assured by invariant {\tt inv5\_10}.
+\item[FUN32] This requirement is assured by invariant {\tt inv4\_11}.
+\item[FUN33] This requirement is assured by invariant {\tt inv1\_1}.
+\item[FUN34] This requirement is assured by invariant {\tt inv1\_2}.
+\item[FUN35] In every state one of the events {\tt USER\_PRESSES\_FLOOR\_BUTTON} and {\tt USER\-\_RELEASES\_FLOOR\_BUTTON} are enbaled because the set {\tt PhyFloorButtonsSet} either contains a $x$ between $0$ and {\tt LAST\_FLOOR} or it doesn't. So the system is never deadlocked. The analogous argument holds for the events corresponding to up and down buttons. Together with the lifeness property of the system the results in the required behavior that the elevator system is always "working".
+
+\end{enumerate}
+\end{document}
